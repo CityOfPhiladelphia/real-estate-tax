@@ -9,142 +9,21 @@ export default {
       type: 'callout',
       slots: {
         text: '\
-          Property assessment and sale information for this address. Source: Office of Property Assessments (OPA). OPA was formerly a part of the Bureau of Revision of Taxes (BRT) and some City records may still use that name.\
+        <b>LBR</b> - Collections being pursued by Linebarger Collection Agency. Please call 215-790-1117.<br>\
+        <b>LBRA</b> - In an agreement with Linebarger.<br>\
+        <b>LBRO</b> - In an Owner Occupied Payment Arrangement (OOPA) agreement with LBR.<br>\
+        <b>GRB</b> - Collections being pursued by GRB Collection Agency. Please call 866-677-5970.<br>\
+        <b>GRBA</b> - In an agreement with GRB.<br>\
+        <b>GRBO</b> - In an Owner Occupied Payment Arrangement (OOPA) agreement with GRB.<br>\
+        <b>AGRE</b> - Active payment agreement plan in effect for delinquent taxes.<br>\
+        <b>INST</b> - Active installment payment plan in effect for current taxes.<br>\
+        <b>PIO</b> - Collections being pursued by Pioneer Collection Agency. Please call 866-439-1318.<br>\
+        <b>BRT</b> - Under appeal with the Board of Revision of Taxes.<br>\
+        <b>LSLD</b> - Sold to a third-party at Tax Lien Sale. Search the civil court docket for more information.<br>\
+        <b>DISC</b> - Discounted amount good until March 1st.<br>\
+        <b>SEQR</b> - Collections being pursued by Law Department\'s Sequestration/Receivership Program. Please search the civil docket.\
         '
       }
     },
-    {
-      type: 'vertical-table',
-      slots: {
-        fields: [
-          {
-            label: 'OPA Account #',
-            value: function(state) {
-              return state.geocode.data.properties.opa_account_num;
-            }
-          },
-          {
-            label: 'OPA Address',
-            value: function(state) {
-              return state.geocode.data.properties.opa_address;
-            }
-          },
-          {
-            label: 'Owners',
-            value: function(state) {
-              var owners = state.geocode.data.properties.opa_owners;
-              var ownersJoined = owners.join(', ');
-              return ownersJoined;
-            }
-          },
-          {
-            label: 'Assessed Value',// + new Date().getFullYear(),
-            value: function(state) {
-              var data = state.sources.opa.data;
-              // return data.market_value;
-              var result;
-              if (data) {
-                result = data.market_value;
-              } else {
-                result = 'no data';
-              }
-              return result;
-            },
-            transforms: [
-              'currency'
-            ]
-          },
-          {
-            label: 'Sale Date',
-            value: function(state) {
-              var data = state.sources.opa.data;
-              // return data.sale_date;
-              var result;
-              if (data) {
-                result = data.sale_date;
-              } else {
-                result = 'no data';
-              }
-              return result;
-            },
-            transforms: [
-              'date'
-            ]
-          },
-          {
-            label: 'Sale Price',
-            value: function(state) {
-              var data = state.sources.opa.data;
-              // return data.sale_price;
-              var result;
-              if (data) {
-                result = data.sale_price;
-              } else {
-                result = 'no data';
-              }
-              return result;
-            },
-            transforms: [
-              'currency'
-            ]
-          },
-        ],
-      },
-      options: {
-        id: 'opaData',
-        // requiredSources: ['opa'],
-        externalLink: {
-          action: function(count) {
-            return 'See more';
-          },
-          name: 'Property Search',
-          href: function(state) {
-            var id = state.geocode.data.properties.opa_account_num;
-            return 'http://property.phila.gov/?p=' + id;
-          }
-        }
-      }
-    }
-
-    //     ]
-    //   }
-    // }
   ],
-  basemap: 'pwd',
-  identifyFeature: 'address-marker',
-  // we might not need this anymore, now that we have identifyFeature
-  parcels: 'pwd',
-  errorMessage: function (state) {
-    var data = state.sources.condoList.data;
-        // features = data.features;
-
-    if (data) {
-      var numCondos = data.total_size;
-
-      if (numCondos > 0) {
-        var shouldPluralize = numCondos > 1,
-            isOrAre = shouldPluralize ? 'are' : 'is',
-            unitOrUnits = shouldPluralize ? 'units' : 'unit',
-            message = [
-              '<h3>',
-              'There ',
-              isOrAre,
-              // ' <strong>',
-              ' ',
-              numCondos,
-              ' condominium ',
-              unitOrUnits,
-              // '</strong> at this address.</h3>',
-              ' at this address.</h3>',
-              // ' at this address. ',
-              '<p>You can use the Condominiums tab below to see information for an individual unit.</p>'
-              // 'Please select a unit from the Condominiums tab below.'
-            ].join('');
-
-        return message;
-      }
-    } else {
-      return 'There is no property assessment record for this address.';
-    }
-  }
 }

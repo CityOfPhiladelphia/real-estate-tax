@@ -21,6 +21,7 @@ import greeting from './general/greeting';
 // data sources
 import condoList from './data-sources/condo-list';
 import opa from './data-sources/opa';
+import realEstateTaxDelinquencies from './data-sources/real-estate-tax-delinquencies';
 
 // Topics
 import property from './topics/property';
@@ -63,6 +64,7 @@ appboard({
   dataSources: {
     condoList,
     opa,
+    realEstateTaxDelinquencies,
   },
   defaultTopic: null,
   topics: [
@@ -74,107 +76,10 @@ appboard({
   ],
   components: [
     {
-      type: 'callout',
-      slots: {
-        text: '\
-          Property assessment and sale information for this address. Source: Office of Property Assessments (OPA). OPA was formerly a part of the Bureau of Revision of Taxes (BRT) and some City records may still use that name.\
-        '
-      }
-    },
-    {
-      type: 'vertical-table',
-      slots: {
-        fields: [
-          {
-            label: 'OPA Account #',
-            value: function(state) {
-              return state.geocode.data.properties.opa_account_num;
-            }
-          },
-          {
-            label: 'OPA Address',
-            value: function(state) {
-              return state.geocode.data.properties.opa_address;
-            }
-          },
-          {
-            label: 'Owners',
-            value: function(state) {
-              var owners = state.geocode.data.properties.opa_owners;
-              var ownersJoined = owners.join(', ');
-              return ownersJoined;
-            }
-          },
-          {
-            label: 'Assessed Value',// + new Date().getFullYear(),
-            value: function(state) {
-              var data = state.sources.opa.data;
-              // return data.market_value;
-              var result;
-              if (data) {
-                result = data.market_value;
-              } else {
-                result = 'no data';
-              }
-              return result;
-            },
-            transforms: [
-              'currency'
-            ]
-          },
-          {
-            label: 'Sale Date',
-            value: function(state) {
-              var data = state.sources.opa.data;
-              // return data.sale_date;
-              var result;
-              if (data) {
-                result = data.sale_date;
-              } else {
-                result = 'no data';
-              }
-              return result;
-            },
-            transforms: [
-              'date'
-            ]
-          },
-          {
-            label: 'Sale Price',
-            value: function(state) {
-              var data = state.sources.opa.data;
-              // return data.sale_price;
-              var result;
-              if (data) {
-                result = data.sale_price;
-              } else {
-                result = 'no data';
-              }
-              return result;
-            },
-            transforms: [
-              'currency'
-            ]
-          },
-        ],
-      },
+      type: 'topic-set',
       options: {
-        id: 'opaData',
-        // requiredSources: ['opa'],
-        externalLink: {
-          action: function(count) {
-            return 'See more';
-          },
-          name: 'Property Search',
-          href: function(state) {
-            var id = state.geocode.data.properties.opa_account_num;
-            return 'http://property.phila.gov/?p=' + id;
-          }
-        }
+        defaultTopic: 'property'
       }
-    },
-    {
-      type: 'topic-set'
     },
   ],
 });

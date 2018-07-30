@@ -3,15 +3,84 @@ export default {
   icon: 'home',
   label: 'Property Information',
   // REVIEW can these be calculated from vue deps?
-  dataSources: ['opa'],
+  dataSources: ['opa', 'realEstateTaxDelinquencies'],
   components: [
     {
       type: 'callout',
-      slots: {
-        text: '\
-          Property assessment and sale information for this address. Source: Office of Property Assessments (OPA). OPA was formerly a part of the Bureau of Revision of Taxes (BRT) and some City records may still use that name.\
-        '
-      }
+      options: {
+        components: [
+          {
+            type: 'division',
+            options: {
+              class: 'small-5',
+              style: 'display: inline-block; text-align: center; vertical-align: middle',
+              components: [
+                {
+                  type: 'paragraph',
+                  slots: {
+                    text:'<h4>Balance Due</h4>'
+                  }
+                },
+                {
+                  type: 'paragraph',
+                  slots: {
+                    text: function(state) {
+                      if (state.sources.realEstateTaxDelinquencies.data.rows.length) {
+                        return state.sources.realEstateTaxDelinquencies.data.rows[0].total_due;
+                      } else {
+                        return '0';
+                      }
+                    },
+                    additionalTags: ['b', 'h2'],
+                    transforms: [
+                      'currency'
+                    ]
+                  }
+                }
+              ]
+            },
+          },
+          {
+            type: 'division',
+            options: {
+              class: 'small-5',
+              style: 'display: inline-block; text-align: center; vertical-align: middle',
+              components: [
+                {
+                  type: 'button-comp',
+                  options: {
+                    // class: 'full-width',
+                  },
+                  slots: {
+                    text:'Pay Now'
+                  }
+                },
+              ]
+            },
+          },
+          {
+            type: 'division',
+            options: {
+              class: 'small-12',
+              style: 'display: inline-block; text-align: center; vertical-align: middle',
+              components: [
+                {
+                  type: 'paragraph',
+                  slots: {
+                    text: function(state) {
+                      if (state.sources.realEstateTaxDelinquencies.data.rows.length) {
+                        return 'There are other payment options and assistance plans available. <a><b>CLICK HERE</b></a> for more information.';
+                      } else {
+                        return 'There is no current balance due on this property';
+                      }
+                    },
+                  }
+                },
+              ]
+            },
+          },
+        ],
+      },
     },
     {
       type: 'vertical-table',
