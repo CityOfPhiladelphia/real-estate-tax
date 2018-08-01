@@ -22,7 +22,7 @@ import greeting from './general/greeting';
 import condoList from './data-sources/condo-list';
 import opa from './data-sources/opa';
 import tips from './data-sources/tips';
-import realEstateTaxDelinquencies from './data-sources/real-estate-tax-delinquencies';
+// import realEstateTaxDelinquencies from './data-sources/real-estate-tax-delinquencies';
 
 // Topics
 import property from './topics/property';
@@ -69,7 +69,7 @@ appboard({
   dataSources: {
     condoList,
     opa,
-    realEstateTaxDelinquencies,
+    // realEstateTaxDelinquencies,
     tips,
   },
   defaultTopic: null,

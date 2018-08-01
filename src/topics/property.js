@@ -6,7 +6,7 @@ export default {
   icon: 'home',
   label: 'Property Information',
   // REVIEW can these be calculated from vue deps?
-  dataSources: ['opa', 'realEstateTaxDelinquencies', 'tips'],
+  dataSources: ['opa', 'tips'],
   components: [
     {
       type: 'callout',
@@ -95,7 +95,7 @@ export default {
                   type: 'paragraph',
                   slots: {
                     text: function(state) {
-                      if (state.sources.realEstateTaxDelinquencies.data.rows.length) {
+                      if (state.appData.propertyBalance) {
                         return 'There are other payment options and assistance plans available. <a><b>CLICK HERE</b></a> for more information.';
                       } else {
                         return 'There is no current balance due on this property';
