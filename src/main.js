@@ -21,6 +21,7 @@ import greeting from './general/greeting';
 // data sources
 import condoList from './data-sources/condo-list';
 import opa from './data-sources/opa';
+import tips from './data-sources/tips';
 import realEstateTaxDelinquencies from './data-sources/real-estate-tax-delinquencies';
 
 // Topics
@@ -46,8 +47,12 @@ appboard({
   router: {
     enabled: true
   },
-  addressAutocomplete: {
-    enabled: true
+  defaultAddressTextPlaceholder: "BEGIN REAL ESTATE TAX PAYMENT",
+  addressInput: {
+    width: 515,
+    position: 'right',
+    autocompleteEnabled: true,
+    placeholder: 'Search by 9-digit OPA property # or property address',
   },
   rootStyle: {
     position: 'absolute',
@@ -65,6 +70,7 @@ appboard({
     condoList,
     opa,
     realEstateTaxDelinquencies,
+    tips,
   },
   defaultTopic: null,
   topics: [
@@ -75,6 +81,15 @@ appboard({
     status,
   ],
   components: [
+    // {
+    //   type: 'callout',
+    // },
+    // {
+    //   type: 'topic',
+    //   key: 'property',
+    //   icon: 'home',
+    //   label: 'Property Information',
+    // }
     {
       type: 'topic-set',
       options: {

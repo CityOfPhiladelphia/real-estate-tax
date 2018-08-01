@@ -12,9 +12,10 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
-    "@cityofphiladelphia/appboard": "^0.0.14",
+    "@cityofphiladelphia/appboard": "^0.0.16",
     "accounting": "^0.4.1",
     "axios": "^0.18.0",
+    "escape-html": "^1.0.3",
     "moment": "^2.21.0"
   },
   "devDependencies": {

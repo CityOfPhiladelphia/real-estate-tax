@@ -1,9 +1,12 @@
+import generateBillingXml from '../util/generate-billing-xml';
+import axios from 'axios';
+
 export default {
   key: 'property',
   icon: 'home',
   label: 'Property Information',
   // REVIEW can these be calculated from vue deps?
-  dataSources: ['opa', 'realEstateTaxDelinquencies'],
+  dataSources: ['opa', 'realEstateTaxDelinquencies', 'tips'],
   components: [
     {
       type: 'callout',
@@ -13,7 +16,7 @@ export default {
             type: 'division',
             options: {
               class: 'small-5',
-              style: 'display: inline-block; text-align: center; vertical-align: middle',
+              style: 'display: inline-block; text-align: center; vertical-align: middle;',
               components: [
                 {
                   type: 'paragraph',
@@ -25,8 +28,8 @@ export default {
                   type: 'paragraph',
                   slots: {
                     text: function(state) {
-                      if (state.sources.realEstateTaxDelinquencies.data.rows.length) {
-                        return state.sources.realEstateTaxDelinquencies.data.rows[0].total_due;
+                      if (state.appData.propertyBalance) {
+                        return state.appData.propertyBalance;
                       } else {
                         return '0';
                       }
@@ -44,14 +47,38 @@ export default {
             type: 'division',
             options: {
               class: 'small-5',
-              style: 'display: inline-block; text-align: center; vertical-align: middle',
+              style: 'display: inline-block; text-align: center; vertical-align: middle;',
               components: [
                 {
-                  type: 'button-comp',
-                  options: {
-                    // class: 'full-width',
-                  },
+                  type: 'e-pay-form',
                   slots: {
+                    buttonAction: function(state) {
+
+
+                      const data = {
+                        'accountNum': state.sources.tips.data.data.accountNum,
+                        'totalDue': 0,
+                        'balances': state.sources.tips.data.data,
+                        'address': {
+                          'streetAddress': state.sources.tips.data.data.property.address,
+                          'zipCode': state.geocode.data.properties.zip_code,
+                        }
+                      }
+                      return generateBillingXml(data);
+                      // const post = axios({
+                      //   method: 'post',
+                      //   url: 'https://test-secure.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx',
+                      //   data: {
+                      //     billStmt: billXml,
+                      //   },
+                      // }).then((response) => {
+                      //   console.log(reponse);
+                      // }).catch((error) => {
+                      //   console.log(error);
+                      // });
+
+
+                    },
                     text:'Pay Now'
                   }
                 },
@@ -62,7 +89,7 @@ export default {
             type: 'division',
             options: {
               class: 'small-12',
-              style: 'display: inline-block; text-align: center; vertical-align: middle',
+              style: 'display: inline-block; text-align: center; vertical-align: middle;',
               components: [
                 {
                   type: 'paragraph',

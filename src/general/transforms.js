@@ -9,8 +9,7 @@ export default {
     globals: ['accounting'],
     // this is the function that gets called to perform the transform
     transform: function (value, globals) {
-      // var accounting = globals.accounting;
-      return accounting.formatMoney(value);
+      return accounting.formatMoney(value, '$', 2);
     }
   },
   date: {
