@@ -22,7 +22,6 @@ import greeting from './general/greeting';
 import condoList from './data-sources/condo-list';
 import opa from './data-sources/opa';
 import tips from './data-sources/tips';
-// import realEstateTaxDelinquencies from './data-sources/real-estate-tax-delinquencies';
 
 // Topics
 import property from './topics/property';
@@ -34,9 +33,9 @@ import status from './topics/status';
 // turn off console logging in production
 // TODO come up with better way of doing this with webpack + env vars
 const { hostname='' } = location;
-if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
-  console.log = console.info = console.debug = console.error = function () {};
-}
+// if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
+//   console.log = console.info = console.debug = console.error = function () {};
+// }
 
 var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/appboard_base_config/afe6585d/config.js';
 
@@ -52,6 +51,7 @@ appboard({
     width: 515,
     position: 'right',
     autocompleteEnabled: true,
+    autocompleteMax: 15,
     placeholder: 'Search by 9-digit OPA property # or property address',
   },
   rootStyle: {
@@ -69,7 +69,6 @@ appboard({
   dataSources: {
     condoList,
     opa,
-    // realEstateTaxDelinquencies,
     tips,
   },
   defaultTopic: null,
@@ -81,15 +80,6 @@ appboard({
     status,
   ],
   components: [
-    // {
-    //   type: 'callout',
-    // },
-    // {
-    //   type: 'topic',
-    //   key: 'property',
-    //   icon: 'home',
-    //   label: 'Property Information',
-    // }
     {
       type: 'topic-set',
       options: {
