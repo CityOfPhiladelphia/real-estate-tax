@@ -55,10 +55,10 @@ module.exports = {
           enforce: true,
           priority: 5,
         },
-        appboard: {
-          test: /appboard/,
+        mapboard: {
+          test: /mapboard/,
           chunks: 'initial',
-          name: 'appboard',
+          name: 'mapboard',
           priority: 10,
         },
       },

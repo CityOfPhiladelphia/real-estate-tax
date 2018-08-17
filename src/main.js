@@ -10,7 +10,7 @@ __________              .__  ___________         __          __
 import accounting from 'accounting';
 import axios from 'axios';
 import moment from 'moment';
-import appboard from '@cityofphiladelphia/appboard';
+import mapboard from '@cityofphiladelphia/mapboard';
 
 // General Config Modules
 import helpers from './util/helpers';
@@ -30,6 +30,8 @@ import agreements from './topics/agreements';
 import aboutPayment from './topics/about-payment';
 import status from './topics/status';
 
+// import map from './general/map';
+
 // turn off console logging in production
 // TODO come up with better way of doing this with webpack + env vars
 const { hostname='' } = location;
@@ -37,12 +39,17 @@ const { hostname='' } = location;
 //   console.log = console.info = console.debug = console.error = function () {};
 // }
 
-var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/appboard_base_config/afe6585d/config.js';
+// var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/appboard_base_config/afe6585d/config.js';
+var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/b4a9023cc4520625d0bce318cec9e64744aa0fc7/config.js';
 
 // configure accounting.js
 accounting.settings.currency.precision = 0;
 
-appboard({
+mapboard({
+  panels: [
+    'topics',
+  ],
+  // map,
   router: {
     enabled: true
   },
