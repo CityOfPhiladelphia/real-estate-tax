@@ -30,14 +30,20 @@ import agreements from './topics/agreements';
 import aboutPayment from './topics/about-payment';
 import status from './topics/status';
 
-// import map from './general/map';
+
+import map from './general/map';
+import legendControls from './general/legendControls';
+import imageOverlayGroups from './general/imageOverlayGroups';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet-easybutton/src/easy-button.css';
+import 'leaflet-measure/dist/leaflet-measure.css';
 
 // turn off console logging in production
 // TODO come up with better way of doing this with webpack + env vars
 const { hostname='' } = location;
-// if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
-//   console.log = console.info = console.debug = console.error = function () {};
-// }
+if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
+  console.log = console.info = console.debug = console.error = function () {};
+}
 
 // var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/appboard_base_config/afe6585d/config.js';
 var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/b4a9023cc4520625d0bce318cec9e64744aa0fc7/config.js';
@@ -48,8 +54,22 @@ accounting.settings.currency.precision = 0;
 mapboard({
   panels: [
     'topics',
+    // 'map',
   ],
-  // map,
+  map,
+  imageOverlayGroups,
+  legendControls,
+  cyclomedia: {
+    enabled: true,
+    measurementAllowed: false,
+    popoutAble: true,
+  },
+  pictometry: {
+    enabled: true,
+  },
+  geolocation: {
+    enabled: false
+  },
   router: {
     enabled: true
   },
