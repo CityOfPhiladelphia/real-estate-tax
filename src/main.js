@@ -27,7 +27,7 @@ import tips from './data-sources/tips';
 import property from './topics/property';
 import balance from './topics/balance';
 import agreements from './topics/agreements';
-import aboutPayment from './topics/about-payment';
+// import aboutPayment from './topics/about-payment';
 import status from './topics/status';
 
 
@@ -77,7 +77,7 @@ mapboard({
   addressInput: {
     width: 515,
     position: 'right',
-    autocompleteEnabled: true,
+    autocompleteEnabled: false,
     autocompleteMax: 15,
     placeholder: 'Search by 9-digit OPA property # or property address',
   },
@@ -103,7 +103,7 @@ mapboard({
     property,
     balance,
     agreements,
-    aboutPayment,
+    // aboutPayment,
     status,
   ],
   components: [

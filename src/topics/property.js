@@ -11,6 +11,7 @@ export default {
     {
       type: 'callout',
       options: {
+        class: 'columns small-24',
         components: [
           {
             type: 'division',
