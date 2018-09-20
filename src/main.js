@@ -34,6 +34,7 @@ import status from './topics/status';
 import map from './general/map';
 import legendControls from './general/legendControls';
 import imageOverlayGroups from './general/imageOverlayGroups';
+
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-easybutton/src/easy-button.css';
 import 'leaflet-measure/dist/leaflet-measure.css';
