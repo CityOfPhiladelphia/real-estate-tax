@@ -1,6 +1,6 @@
 export default {
   key: 'balance',
-  // icon: 'home',
+  icon: 'usd',
   label: 'Balance Details',
   // REVIEW can these be calculated from vue deps?
   dataSources: ['tips'],

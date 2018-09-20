@@ -1,6 +1,6 @@
 export default {
   key: 'status',
-  // icon: 'home',
+  icon: 'asterisk',
   label: 'Status Details',
   // REVIEW can these be calculated from vue deps?
   dataSources: ['opa'],
