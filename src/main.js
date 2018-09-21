@@ -47,7 +47,7 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
 }
 
 // var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/appboard_base_config/afe6585d/config.js';
-var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/b4a9023cc4520625d0bce318cec9e64744aa0fc7/config.js';
+var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/ede6913302cd65ef32d7d24d4e7793b1b28f7566/config.js';
 
 // configure accounting.js
 accounting.settings.currency.precision = 0;
