@@ -1,3 +1,6 @@
+import helpers from '../util/helpers.js';
+console.log('helpers:', helpers);
+
 export default {
   key: 'balance',
   icon: 'usd',
@@ -5,6 +8,29 @@ export default {
   // REVIEW can these be calculated from vue deps?
   dataSources: ['tips'],
   components: [
+    // {
+    //   type: 'callout',
+    //   options: {
+    //     class: 'columns small-24',
+    //     components: [
+    //       {
+    //         type: 'popover-link',
+    //         slots: {
+    //           value: 'SEQR',
+    //           // value: function(state) {
+    //           //   return state.geocode.status;
+    //           // },
+    //           popoverTransforms: [
+    //             'statusMap',
+    //           ],
+    //           popoverPreText: function(state) {
+    //             return '<i class="fa fa-info-circle" aria-hidden="true"></i> <strong>' + state.geocode.status + '</strong> - '
+    //           },
+    //         },
+    //       }
+    //     ]
+    //   }
+    // },
     {
       type: 'horizontal-table',
       options: {
@@ -80,9 +106,17 @@ export default {
           },
           {
             label: 'Status',
-            value: function(state, item){
+            value: function(state, item) {
               return item.status;
-            }
+              // return 'LSLD';
+            },
+            popoverLink: true,
+            popoverTransforms: [
+              'statusMap',
+            ],
+            popoverPreText: function(state, item) {
+              return '<i class="fa fa-info-circle" aria-hidden="true"></i> <strong>' + item.status + '</strong> - '
+            },
           },
         ],
         sort: {
@@ -93,17 +127,6 @@ export default {
           // asc or desc
           order: 'asc'
         },
-        // externalLink: {
-        //   action: function(count) {
-        //     return 'See ' + count + ' older permits at L&I Property History';
-        //   },
-        //   name: 'L&I Property History',
-        //   href: function(state) {
-        //     var address = state.geocode.data.properties.street_address;
-        //     var addressEncoded = encodeURIComponent(address);
-        //     return 'http://li.phila.gov/#summary?address=' + addressEncoded;
-        //   }
-        // }
       },
       slots: {
         title: 'Balance Details',

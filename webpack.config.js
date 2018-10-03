@@ -18,7 +18,7 @@ module.exports = {
     port: process.env.WEBPACK_DEV_PORT
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
+    // path: path.resolve(__dirname, 'public'),
     filename: '[name].js',
     publicPath: '/',
   },
