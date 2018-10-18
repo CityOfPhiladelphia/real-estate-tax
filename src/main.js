@@ -24,6 +24,7 @@ import opa from './data-sources/opa';
 import tips from './data-sources/tips';
 
 // Topics
+import condos from './topics/condos';
 import property from './topics/property';
 import balance from './topics/balance';
 import agreements from './topics/agreements';
@@ -100,6 +101,7 @@ mapboard({
   },
   defaultTopic: null,
   topics: [
+    condos,
     property,
     balance,
     agreements,

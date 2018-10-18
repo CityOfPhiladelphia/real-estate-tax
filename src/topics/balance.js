@@ -3,7 +3,7 @@ console.log('helpers:', helpers);
 
 export default {
   key: 'balance',
-  icon: 'usd',
+  icon: 'usd-circle',
   label: 'Balance Details',
   // REVIEW can these be calculated from vue deps?
   dataSources: ['tips'],
