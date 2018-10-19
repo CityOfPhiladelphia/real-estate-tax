@@ -1,11 +1,10 @@
 import generateBillingXml from '../util/generate-billing-xml';
-import axios from 'axios';
+import transforms from '../general/transforms';
 
 export default {
   key: 'property',
   icon: 'home',
   label: 'Property Information',
-  // REVIEW can these be calculated from vue deps?
   dataSources: ['opa', 'tips'],
   components: [
     {
@@ -26,33 +25,81 @@ export default {
               // 'text-align: center; vertical-align: middle;',
               components: [
                 {
-                  type: 'span-comp',
-                  slots: {
-                    text:'<h4>Balance Due</h4>'
+                  type: 'division',
+                  options: {
+                    style: '\
+                            display: flex;\
+                            flex-direction: column;\
+                            justify-content: center;\
+                            align-items: center;\
+                            ',
+                    components: [
+                      {
+                        type: 'any-header',
+                        options: {
+                          'headerType': 'h4',
+                          style: '\
+                            margin-bottom: 0px;\
+                            margin-top: 0px;\
+                          '
+                        },
+                        slots: {
+                          text: 'Balance Due',
+                        }
+                      },
+                    ],
+                  },
+                },
+                {
+                  type: 'division',
+                  options: {
+                    style: '\
+                            display: flex;\
+                            flex-direction: column;\
+                            justify-content: center;\
+                            align-items: center;\
+                            ',
+                    components: [
+                      {
+                        type: 'any-header',
+                        options: {
+                          'headerType': 'h2',
+                          style: '\
+                            margin-bottom: 0px;\
+                            margin-top: 0px;\
+                          '
+                        },
+                        slots: {
+                          text: function(state) {
+                            if (state.appData.propertyBalance) {
+                              return state.appData.propertyBalance;
+                            } else {
+                              return '0';
+                            }
+                          },
+                          additionalTags: ['b'],
+                          transforms: [
+                            'currency'
+                          ]
+                        }
+                      },
+                    ],
                   }
                 },
                 {
-                  type: 'any-header',
+                  type: 'paragraph',
                   options: {
-                    'headerType': 'h2',
                     style: '\
-                      margin-bottom: 0px\
+                    margin: auto;\
+                    text-align: center;\
                     '
                   },
                   slots: {
                     text: function(state) {
-                      if (state.appData.propertyBalance) {
-                        return state.appData.propertyBalance;
-                      } else {
-                        return '0';
-                      }
+                      return 'Last Payment Posted Date: ' + transforms.date.transform(state.sources.tips.data.data.lastPaymentPostedDate);
                     },
-                    additionalTags: ['b'],
-                    transforms: [
-                      'currency'
-                    ]
                   }
-                }
+                },
               ]
             },
           },
@@ -153,7 +200,6 @@ export default {
             label: 'Assessed Value',// + new Date().getFullYear(),
             value: function(state) {
               var data = state.sources.opa.data;
-              // return data.market_value;
               var result;
               if (data) {
                 result = data.market_value;
@@ -170,7 +216,6 @@ export default {
             label: 'Sale Date',
             value: function(state) {
               var data = state.sources.opa.data;
-              // return data.sale_date;
               var result;
               if (data) {
                 result = data.sale_date;
@@ -187,7 +232,6 @@ export default {
             label: 'Sale Price',
             value: function(state) {
               var data = state.sources.opa.data;
-              // return data.sale_price;
               var result;
               if (data) {
                 result = data.sale_price;
@@ -218,41 +262,4 @@ export default {
       }
     }
   ],
-  // basemap: 'pwd',
-  // identifyFeature: 'address-marker',
-  // we might not need this anymore, now that we have identifyFeature
-  // parcels: 'pwd',
-  // errorMessage: function (state) {
-  //   var data = state.sources.condoList.data;
-  //       // features = data.features;
-  //
-  //   if (data) {
-  //     var numCondos = data.total_size;
-  //
-  //     if (numCondos > 0) {
-  //       var shouldPluralize = numCondos > 1,
-  //           isOrAre = shouldPluralize ? 'are' : 'is',
-  //           unitOrUnits = shouldPluralize ? 'units' : 'unit',
-  //           message = [
-  //             '<h3>',
-  //             'There ',
-  //             isOrAre,
-  //             // ' <strong>',
-  //             ' ',
-  //             numCondos,
-  //             ' condominium ',
-  //             unitOrUnits,
-  //             // '</strong> at this address.</h3>',
-  //             ' at this address.</h3>',
-  //             // ' at this address. ',
-  //             '<p>You can use the Condominiums tab below to see information for an individual unit.</p>'
-  //             // 'Please select a unit from the Condominiums tab below.'
-  //           ].join('');
-  //
-  //       return message;
-  //     }
-  //   } else {
-  //     return 'There is no property assessment record for this address.';
-  //   }
-  // }
 }

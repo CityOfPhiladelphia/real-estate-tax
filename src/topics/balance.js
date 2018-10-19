@@ -1,5 +1,4 @@
 import helpers from '../util/helpers.js';
-console.log('helpers:', helpers);
 
 export default {
   key: 'balance',
