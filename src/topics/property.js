@@ -96,7 +96,7 @@ export default {
                   },
                   slots: {
                     text: function(state) {
-                      return 'Last Payment Posted Date: ' + transforms.date.transform(state.sources.tips.data.data.lastPaymentPostedDate);
+                      return 'Includes Payments Through: ' + transforms.date.transform(state.sources.tips.data.data.lastPaymentPostedDate);
                     },
                   }
                 },
