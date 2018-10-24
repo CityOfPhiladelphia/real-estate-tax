@@ -20,7 +20,7 @@ module.exports = {
     port: 8084
   },
   output: {
-    // path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'public'),
     filename: '[name].js',
     publicPath: '/',
   },
