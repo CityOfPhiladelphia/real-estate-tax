@@ -27,7 +27,7 @@ import tips from './data-sources/tips';
 import condos from './topics/condos';
 import property from './topics/property';
 import balance from './topics/balance';
-import agreements from './topics/agreements';
+// import agreements from './topics/agreements';
 // import aboutPayment from './topics/about-payment';
 import status from './topics/status';
 
@@ -58,6 +58,14 @@ mapboard({
     // 'map',
   ],
   map,
+  addressHeaderAdditionalInfo: {
+    data: 'opa_account_num',
+    preText: 'OPA #',
+    options: {
+      headerType: 'h3',
+      style: 'margin-top: 5px; margin-bottom: 0px;',
+    }
+  },
   imageOverlayGroups,
   legendControls,
   cyclomedia: {
@@ -74,7 +82,7 @@ mapboard({
   router: {
     enabled: true
   },
-  defaultAddressTextPlaceholder: "BEGIN REAL ESTATE TAX PAYMENT",
+  defaultAddressTextPlaceholder: "BEGIN REAL ESTATE TAX PAYMENT SEARCH",
   addressInput: {
     width: 515,
     position: 'right',
@@ -104,7 +112,7 @@ mapboard({
     condos,
     property,
     balance,
-    agreements,
+    // agreements,
     // aboutPayment,
     status,
   ],

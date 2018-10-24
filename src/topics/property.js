@@ -147,6 +147,7 @@ export default {
                       justify-content: center;\
                       align-items: center;\
                       padding-top: 15px;\
+                      margin-bottom: 10px;\
                       ',
               components: [
                 {
@@ -159,11 +160,35 @@ export default {
                   slots: {
                     text: function(state) {
                       if (state.appData.propertyBalance) {
-                        return 'There are other payment options and assistance plans available. <a href="https://www.phila.gov/services/payments-assistance-taxes/payment-plans/" target="_blank"><b>CLICK HERE</b></a> for more information.';
+                        return 'There are other payment options and assistance plans available.';// <a href="https://www.phila.gov/services/payments-assistance-taxes/payment-plans/" target="_blank"><b>CLICK HERE</b></a> for more information.';
                       } else {
                         return 'There is no current balance due on this property';
                       }
                     },
+                  }
+                },
+              ]
+            },
+          },
+          {
+            type: 'division',
+            options: {
+              class: 'columns small-24 medium-12',
+              style: '\
+                      display: flex;\
+                      flex-direction: column;\
+                      justify-content: center;\
+                      align-items: center;\
+                      ',
+                      // padding-top: 15px;\
+              components: [
+                {
+                  type: 'button-comp',
+                  slots: {
+                    buttonAction: function(state) {
+                      window.open('https://www.phila.gov/services/payments-assistance-taxes/payment-plans/', '_blank');
+                    },
+                    text:'Payment Agreements'
                   }
                 },
               ]

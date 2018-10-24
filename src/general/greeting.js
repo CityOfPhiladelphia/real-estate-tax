@@ -8,10 +8,10 @@ export default {
       <p>Real Estate Tax bills are sent in December for the following year and payments are due March 31st. If you pay on\
         or before the last day of February, you receive a 1% discount. If you pay after March 31, you are subject to\
         increased charges called "additions". At the end of the year, these charges begin to accrue taxes and penalties.</p><br>\
-      <p>For questions about your account, email revenue@phila.gov or call 215-686-6442.</p><br>\
-      <p>For questions about account payoffs, email retaxpayoff@phila.gov. To receive payoff amounts, please email\
+      <p>For questions about your account, email <a href="mailto:revenue@phila.gov">revenue@phila.gov</a> or call 215-686-6442.</p><br>\
+      <p>For questions about account payoffs, email <a href="mailto:retaxpayoff@phila.gov">retaxpayoff@phila.gov</a>. To receive payoff amounts, please email\
         the statement of claim number from the legal action, the property address and/or the Office of Property\
-        Assessment number to retaxpayoff@phila.gov or fax it to 215-686-0582.</p><br>\
+        Assessment number to <a href="mailto:retaxpayoff@phila.gov">retaxpayoff@phila.gov</a> or fax it to 215-686-0582.</p><br>\
     </div>\
   ',
 }
