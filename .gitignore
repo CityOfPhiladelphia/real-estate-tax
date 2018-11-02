@@ -4,3 +4,4 @@ public/*.js
 public/*.js.map
 .netlify
 dist/
+.npmrc
