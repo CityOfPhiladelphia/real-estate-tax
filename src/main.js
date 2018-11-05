@@ -31,14 +31,18 @@ import balance from './topics/balance';
 // import aboutPayment from './topics/about-payment';
 import status from './topics/status';
 
-
 import map from './general/map';
 import legendControls from './general/legendControls';
 import imageOverlayGroups from './general/imageOverlayGroups';
 
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-easybutton/src/easy-button.css';
-import 'leaflet-measure/dist/leaflet-measure.css';
+import '@fortawesome/fontawesome-pro/js/all';
+// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import '../node_modules/phila-standards/dist/css/phila-app.min.css';
+import './styles.css';
+
+// import 'leaflet/dist/leaflet.css';
+// import 'leaflet-easybutton/src/easy-button.css';
+// import 'leaflet-measure/dist/leaflet-measure.css';
 
 // turn off console logging in production
 // TODO come up with better way of doing this with webpack + env vars
