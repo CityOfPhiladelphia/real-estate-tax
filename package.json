@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A real estate tax data viewer for the City of Philadelphia",
   "main": "",
-  "repository": "https://github.com/cityofphiladelphia/atlas",
+  "repository": "https://github.com/cityofphiladelphia/real-estate-demo",
   "author": "City of Philadelphia <maps@phila.gov>",
   "license": "MIT",
   "private": false,
@@ -20,21 +20,17 @@
     "phila-standards": "^1.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
     "@fortawesome/fontawesome-pro": "^5.5.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.7.0",
+    "babel-loader": "^8.0.4",
     "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "style-loader": "^0.20.3",
-    "webpack": "4.2.0",
-    "webpack-cli": "^2.0.13",
-    "webpack-dev-server": "^3.1.1"
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
+    "webpack": "^4.25.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }

@@ -1,12 +1,12 @@
 const path = require('path');
-const webpack = require('webpack');
-
 const env = process.env.NODE_ENV;
 const isDevelopment = env === 'development';
 
-module.exports = {
+// const VueLoaderPlugin = require('vue-loader/lib/plugin')
+
+export default {
   entry: {
-    app: './src/main.js',
+    app: ['./src/index.html', './src/main.js'],
   },
   resolve: {
     mainFields: ['module', 'main', 'browser'],
@@ -14,8 +14,8 @@ module.exports = {
   devtool: isDevelopment ? 'inline-source-map' : 'source-map',
   devServer: {
     contentBase: './public',
-    host: process.env.WEBPACK_DEV_HOST,
-    // host: 'localhost',
+    // host: process.env.WEBPACK_DEV_HOST,
+    host: 'localhost',
     // port: process.env.WEBPACK_DEV_PORT
     port: 8084
   },
@@ -27,8 +27,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: 'babel-loader',
+        test: /\.js/,
+        exclude: /(node_modules|bower_components)/,
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ]
+      },
+      {
+        test: /\.html/,
+        loader: 'file-loader?name=[name].[ext]',
       },
       {
         test: /\.css$/,
@@ -41,11 +50,19 @@ module.exports = {
           name: 'images/[name].[ext]?[hash]',
         },
       },
-    ],
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }
+    ]
   },
-  plugins: [
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
-  ],
+  // plugins: [
+  //   new VueLoaderPlugin()
+  // ],
+  stats: {
+      colors: true
+  },
+  devtool: 'source-map',
   mode: env,
   optimization: {
     splitChunks: {
