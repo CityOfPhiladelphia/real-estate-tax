@@ -49,11 +49,11 @@ export default {
         options: {
           name: 'images/[name].[ext]?[hash]',
         },
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
       }
+      // {
+      //   test: /\.vue$/,
+      //   loader: 'vue-loader'
+      // }
     ]
   },
   // plugins: [
