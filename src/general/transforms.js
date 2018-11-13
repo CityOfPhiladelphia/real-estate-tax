@@ -28,7 +28,7 @@ export default {
         'SEQR': `Collections being pursued by Law Department\'s Sequestration/Receivership Program. Please search the civil docket.
                 <br><br>This charge has a tax lien that is in the Sequestration Program. For more information regarding the status
                 of the sequestration proceedings, you may call 215-686-3629, or search the Philadelphia Court's civil docket
-                at <a href="http://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer" target="_blank">Civil Docket Access</a>.
+                at <a style="color: #dbe0ff;" href="http://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer" target="_blank">Civil Docket Access</a>.
                 You may enter the property owner's name in the Court’s “Caption” search box.`,
       }
       if (map[value]) {

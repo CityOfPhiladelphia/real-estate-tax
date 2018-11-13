@@ -116,22 +116,52 @@ export default {
                       ',
               components: [
                 {
-                  type: 'e-pay-form',
-                  slots: {
-                    buttonAction: function(state) {
-
-                      const data = {
-                        'accountNum': state.sources.tips.data.data.accountNum,
-                        'totalDue': 0,
-                        'balances': state.sources.tips.data.data,
-                        'address': {
-                          'streetAddress': state.sources.tips.data.data.property.address,
-                          'zipCode': state.geocode.data.properties.zip_code,
+                  type: 'division',
+                  options: {
+                    // class: 'columns small-24 medium-6',
+                    style: '\
+                            display: flex;\
+                            flex-direction: column;\
+                            justify-content: center;\
+                            align-items: center;\
+                            ',
+                            // padding-top: 15px;\
+                    components: [
+                      {
+                        type: 'e-pay-form',
+                        options: {
+                          height: 50,
+                          width: 160,
+                          fontSize: 25,
+                        },
+                        slots: {
+                          buttonAction: function(state) {
+                            const data = {
+                              'accountNum': state.sources.tips.data.data.accountNum,
+                              'totalDue': 0,
+                              'balances': state.sources.tips.data.data,
+                              'address': {
+                                'streetAddress': state.sources.tips.data.data.property.address,
+                                'zipCode': state.geocode.data.properties.zip_code,
+                              }
+                            }
+                            return generateBillingXml(data);
+                          },
+                          text:'Pay Now'
                         }
-                      }
-                      return generateBillingXml(data);
-                    },
-                    text:'Pay Now'
+                      },
+                    ],
+                  }
+                },
+                {
+                  type: 'paragraph',
+                  options: {
+                    style: '\
+                    margin: auto;\
+                    '
+                  },
+                  slots: {
+                    text: 'Or pay by phone (877) 309-3710',
                   }
                 },
               ]
@@ -140,7 +170,7 @@ export default {
           {
             type: 'division',
             options: {
-              class: 'columns small-24 medium-12',
+              class: 'columns small-24 medium-6',
               style: '\
                       display: flex;\
                       flex-direction: column;\
@@ -151,6 +181,28 @@ export default {
                       ',
               components: [
                 {
+                  type: 'division',
+                  options: {
+                    style: '\
+                            display: flex;\
+                            flex-direction: column;\
+                            justify-content: center;\
+                            align-items: center;\
+                            ',
+                    components: [
+                      {
+                        type: 'button-comp',
+                        slots: {
+                          buttonAction: function(state) {
+                            window.open('https://www.phila.gov/services/payments-assistance-taxes/payment-plans/', '_blank');
+                          },
+                          text:'Payment Plans'
+                        }
+                      },
+                    ]
+                  },
+                },
+                {
                   type: 'paragraph',
                   options: {
                     style: '\
@@ -160,7 +212,7 @@ export default {
                   slots: {
                     text: function(state) {
                       if (state.appData.propertyBalance) {
-                        return 'There are other payment options and assistance plans available.';// <a href="https://www.phila.gov/services/payments-assistance-taxes/payment-plans/" target="_blank"><b>CLICK HERE</b></a> for more information.';
+                        return 'Other payment options and assistance plans are available.';// <a href="https://www.phila.gov/services/payments-assistance-taxes/payment-plans/" target="_blank"><b>CLICK HERE</b></a> for more information.';
                       } else {
                         return 'There is no current balance due on this property';
                       }
@@ -173,22 +225,47 @@ export default {
           {
             type: 'division',
             options: {
-              class: 'columns small-24 medium-12',
+              class: 'columns small-24 medium-6',
               style: '\
                       display: flex;\
                       flex-direction: column;\
                       justify-content: center;\
                       align-items: center;\
+                      padding-top: 15px;\
+                      margin-bottom: 10px;\
                       ',
-                      // padding-top: 15px;\
               components: [
                 {
-                  type: 'button-comp',
+                  type: 'division',
+                  options: {
+                    style: '\
+                            display: flex;\
+                            flex-direction: column;\
+                            justify-content: center;\
+                            align-items: center;\
+                            ',
+                    components: [
+                      {
+                        type: 'button-comp',
+                        slots: {
+                          buttonAction: function(state) {
+                            window.open('https://ework.phila.gov/revenue/', '_blank');
+                          },
+                          text:'Print Payment Coupon'
+                        }
+                      },
+                    ]
+                  },
+                },
+                {
+                  type: 'paragraph',
+                  options: {
+                    style: '\
+                    margin: auto;\
+                    '
+                  },
                   slots: {
-                    buttonAction: function(state) {
-                      window.open('https://www.phila.gov/services/payments-assistance-taxes/payment-plans/', '_blank');
-                    },
-                    text:'Payment Agreements'
+                    text: 'Print a payment coupon',
                   }
                 },
               ]
