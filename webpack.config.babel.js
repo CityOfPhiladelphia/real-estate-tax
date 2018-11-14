@@ -6,7 +6,8 @@ const isDevelopment = env === 'development';
 
 export default {
   entry: {
-    app: ['./public/index.html', './src/main.js'],
+    app: ['./public/index.html', './public/styles.css', './src/main.js'],
+    // app: ['./src/main.js'],
   },
   resolve: {
     mainFields: ['module', 'main', 'browser'],
