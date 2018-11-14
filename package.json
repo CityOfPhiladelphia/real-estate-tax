@@ -12,7 +12,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
-    "@cityofphiladelphia/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#985b22b693660b1b1904f9303f2763286d4fe952",
+    "@cityofphiladelphia/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#3ca50327d578d4b68319218b4f6e6704ab279d63",
     "accounting": "^0.4.1",
     "axios": "^0.18.0",
     "escape-html": "^1.0.3",
