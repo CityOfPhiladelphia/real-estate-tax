@@ -86,13 +86,13 @@ mapboard({
   router: {
     enabled: true
   },
-  defaultAddressTextPlaceholder: "BEGIN REAL ESTATE TAX PAYMENT SEARCH",
+  defaultAddressTextPlaceholder: "Search Address or 9-digit OPA Property #",
   addressInput: {
-    width: 515,
+    width: 465,
     position: 'right',
     autocompleteEnabled: false,
     autocompleteMax: 15,
-    placeholder: 'Search by 9-digit OPA property # or property address',
+    placeholder: ' ',
   },
   rootStyle: {
     position: 'absolute',
