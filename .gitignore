@@ -1,6 +1,5 @@
 node_modules
 yarn-error.log
-public/
 .netlify
 dist/
 .npmrc

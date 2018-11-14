@@ -6,21 +6,21 @@ const isDevelopment = env === 'development';
 
 export default {
   entry: {
-    app: ['./src/index.html', './src/main.js'],
+    app: ['./public/index.html', './src/main.js'],
   },
   resolve: {
     mainFields: ['module', 'main', 'browser'],
   },
   devtool: isDevelopment ? 'inline-source-map' : 'source-map',
   devServer: {
-    contentBase: './public',
+    contentBase: './dist',
     // host: process.env.WEBPACK_DEV_HOST,
     host: 'localhost',
     // port: process.env.WEBPACK_DEV_PORT
     port: 8084
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     publicPath: '/',
   },
