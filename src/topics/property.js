@@ -170,7 +170,7 @@ export default {
                     ',
                   },
                   slots: {
-                    text: 'Or pay by phone (877) 309-3710',
+                    text: 'Or pay by phone (877) 309-3710.',
                     vshowProp: function(state) {
                       console.log('account:', account);
                       const totalDue = state.sources.tips.data.data.years.reduce((acc, year) => {
@@ -230,9 +230,9 @@ export default {
                   slots: {
                     text: function(state) {
                       if (state.appData.propertyBalance) {
-                        return 'Other payment options and assistance plans are available.';// <a href="https://www.phila.gov/services/payments-assistance-taxes/payment-plans/" target="_blank"><b>CLICK HERE</b></a> for more information.';
+                        return 'Need help with your bill? We offer payment options and assistance plans.';// <a href="https://www.phila.gov/services/payments-assistance-taxes/payment-plans/" target="_blank"><b>CLICK HERE</b></a> for more information.';
                       } else {
-                        return 'There is no current balance due on this property';
+                        return 'There is no current balance due on this property.';
                       }
                     },
                   }
@@ -294,7 +294,7 @@ export default {
                     '
                   },
                   slots: {
-                    text: 'Print a payment coupon',
+                    text: 'Print a payment coupon.',
                   }
                 },
               ]
