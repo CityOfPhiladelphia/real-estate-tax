@@ -1,5 +1,7 @@
 import generateBillingXml from '../util/generate-billing-xml';
 import transforms from '../general/transforms';
+// import propertyCallout from '../components/propertyCallout.vue';
+import account from '../util/account.js';
 
 export default {
   key: 'property',
@@ -7,6 +9,13 @@ export default {
   label: 'Property Information',
   dataSources: ['opa', 'tips'],
   components: [
+    // {
+    //   type: 'propertyCallout',
+    //   slots: {
+    //     text: 'test'
+    //   }
+    // },
+
     {
       type: 'callout',
       options: {
@@ -158,10 +167,19 @@ export default {
                   options: {
                     style: '\
                     margin: auto;\
-                    '
+                    ',
                   },
                   slots: {
                     text: 'Or pay by phone (877) 309-3710',
+                    vshowProp: function(state) {
+                      console.log('account:', account);
+                      const totalDue = state.sources.tips.data.data.years.reduce((acc, year) => {
+                        const yearTotal = account.methods.totalForYear(year);
+                        return acc + yearTotal;
+                      }, 0);
+                      console.log('totalDue:', totalDue);
+                      return totalDue > 0;
+                    }
                   }
                 },
               ]
@@ -224,6 +242,17 @@ export default {
           },
           {
             type: 'division',
+            slots: {
+              vshowProp: function(state) {
+                console.log('account:', account);
+                const totalDue = state.sources.tips.data.data.years.reduce((acc, year) => {
+                  const yearTotal = account.methods.totalForYear(year);
+                  return acc + yearTotal;
+                }, 0);
+                console.log('totalDue:', totalDue);
+                return totalDue > 0;
+              }
+            },
             options: {
               class: 'columns small-24 medium-6',
               style: '\

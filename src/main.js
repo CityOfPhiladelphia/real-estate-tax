@@ -56,7 +56,16 @@ var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/2b
 // configure accounting.js
 accounting.settings.currency.precision = 0;
 
+
+// import propertyCallout from './components/propertyCallout.vue';
+// const customComps = {
+//   'propertyCallout': propertyCallout
+// };
+
+
+
 mapboard({
+  // customComps,
   panels: [
     'topics',
     // 'map',
