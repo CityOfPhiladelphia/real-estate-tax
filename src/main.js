@@ -66,6 +66,10 @@ accounting.settings.currency.precision = 0;
 
 mapboard({
   // customComps,
+  header: {
+    enabled: true,
+    text: 'Real Estate Tax Balance Search'
+  },
   panels: [
     'topics',
     // 'map',
