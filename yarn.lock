@@ -530,11 +530,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#324fa300aaa51eebfb7d1ab9b8136ce880ad77ec":
+"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#226922ffafbcfaf27d7aa5c4ab469c0341112c7e":
   version "3.0.15"
-  resolved "https://github.com/CityOfPhiladelphia/mapboard#324fa300aaa51eebfb7d1ab9b8136ce880ad77ec"
+  resolved "https://github.com/CityOfPhiladelphia/mapboard#226922ffafbcfaf27d7aa5c4ab469c0341112c7e"
   dependencies:
-    "@cityofphiladelphia/phila-vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#f94fdbb463d6a437d1bece6b3e4fafa7a4134161"
+    "@cityofphiladelphia/phila-vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#485d4148e843c985bdb95f7f6182144f499bd17a"
     "@cityofphiladelphia/phila-vue-datafetch" "0.0.12"
     "@cityofphiladelphia/phila-vue-mapping" "1.0.11"
     "@fortawesome/fontawesome-svg-core" "^1.2.5"
@@ -557,9 +557,9 @@
     vue "^2.5.16"
     vuex "^3.0.1"
 
-"@cityofphiladelphia/phila-vue-comps@https://github.com/CityOfPhiladelphia/phila-vue-comps#f94fdbb463d6a437d1bece6b3e4fafa7a4134161":
+"@cityofphiladelphia/phila-vue-comps@https://github.com/CityOfPhiladelphia/phila-vue-comps#485d4148e843c985bdb95f7f6182144f499bd17a":
   version "1.0.13"
-  resolved "https://github.com/CityOfPhiladelphia/phila-vue-comps#f94fdbb463d6a437d1bece6b3e4fafa7a4134161"
+  resolved "https://github.com/CityOfPhiladelphia/phila-vue-comps#485d4148e843c985bdb95f7f6182144f499bd17a"
   dependencies:
     axios "^0.18.0"
     escape-html "^1.0.3"
@@ -4063,8 +4063,8 @@ forwarded@~0.1.2:
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
 
 foundation-sites@^6.4.3:
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.5.0.tgz#7bd4cb33977cbcb8a1cae5ad32c7c0de0fdbfc71"
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.5.1.tgz#a96da2da2dc81b84ff7730714ca1090445de4a42"
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -6873,13 +6873,13 @@ source-map-url@^0.4.0:
 
 source-map@^0.1.34, source-map@~0.1.33:
   version "0.1.43"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
+  resolved "http://registry.npmjs.org/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
   dependencies:
     amdefine ">=0.0.4"
 
 source-map@^0.4.2:
   version "0.4.4"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
+  resolved "http://registry.npmjs.org/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
   dependencies:
     amdefine ">=0.0.4"
 
