@@ -49,6 +49,11 @@ export default {
       },
       options: {
         id: 'statusDetails',
+        styles: {
+          th: {
+            'width': '10%'
+          }
+        }
       }
     }
   ],

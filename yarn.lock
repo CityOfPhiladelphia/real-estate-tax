@@ -530,11 +530,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cityofphiladelphia/mapboard@3.0.16":
+"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#295d32012ab57167fa1589569822c8a333e40efb":
   version "3.0.16"
-  resolved "https://registry.yarnpkg.com/@cityofphiladelphia/mapboard/-/mapboard-3.0.16.tgz#2573405cd60b1e9442445c19478671be44731e49"
+  resolved "https://github.com/CityOfPhiladelphia/mapboard#295d32012ab57167fa1589569822c8a333e40efb"
   dependencies:
-    "@cityofphiladelphia/phila-vue-comps" "1.0.14"
+    "@cityofphiladelphia/phila-vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#544fc7c26ada055a1b47cd9602fdc84ac05ed90f"
     "@cityofphiladelphia/phila-vue-datafetch" "0.0.12"
     "@cityofphiladelphia/phila-vue-mapping" "1.0.11"
     "@fortawesome/fontawesome-svg-core" "^1.2.5"
@@ -557,9 +557,9 @@
     vue "^2.5.16"
     vuex "^3.0.1"
 
-"@cityofphiladelphia/phila-vue-comps@1.0.14":
+"@cityofphiladelphia/phila-vue-comps@https://github.com/CityOfPhiladelphia/phila-vue-comps#544fc7c26ada055a1b47cd9602fdc84ac05ed90f":
   version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@cityofphiladelphia/phila-vue-comps/-/phila-vue-comps-1.0.14.tgz#103445e910b5f6cc285500972211c6a8717a2b07"
+  resolved "https://github.com/CityOfPhiladelphia/phila-vue-comps#544fc7c26ada055a1b47cd9602fdc84ac05ed90f"
   dependencies:
     axios "^0.18.0"
     escape-html "^1.0.3"

@@ -99,7 +99,17 @@ mapboard({
   router: {
     enabled: true
   },
-  defaultAddressTextPlaceholder: "Search Address or 9-digit OPA Property #",
+  defaultAddressTextPlaceholder: {
+    text: "Search Address or 9-digit OPA Property Number",
+    wideStyle: {
+      'font-size': '24px',
+      'line-height': '28px'
+    },
+    narrowStyle: {
+      'font-size': '20px',
+      'line-height': '24px'
+    }
+  },
   addressInput: {
     width: 465,
     position: 'right',

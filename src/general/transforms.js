@@ -17,16 +17,14 @@ export default {
         'INST': 'Active installment payment plan in effect for current taxes.',
         'PIO': 'Collections being pursued by Pioneer Collection Agency. Please call 866-439-1318.',
         'BRT': 'Under appeal with the Board of Revision of Taxes.',
-        'LSLD': `Sold to a third-party at Tax Lien Sale. Search the civil court docket for more information.
-                <br><br>This charge has a tax lien that was sold to a private third-party lien-holder at a City Tax Lien Sale.
+        'LSLD': `This charge has a tax lien that was sold to a private third-party lien-holder at a City Tax Lien Sale.
                 Therefore, the amounts listed below for those years may not include all Real Estate Tax liabilities currently due.
                 For more information regarding the name, address, and phone number of the new lien-holder, as well as the
                 status of the lien(s), you may search the Philadelphia Court's civil docket
                 at <a href="http://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer" target="_blank">Civil Docket Access</a>.
                 You may enter or copy/paste the 13-digit lien number listed below (ex. 1504R14010000) to the Court’s “Case ID” search box.`,
         'DISC': 'Discounted amount good until March 1st.',
-        'SEQR': `Collections being pursued by Law Department\'s Sequestration/Receivership Program. Please search the civil docket.
-                <br><br>This charge has a tax lien that is in the Sequestration Program. For more information regarding the status
+        'SEQR': `This charge has a tax lien that is in the Law Department\'s Sequestration/Receivership Program. For more information regarding the status
                 of the sequestration proceedings, you may call 215-686-3629, or search the Philadelphia Court's civil docket
                 at <a href="http://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer" target="_blank">Civil Docket Access</a>.
                 You may enter the property owner's name in the Court’s “Caption” search box.`,
