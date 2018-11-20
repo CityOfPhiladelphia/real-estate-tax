@@ -35,6 +35,10 @@ export default {
       options: {
         id: 'balanceDetails',
         // limit: 5,
+        totalRow: {
+          enabled: true,
+          totalField: 'year'
+        },
         fields: [
           {
             label: 'Year',
