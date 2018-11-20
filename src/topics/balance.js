@@ -46,9 +46,9 @@ export default {
               return item.year;
             },
             nullValue: 'no year available',
-            // transforms: [
-            //   'date'
-            // ]
+            transforms: [
+              'misc'
+            ]
           },
           {
             label: 'Principal',

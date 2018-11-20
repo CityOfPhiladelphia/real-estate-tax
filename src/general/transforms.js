@@ -36,6 +36,15 @@ export default {
       }
     }
   },
+  misc: {
+    transform: function(value) {
+      if (value === 2034) {
+        return 'MISC';
+      } else {
+        return value;
+      }
+    }
+  },
   currency: {
     // a list of global objects this transform depends on
     globals: ['accounting'],
