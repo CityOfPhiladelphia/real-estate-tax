@@ -6,6 +6,7 @@ __________              .__  ___________         __          __
  |____|_  /\___  >____  /____/_______  /____  > |__| (____  /__|  \___  >
         \/     \/     \/             \/     \/            \/          \/
 */
+import '@babel/polyfill';
 
 import accounting from 'accounting';
 import axios from 'axios';
