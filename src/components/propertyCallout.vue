@@ -127,6 +127,7 @@
 
 .p-margin {
   margin: auto;
+  max-width: 100%;
 }
 
 </style>
