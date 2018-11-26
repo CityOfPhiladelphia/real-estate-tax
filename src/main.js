@@ -107,12 +107,12 @@ mapboard({
   defaultAddressTextPlaceholder: {
     text: "Search Address or 9-digit OPA Property Number",
     wideStyle: {
-      'width': '100%',
+      'max-width': '100%',
       'font-size': '24px',
       'line-height': '28px'
     },
     narrowStyle: {
-      'width': 'auto',
+      'max-width': '100%',
       'font-size': '20px',
       'line-height': '24px'
     }
