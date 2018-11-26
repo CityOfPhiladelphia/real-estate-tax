@@ -6,6 +6,10 @@ __________              .__  ___________         __          __
  |____|_  /\___  >____  /____/_______  /____  > |__| (____  /__|  \___  >
         \/     \/     \/             \/     \/            \/          \/
 */
+
+import * as Sentry from '@sentry/browser';
+Sentry.init({ dsn: 'https://6702e2c2f3ea4c6384583fbed0b54f4f@sentry.io/1330799' });
+
 import '@babel/polyfill';
 
 import accounting from 'accounting';

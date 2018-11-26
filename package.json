@@ -14,6 +14,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@cityofphiladelphia/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#c94049bdc7ae69b3de3fd4df0921b04dcd915779",
+    "@sentry/browser": "4.3.4",
     "accounting": "^0.4.1",
     "axios": "^0.18.0",
     "escape-html": "^1.0.3",
