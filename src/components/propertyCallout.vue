@@ -34,7 +34,7 @@
         >
           Print Payment Coupon
         </a>
-        <p class="p-margin">Print a payment coupon.</p>
+        <!-- <p class="p-margin">Print a payment coupon.</p> -->
       </div>
     </div>
   </div>
