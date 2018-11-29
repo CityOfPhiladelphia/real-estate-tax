@@ -56,18 +56,19 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
   console.log = console.info = console.debug = console.error = function () {};
 }
 
-var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
+// var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
+var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/mapboard-base-config@2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
 
 // configure accounting.js
 accounting.settings.currency.precision = 0;
 
 
 import propertyCallout from './components/propertyCallout.vue';
+import newSiteModal from './components/newSiteModal.vue';
 const customComps = {
-  'propertyCallout': propertyCallout
+  'propertyCallout': propertyCallout,
+  'newSiteModal': newSiteModal
 };
-
-
 
 mapboard({
   customComps,
@@ -77,8 +78,17 @@ mapboard({
   },
   panels: [
     'topics',
-    // 'map',
   ],
+  initialPopover: {
+    options: {
+      'height': '100%',
+      'components': [
+        {
+          'type': 'newSiteModal',
+        },
+      ]
+    },
+  },
   map,
   addressHeaderAdditionalInfo: {
     data: 'opa_account_num',
@@ -146,8 +156,6 @@ mapboard({
     condos,
     property,
     balance,
-    // agreements,
-    // aboutPayment,
     status,
   ],
   components: [

@@ -1,5 +1,5 @@
 export default {
-  initialMessage: '\
+  message: '\
     <h2><b>About the Philadelphia Real Estate Tax</b></h2>\
     <div class="callout">\
       <p>The City and the School District of Philadelphia impose a tax on all real estate in the City pursuant to Philadelphia\
@@ -16,4 +16,22 @@ export default {
          and/or the Office of Property Assessment number to <a href="mailto:amountdue@phila.gov">amountdue@phila.gov</a>.</p><br>\
     </div>\
   ',
+  options: {
+    // components:[
+    //   {
+    //     'type': 'popover',
+    //     'options': {
+    //       'height': '100%',
+    //       'components': [
+    //         {
+    //           'type': 'newSiteModal',
+    //           'slots': {
+    //             'text': 'this is a callout inside a popover',
+    //           },
+    //         },
+    //       ]
+    //     },
+    //   }
+    // ]
+  }
 }

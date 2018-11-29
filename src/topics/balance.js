@@ -7,34 +7,10 @@ export default {
   // REVIEW can these be calculated from vue deps?
   dataSources: ['tips'],
   components: [
-    // {
-    //   type: 'callout',
-    //   options: {
-    //     class: 'columns small-24',
-    //     components: [
-    //       {
-    //         type: 'popover-link',
-    //         slots: {
-    //           value: 'SEQR',
-    //           // value: function(state) {
-    //           //   return state.geocode.status;
-    //           // },
-    //           popoverTransforms: [
-    //             'statusMap',
-    //           ],
-    //           popoverPreText: function(state) {
-    //             return '<i class="fa fa-info-circle" aria-hidden="true"></i> <strong>' + state.geocode.status + '</strong> - '
-    //           },
-    //         },
-    //       }
-    //     ]
-    //   }
-    // },
     {
       type: 'horizontal-table',
       options: {
         id: 'balanceDetails',
-        // limit: 5,
         totalRow: {
           enabled: true,
           totalField: 'year'
@@ -111,7 +87,6 @@ export default {
             label: 'Status',
             value: function(state, item) {
               return item.status;
-              // return 'LSLD';
             },
             popoverLink: true,
             popoverTransforms: [
