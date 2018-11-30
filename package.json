@@ -19,7 +19,8 @@
     "axios": "^0.18.0",
     "escape-html": "^1.0.3",
     "moment": "^2.21.0",
-    "phila-standards": "^1.0.2"
+    "phila-standards": "^1.0.2",
+    "webpack-visualizer-plugin": "^0.1.11"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

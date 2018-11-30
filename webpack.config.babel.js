@@ -2,7 +2,8 @@ const path = require('path');
 const env = process.env.NODE_ENV;
 const isDevelopment = env === 'development';
 
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const Visualizer = require('webpack-visualizer-plugin');
 
 export default {
   entry: {
@@ -58,7 +59,8 @@ export default {
     ]
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new Visualizer({ filename: './statistics.html' })
   ],
   stats: {
       colors: true

@@ -40,7 +40,7 @@ import map from './general/map';
 import legendControls from './general/legendControls';
 import imageOverlayGroups from './general/imageOverlayGroups';
 
-import '@fortawesome/fontawesome-pro/js/all';
+// import '@fortawesome/fontawesome-pro/js/all';
 // import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import '../node_modules/phila-standards/dist/css/phila-app.min.css';
 import './styles.css';
