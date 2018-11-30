@@ -12,6 +12,14 @@ Sentry.init({ dsn: 'https://6702e2c2f3ea4c6384583fbed0b54f4f@sentry.io/1330799' 
 
 import '@babel/polyfill';
 
+// Font Awesome Icons
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHome } from '@fortawesome/pro-solid-svg-icons/faHome';
+import { faUsdCircle } from '@fortawesome/pro-solid-svg-icons/faUsdCircle';
+import { faAsterisk } from '@fortawesome/pro-solid-svg-icons/faAsterisk';
+import { faCircle } from '@fortawesome/pro-solid-svg-icons/faCircle';
+library.add(faHome, faUsdCircle, faAsterisk, faCircle);
+
 import accounting from 'accounting';
 import axios from 'axios';
 import moment from 'moment';
