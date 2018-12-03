@@ -123,7 +123,8 @@ mapboard({
     enabled: false
   },
   router: {
-    enabled: true
+    enabled: true,
+    returnToDefaultTopicOnGeocode: true,
   },
   defaultAddressTextPlaceholder: {
     text: "Search Address or 9-digit OPA Property Number",
@@ -162,7 +163,7 @@ mapboard({
     opa,
     tips,
   },
-  defaultTopic: null,
+  defaultTopic: 'property',
   topics: [
     condos,
     property,
