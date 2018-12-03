@@ -1,15 +1,17 @@
 <template>
   <div>
 
-    <div class="main-div">
-      <div class="top-div small-centered">
-        <h2>Welcome to the new<br><b>Real Estate Tax Balance Search!</b></h2>
-      </div>
-      <div class="bottom-div">
-        <div class="columns small-24 small-centered medium-12">
-          <a @click="close" class="button full-width">Continue To New Site</a>
-          <a href="https://legacy.phila.gov/revenue/realestatetax/" class="button full-width">Go To Old Site</a>
-          <p class="disclaimer">Payment coupons are only available on the new site.</p>
+    <div class="flex-div">
+      <div class="main-div">
+        <div class="top-div small-centered">
+          <h2>Welcome to the new<br><b>Real Estate Tax Balance Search!</b></h2>
+        </div>
+        <div class="bottom-div">
+          <div class="columns small-24 small-centered medium-12">
+            <a @click="close" class="button full-width">Continue To New Site</a>
+            <a href="https://legacy.phila.gov/revenue/realestatetax/" class="button full-width">Go To Old Site</a>
+            <p class="disclaimer">Payment coupons are only available on the new site.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -40,8 +42,18 @@ a {
   margin: 5px;
 }
 
+.flex-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main-div {
+  /* display: flex;
+  flex-direction: column; */
   min-height: 300px;
+  min-width: 500px;
+  max-width: 700px;
   text-align: center;
 }
 
