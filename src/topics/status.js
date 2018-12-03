@@ -3,10 +3,8 @@ import transforms from '../general/transforms.js';
 let keys = [
   'LBR',
   'LBRA',
-  'LBRO',
   'GRB',
   'GRBA',
-  'GRBO',
   'AGRE',
   'INST',
   'PIO',

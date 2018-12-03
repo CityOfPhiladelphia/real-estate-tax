@@ -9,10 +9,8 @@ export default {
       var map = {
         'LBR': 'Collections being pursued by Linebarger Collection Agency. Please call (215) 790-1117.',
         'LBRA': 'In an agreement with Linebarger.',
-        'LBRO': 'In an Owner Occupied Payment Arrangement (OOPA) agreement with LBR.',
         'GRB': 'Collections being pursued by GRB Collection Agency. Please call (866) 677-5970.',
         'GRBA': 'In an agreement with GRB.',
-        'GRBO': 'In an Owner Occupied Payment Arrangement (OOPA) agreement with GRB.',
         'AGRE': 'Active payment agreement plan in effect for delinquent taxes.',
         'INST': 'Active installment payment plan in effect for current taxes.',
         'PIO': 'Collections being pursued by Pioneer Collection Agency. Please call (866) 439-1318.',
