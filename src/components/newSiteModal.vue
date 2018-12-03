@@ -10,8 +10,8 @@
         </div>
         <div class="bottom-div">
           <div class="columns small-24 small-centered medium-12">
-            <a @click="close" class="button full-width">Continue To New Site</a>
-            <a href="https://legacy.phila.gov/revenue/realestatetax/" class="button full-width">Go To Old Site</a>
+            <a @click="close" class="button full-width uniform-font">Continue To New Site</a>
+            <a href="https://legacy.phila.gov/revenue/realestatetax/" class="button full-width uniform-font">Go To Old Site</a>
             <p class="disclaimer">Payment coupons are only available on the new site.</p>
           </div>
         </div>
@@ -51,6 +51,10 @@ export default {
 a {
   color: white !important;
   margin: 5px;
+}
+
+.uniform-font {
+  font-size: 14px;
 }
 
 .flex-div {
