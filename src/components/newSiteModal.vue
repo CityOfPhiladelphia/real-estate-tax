@@ -2,7 +2,9 @@
   <div>
 
     <div class="flex-div">
-      <div class="main-div">
+      <div class="main-div"
+           :style="minWidth"
+      >
         <div class="top-div small-centered">
           <h2>Welcome to the new<br><b>Real Estate Tax Balance Search!</b></h2>
         </div>
@@ -24,6 +26,15 @@ import philaVueComps from '@cityofphiladelphia/phila-vue-comps';
 
 export default {
   components: {
+  },
+  computed: {
+    minWidth() {
+      if (this.$store.state.isMobileOrTablet) {
+        return;
+      } else {
+        return { minWidth: '550px' };
+      }
+    }
   },
   methods: {
     close() {
@@ -52,7 +63,7 @@ a {
   /* display: flex;
   flex-direction: column; */
   min-height: 300px;
-  min-width: 500px;
+  /* min-width: 500px; */
   max-width: 700px;
   text-align: center;
 }
