@@ -9,6 +9,7 @@
         <div class="columns small-24 small-centered medium-12">
           <a @click="close" class="button full-width">Continue To New Site</a>
           <a href="https://legacy.phila.gov/revenue/realestatetax/" class="button full-width">Go To Old Site</a>
+          <p class="disclaimer">Payment coupons are only available on the new site.</p>
         </div>
       </div>
     </div>
@@ -58,6 +59,10 @@ a {
   padding: 10px;
   background: white;
   color: black;
+}
+
+.disclaimer {
+  font-size: 14px;
 }
 
 
