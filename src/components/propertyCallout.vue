@@ -60,7 +60,8 @@
         const options = {
           height: 50,
           width: 160,
-          fontSize: 25
+          fontSize: 25,
+          actionAddress: 'https://secure.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx'
         }
         return options;
       },
