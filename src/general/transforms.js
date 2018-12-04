@@ -4,6 +4,45 @@ import moment from 'moment';
 accounting.settings.currency.precision = 0;
 
 export default {
+  statusMap: {
+    transform: function(value) {
+      var map = {
+        'LBR': 'Collections being pursued by Linebarger Collection Agency. Please call (215) 790-1117.',
+        'LBRA': 'In an agreement with Linebarger.',
+        'GRB': 'Collections being pursued by GRB Collection Agency. Please call (866) 677-5970.',
+        'GRBA': 'In an agreement with GRB.',
+        'AGRE': 'Active payment agreement plan in effect for delinquent taxes.',
+        'INST': 'Active installment payment plan in effect for current taxes.',
+        'PIO': 'Collections being pursued by Pioneer Collection Agency. Please call (866) 439-1318.',
+        'BRT': 'Under appeal with the Board of Revision of Taxes.',
+        'LSLD': `This charge has a tax lien that was sold to a private third-party lien-holder at a City Tax Lien Sale.
+                Therefore, the amounts listed below for those years may not include all Real Estate Tax liabilities currently due.
+                For more information regarding the name, address, and phone number of the new lien-holder, as well as the
+                status of the lien(s), you may search the Philadelphia Court's civil docket
+                at <a href="http://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer" target="_blank">Civil Docket Access</a>.
+                You may enter or copy/paste the 13-digit lien number listed below (ex. 1504R14010000) to the Court’s “Case ID” search box.`,
+        'DISC': 'Discounted amount good until March 1st.',
+        'SEQR': `This charge has a tax lien that is in the Law Department\'s Sequestration/Receivership Program. For more information regarding the status
+                of the sequestration proceedings, you may call (215) 686-3629, or search the Philadelphia Court's civil docket
+                at <a href="http://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer" target="_blank">Civil Docket Access</a>.
+                You may enter the property owner's name in the Court’s “Caption” search box.`,
+      }
+      if (map[value]) {
+        return map[value];
+      } else {
+        return 'There is no information provided about this code.'
+      }
+    }
+  },
+  misc: {
+    transform: function(value) {
+      if (value === 2034) {
+        return 'MISC';
+      } else {
+        return value;
+      }
+    }
+  },
   currency: {
     // a list of global objects this transform depends on
     globals: ['accounting'],

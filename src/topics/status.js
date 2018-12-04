@@ -1,29 +1,58 @@
+import transforms from '../general/transforms.js';
+
+let keys = [
+  'LBR',
+  'LBRA',
+  'GRB',
+  'GRBA',
+  'AGRE',
+  'INST',
+  'PIO',
+  'BRT',
+  'LSLD',
+  'DISC',
+  'SEQR'
+]
+
+const LBR = transforms.statusMap.transform('LBR');
+
 export default {
   key: 'status',
-  // icon: 'home',
-  label: 'Status Details',
+  icon: 'asterisk',
+  label: 'Status Descriptions and Instructions',
   // REVIEW can these be calculated from vue deps?
-  dataSources: ['opa'],
   components: [
     {
       type: 'callout',
       slots: {
-        text: '\
-        <b>LBR</b> - Collections being pursued by Linebarger Collection Agency. Please call 215-790-1117.<br>\
-        <b>LBRA</b> - In an agreement with Linebarger.<br>\
-        <b>LBRO</b> - In an Owner Occupied Payment Arrangement (OOPA) agreement with LBR.<br>\
-        <b>GRB</b> - Collections being pursued by GRB Collection Agency. Please call 866-677-5970.<br>\
-        <b>GRBA</b> - In an agreement with GRB.<br>\
-        <b>GRBO</b> - In an Owner Occupied Payment Arrangement (OOPA) agreement with GRB.<br>\
-        <b>AGRE</b> - Active payment agreement plan in effect for delinquent taxes.<br>\
-        <b>INST</b> - Active installment payment plan in effect for current taxes.<br>\
-        <b>PIO</b> - Collections being pursued by Pioneer Collection Agency. Please call 866-439-1318.<br>\
-        <b>BRT</b> - Under appeal with the Board of Revision of Taxes.<br>\
-        <b>LSLD</b> - Sold to a third-party at Tax Lien Sale. Search the civil court docket for more information.<br>\
-        <b>DISC</b> - Discounted amount good until March 1st.<br>\
-        <b>SEQR</b> - Collections being pursued by Law Department\'s Sequestration/Receivership Program. Please search the civil docket.\
+        text: 'Each status code has different instructions. If there is no\
+        status code, the City is handling the account and you should call\
+        (215) 686-6442 with questions.\
         '
       }
     },
+    {
+      type: 'vertical-table',
+      slots: {
+        fields: function() {
+          let ex = []
+          for (let key of keys) {
+            ex.push({
+              label: key,
+              value: transforms.statusMap.transform(key)
+            })
+          }
+          return ex;
+        }()
+      },
+      options: {
+        id: 'statusDetails',
+        styles: {
+          th: {
+            'width': '10%'
+          }
+        }
+      }
+    }
   ],
 }

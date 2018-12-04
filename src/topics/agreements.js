@@ -1,6 +1,6 @@
 export default {
   key: 'agreements',
-  // icon: 'home',
+  icon: 'handshake',
   label: 'Payment Agreements',
   // REVIEW can these be calculated from vue deps?
   // dataSources: ['opa'],

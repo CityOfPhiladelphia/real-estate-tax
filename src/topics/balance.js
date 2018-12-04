@@ -1,6 +1,8 @@
+import helpers from '../util/helpers.js';
+
 export default {
   key: 'balance',
-  // icon: 'home',
+  icon: 'usd-circle',
   label: 'Balance Details',
   // REVIEW can these be calculated from vue deps?
   dataSources: ['tips'],
@@ -9,7 +11,10 @@ export default {
       type: 'horizontal-table',
       options: {
         id: 'balanceDetails',
-        // limit: 5,
+        totalRow: {
+          enabled: true,
+          totalField: 'year'
+        },
         fields: [
           {
             label: 'Year',
@@ -17,9 +22,9 @@ export default {
               return item.year;
             },
             nullValue: 'no year available',
-            // transforms: [
-            //   'date'
-            // ]
+            transforms: [
+              'misc'
+            ]
           },
           {
             label: 'Principal',
@@ -80,9 +85,16 @@ export default {
           },
           {
             label: 'Status',
-            value: function(state, item){
+            value: function(state, item) {
               return item.status;
-            }
+            },
+            popoverLink: true,
+            popoverTransforms: [
+              'statusMap',
+            ],
+            popoverPreText: function(state, item) {
+              return '<i class="fa fa-info-circle" aria-hidden="true"></i> <strong>' + item.status + '</strong> - '
+            },
           },
         ],
         sort: {
@@ -93,17 +105,6 @@ export default {
           // asc or desc
           order: 'asc'
         },
-        // externalLink: {
-        //   action: function(count) {
-        //     return 'See ' + count + ' older permits at L&I Property History';
-        //   },
-        //   name: 'L&I Property History',
-        //   href: function(state) {
-        //     var address = state.geocode.data.properties.street_address;
-        //     var addressEncoded = encodeURIComponent(address);
-        //     return 'http://li.phila.gov/#summary?address=' + addressEncoded;
-        //   }
-        // }
       },
       slots: {
         title: 'Balance Details',
