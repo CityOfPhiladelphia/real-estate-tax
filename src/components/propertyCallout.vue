@@ -42,8 +42,8 @@
 
 <script>
   import transforms from '../general/transforms.js'
-  import philaVueComps from '@cityofphiladelphia/phila-vue-comps'
-  const ePayForm = philaVueComps.ePayForm;
+  import { ePayForm } from '@cityofphiladelphia/phila-vue-comps'
+  // const ePayForm = philaVueComps.ePayForm;
 
   export default {
     components: {

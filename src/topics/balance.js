@@ -6,6 +6,9 @@ export default {
   label: 'Balance Details',
   // REVIEW can these be calculated from vue deps?
   dataSources: ['tips'],
+  errorMessage: function() {
+    return 'Could not locate tax records for that address.';
+  },
   components: [
     {
       type: 'horizontal-table',

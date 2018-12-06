@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import philaVueComps from '@cityofphiladelphia/phila-vue-comps';
 
 export default {
   components: {

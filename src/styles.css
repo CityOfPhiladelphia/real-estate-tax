@@ -25,6 +25,8 @@
 /*this fixes an issue with the topic panel scrolling over the footer padding*/
 #application .app-footer {
 	position: relative;
+  /* position: absolute;
+  bottom: 0; */
 }
 
 /*small*/

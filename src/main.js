@@ -10,10 +10,7 @@ __________              .__  ___________         __          __
 import * as Sentry from '@sentry/browser';
 Sentry.init({ dsn: 'https://6702e2c2f3ea4c6384583fbed0b54f4f@sentry.io/1330799' });
 
-
 import '@babel/polyfill';
-// const philaVueMapping = import('../node_modules/@cityofphiladelphia/phila-vue-mapping');
-// console.log('philaVueMapping:', philaVueMapping);
 
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -43,22 +40,14 @@ import tips from './data-sources/tips';
 import condos from './topics/condos';
 import property from './topics/property';
 import balance from './topics/balance';
-// import agreements from './topics/agreements';
-// import aboutPayment from './topics/about-payment';
 import status from './topics/status';
 
 import map from './general/map';
 import legendControls from './general/legendControls';
 import imageOverlayGroups from './general/imageOverlayGroups';
 
-// import '@fortawesome/fontawesome-pro/js/all';
-// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import '../node_modules/phila-standards/dist/css/phila-app.min.css';
 import './styles.css';
-
-// import 'leaflet/dist/leaflet.css';
-// import 'leaflet-easybutton/src/easy-button.css';
-// import 'leaflet-measure/dist/leaflet-measure.css';
 
 // turn off console logging in production
 // TODO come up with better way of doing this with webpack + env vars
