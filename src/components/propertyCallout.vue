@@ -42,8 +42,8 @@
 
 <script>
   import transforms from '../general/transforms.js'
-  import philaVueComps from '@cityofphiladelphia/phila-vue-comps'
-  const ePayForm = philaVueComps.ePayForm;
+  import { ePayForm } from '@cityofphiladelphia/phila-vue-comps'
+  // const ePayForm = philaVueComps.ePayForm;
 
   export default {
     components: {
@@ -60,7 +60,8 @@
         const options = {
           height: 50,
           width: 160,
-          fontSize: 25
+          fontSize: 25,
+          actionAddress: 'https://test-secure.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx'
         }
         return options;
       },

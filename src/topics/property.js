@@ -7,7 +7,11 @@ export default {
   key: 'property',
   icon: 'home',
   label: 'Property Information',
+  // dataSources: ['opa'],
   dataSources: ['opa', 'tips'],
+  errorMessage: function() {
+    return 'Could not locate tax records for that address.';
+  },
   components: [
     {
       type: 'propertyCallout',
