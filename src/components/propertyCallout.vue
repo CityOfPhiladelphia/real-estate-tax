@@ -95,7 +95,7 @@
         window.open('https://www.phila.gov/services/payments-assistance-taxes/payment-plans/', '_blank');
       },
       couponButtonAction() {
-        window.open('https://ework.phila.gov/revenue/', '_blank');
+        window.open('https://ework.phila.gov/revenue/default?realestate=true', '_blank');
       },
     }
   };
