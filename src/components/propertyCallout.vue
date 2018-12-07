@@ -101,7 +101,6 @@
   };
 </script>
 
-
 <style scoped>
 
 .callout {
