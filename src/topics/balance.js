@@ -14,6 +14,10 @@ export default {
       type: 'horizontal-table',
       options: {
         id: 'balanceDetails',
+        downloadButton: true,
+        downloadFile: function(state) {
+          return state.sources.tips.data.data.accountNum + '_BalanceDetails';
+        },
         totalRow: {
           enabled: true,
           totalField: 'year'
