@@ -14,10 +14,25 @@ export default {
       type: 'horizontal-table',
       options: {
         id: 'balanceDetails',
-        downloadButton: true,
-        downloadFile: function(state) {
-          return state.sources.tips.data.data.accountNum + '_BalanceDetails';
+        download: {
+          button: true,
+          file: function(state) { return state.sources.tips.data.data.accountNum + '_BalanceDetails'; },
+          introLines: [
+            function(state) { return state.geocode.data.properties.street_address; },
+            function(state) {
+              const zipCode = state.geocode.data.properties.zip_code;
+              const zip4 = state.geocode.data.properties.zip_4;
+              const parts = [zipCode];
+              if (zip4) parts.push(zip4);
+              return 'Philadelphia PA ' + parts.join('-');
+            },
+            function(state) { return 'OPA # ' + state.sources.tips.data.data.accountNum.toString(); }
+          ]
         },
+        // downloadButton: true,
+        // downloadFile: function(state) {
+        //   return state.sources.tips.data.data.accountNum + '_BalanceDetails';
+        // },
         totalRow: {
           enabled: true,
           totalField: 'year'

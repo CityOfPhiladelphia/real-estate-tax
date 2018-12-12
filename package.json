@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@cityofphiladelphia/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#ad26324504ad6bfa66286aafd3a3d3d70814bcaf",
+    "@cityofphiladelphia/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#69296f102932fe6764d385f29682722bac3abe72",
     "@sentry/browser": "4.3.4",
     "accounting": "^0.4.1",
     "axios": "^0.18.0",
