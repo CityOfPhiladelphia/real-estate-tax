@@ -29,10 +29,6 @@ export default {
             function(state) { return 'OPA # ' + state.sources.tips.data.data.accountNum.toString(); }
           ]
         },
-        // downloadButton: true,
-        // downloadFile: function(state) {
-        //   return state.sources.tips.data.data.accountNum + '_BalanceDetails';
-        // },
         totalRow: {
           enabled: true,
           totalField: 'year'
