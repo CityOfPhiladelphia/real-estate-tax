@@ -1,4 +1,5 @@
 import helpers from '../util/helpers.js';
+import transforms from '../general/transforms.js';
 
 export default {
   key: 'balance',
@@ -14,8 +15,11 @@ export default {
       type: 'horizontal-table',
       options: {
         id: 'balanceDetails',
-        download: {
-          button: true,
+        export: {
+          formatButtons: {
+            'csv': 'CSV',
+            'pdf': 'PDF'
+          },
           file: function(state) { return state.sources.tips.data.data.accountNum + '_BalanceDetails'; },
           introLines: [
             function(state) { return state.geocode.data.properties.street_address; },
@@ -26,7 +30,42 @@ export default {
               if (zip4) parts.push(zip4);
               return 'Philadelphia PA ' + parts.join('-');
             },
-            function(state) { return 'OPA # ' + state.sources.tips.data.data.accountNum.toString(); }
+            function(state) { return 'OPA # ' + state.sources.tips.data.data.accountNum.toString(); },
+            function(state) {
+              var owners = state.geocode.data.properties.opa_owners;
+              var ownersJoined = owners.join(', ');
+              return 'Owners: ' + ownersJoined;
+            },
+            function(state) {
+              var data = state.sources.opa.data;
+              var result;
+              if (data) {
+                result = data.market_value;
+              } else {
+                result = 'no data';
+              }
+              return 'Assessed Value: $' + result + '.00';
+            },
+            function(state) {
+              var data = state.sources.opa.data;
+              var result;
+              if (data) {
+                result = data.sale_date;
+              } else {
+                result = 'no data';
+              }
+              return 'Sale Date: ' + transforms.date.transform(result);
+            },
+            function(state) {
+              var data = state.sources.opa.data;
+              var result;
+              if (data) {
+                result = data.sale_price;
+              } else {
+                result = 'no data';
+              }
+              return 'Sale Price: ' + transforms.currency.transform(result);
+            }
           ]
         },
         totalRow: {
