@@ -86,9 +86,6 @@
       transform() {
         return transforms;
       },
-      message() {
-        return 'test';
-      }
     },
     methods: {
       plansButtonAction() {
