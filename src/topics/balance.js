@@ -64,7 +64,7 @@ export default {
               } else {
                 result = 'no data';
               }
-              return 'Sale Price: ' + transforms.currency.transform(result);
+              return 'Sale Price: $' + result + '.00';
             }
           ]
         },
