@@ -543,9 +543,9 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#805f9dae5285a2c5188164444bfe38ab1d7f15bc":
+"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#f0bc054981387326fd15d3bd384189d51f451f6f":
   version "3.0.16"
-  resolved "https://github.com/CityOfPhiladelphia/mapboard#805f9dae5285a2c5188164444bfe38ab1d7f15bc"
+  resolved "https://github.com/CityOfPhiladelphia/mapboard#f0bc054981387326fd15d3bd384189d51f451f6f"
   dependencies:
     "@cityofphiladelphia/phila-vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#1765e6e1250b90039313be34593e7a5f86f4c615"
     "@cityofphiladelphia/phila-vue-datafetch" "https://github.com/CityOfPhiladelphia/phila-vue-datafetch#fa4f6fc9e08ca3cb3987c95859722617bd189b2f"
@@ -570,7 +570,7 @@
     moment "^2.21.0"
     phila-standards "^1.0.0"
     proj4 "^2.4.4"
-    vue "^2.5.16"
+    vue "^2.5.21"
     vuex "^3.0.1"
 
 "@cityofphiladelphia/phila-vue-comps@https://github.com/CityOfPhiladelphia/phila-vue-comps#1765e6e1250b90039313be34593e7a5f86f4c615":
@@ -8078,6 +8078,10 @@ vue-template-es2015-compiler@^1.6.0:
 vue@^2.5.16:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
+
+vue@^2.5.21:
+  version "2.5.21"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.21.tgz#3d33dcd03bb813912ce894a8303ab553699c4a85"
 
 vuex@^3.0.1:
   version "3.0.1"
