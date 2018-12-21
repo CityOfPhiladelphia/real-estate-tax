@@ -543,9 +543,9 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#f0bc054981387326fd15d3bd384189d51f451f6f":
+"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#95aca3fa81711cfff80b2a7a5a8a44ca6df77dc6":
   version "3.0.16"
-  resolved "https://github.com/CityOfPhiladelphia/mapboard#f0bc054981387326fd15d3bd384189d51f451f6f"
+  resolved "https://github.com/CityOfPhiladelphia/mapboard#95aca3fa81711cfff80b2a7a5a8a44ca6df77dc6"
   dependencies:
     "@cityofphiladelphia/phila-vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#1765e6e1250b90039313be34593e7a5f86f4c615"
     "@cityofphiladelphia/phila-vue-datafetch" "https://github.com/CityOfPhiladelphia/phila-vue-datafetch#fa4f6fc9e08ca3cb3987c95859722617bd189b2f"

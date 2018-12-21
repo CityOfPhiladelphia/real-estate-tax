@@ -59,7 +59,7 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
 // var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
 // var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/mapboard-base-config@2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
 // var BASE_CONFIG_URL = 'https://ajrothwell.github.io/mapboard-base-config/config.js';
-var BASE_CONFIG_URL = '';
+var BASE_CONFIG_URL = null;
 
 // configure accounting.js
 accounting.settings.currency.precision = 0;
