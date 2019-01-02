@@ -20,6 +20,7 @@ export default {
       type: 'horizontal-table',
       options: {
         id: 'condoList',
+        export: {},
         useApiCount: true,
         defaultIncrement: 25,
         fields: [
