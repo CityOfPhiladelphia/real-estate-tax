@@ -543,11 +543,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#95aca3fa81711cfff80b2a7a5a8a44ca6df77dc6":
+"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#82f28c648954a7864055793ac17b8007c04f3899":
   version "3.0.16"
-  resolved "https://github.com/CityOfPhiladelphia/mapboard#95aca3fa81711cfff80b2a7a5a8a44ca6df77dc6"
+  resolved "https://github.com/CityOfPhiladelphia/mapboard#82f28c648954a7864055793ac17b8007c04f3899"
   dependencies:
-    "@cityofphiladelphia/phila-vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#1765e6e1250b90039313be34593e7a5f86f4c615"
+    "@cityofphiladelphia/phila-vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#4c03e75ebff5fa091958f01c9b465af26bf0895d"
     "@cityofphiladelphia/phila-vue-datafetch" "https://github.com/CityOfPhiladelphia/phila-vue-datafetch#fa4f6fc9e08ca3cb3987c95859722617bd189b2f"
     "@cityofphiladelphia/phila-vue-mapping" "https://github.com/CityOfPhiladelphia/phila-vue-mapping#10a915c6784899a73071fa647288721a9e4aefc8"
     "@fortawesome/fontawesome-svg-core" "^1.2.8"
@@ -573,9 +573,9 @@
     vue "^2.5.21"
     vuex "^3.0.1"
 
-"@cityofphiladelphia/phila-vue-comps@https://github.com/CityOfPhiladelphia/phila-vue-comps#1765e6e1250b90039313be34593e7a5f86f4c615":
+"@cityofphiladelphia/phila-vue-comps@https://github.com/CityOfPhiladelphia/phila-vue-comps#4c03e75ebff5fa091958f01c9b465af26bf0895d":
   version "1.0.14"
-  resolved "https://github.com/CityOfPhiladelphia/phila-vue-comps#1765e6e1250b90039313be34593e7a5f86f4c615"
+  resolved "https://github.com/CityOfPhiladelphia/phila-vue-comps#4c03e75ebff5fa091958f01c9b465af26bf0895d"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.8"
     "@fortawesome/pro-light-svg-icons" "^5.5.0"
