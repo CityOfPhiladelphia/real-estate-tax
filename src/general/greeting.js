@@ -11,27 +11,8 @@ export default {
         <a target="_blank" href="https://www.phila.gov/services/property-lots-housing/property-taxes/">Find\
         more information about Philadelphia Real Estate Tax</a>, including information about discount and assistance programs.</p><br>\
       <p>For questions about your account, email <a href="mailto:revenue@phila.gov">revenue@phila.gov</a> or call (215) 686-6442.\
-        For questions about account payoffs, forward an email to <a href="mailto:amountdue@phila.gov">amountdue@phila.gov</a>.\
          To receive payoff amounts, please e-mail the statement of claim number from the legal action, the property address\
          and/or the Office of Property Assessment number to <a href="mailto:amountdue@phila.gov">amountdue@phila.gov</a>.</p><br>\
     </div>\
-  ',
-  options: {
-    // components:[
-    //   {
-    //     'type': 'popover',
-    //     'options': {
-    //       'height': '100%',
-    //       'components': [
-    //         {
-    //           'type': 'newSiteModal',
-    //           'slots': {
-    //             'text': 'this is a callout inside a popover',
-    //           },
-    //         },
-    //       ]
-    //     },
-    //   }
-    // ]
-  }
+  '
 }
