@@ -33,11 +33,13 @@ export default {
             }
           },
           {
-            label: 'Owners',
+            label: 'Owner',
             value: function(state) {
-              var owners = state.geocode.data.properties.opa_owners;
-              var ownersJoined = owners.join(', ');
-              return ownersJoined;
+              // var owners = state.geocode.data.properties.opa_owners;
+              // var ownersJoined = owners.join(', ');
+              // return ownersJoined;
+              var owner = state.sources.tips.data.data.property.ownerName;
+              return owner;
             }
           },
           {
