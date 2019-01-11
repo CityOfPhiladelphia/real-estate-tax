@@ -19,7 +19,7 @@ export default {
     // host: process.env.WEBPACK_DEV_HOST,
     host: 'localhost',
     // port: process.env.WEBPACK_DEV_PORT
-    port: 8084
+    port: 8088
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

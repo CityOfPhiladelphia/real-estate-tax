@@ -7,8 +7,8 @@ __________              .__  ___________         __          __
         \/     \/     \/             \/     \/            \/          \/
 */
 
-import * as Sentry from '@sentry/browser';
-Sentry.init({ dsn: 'https://6702e2c2f3ea4c6384583fbed0b54f4f@sentry.io/1330799' });
+// import * as Sentry from '@sentry/browser';
+// Sentry.init({ dsn: 'https://6702e2c2f3ea4c6384583fbed0b54f4f@sentry.io/1330799' });
 
 import '@babel/polyfill';
 
@@ -22,7 +22,7 @@ library.add(faHome, faUsdCircle, faAsterisk, faCircle);
 
 import accounting from 'accounting';
 import axios from 'axios';
-import moment from 'moment';
+// import moment from 'moment';
 import mapboard from '@cityofphiladelphia/mapboard';
 
 // General Config Modules
@@ -59,7 +59,7 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
 // var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
 // var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/mapboard-base-config@2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
 // var BASE_CONFIG_URL = 'https://ajrothwell.github.io/mapboard-base-config/config.js';
-var BASE_CONFIG_URL = '';
+var BASE_CONFIG_URL = null;
 
 // configure accounting.js
 accounting.settings.currency.precision = 0;
