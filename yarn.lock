@@ -543,9 +543,9 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#eace8be980951e0850a42a7c05ffbaa24a734c64":
+"@cityofphiladelphia/mapboard@https://github.com/CityOfPhiladelphia/mapboard#8f04ec6e0b289e85439d2f9f8b942e261e5ad6a6":
   version "3.0.16"
-  resolved "https://github.com/CityOfPhiladelphia/mapboard#eace8be980951e0850a42a7c05ffbaa24a734c64"
+  resolved "https://github.com/CityOfPhiladelphia/mapboard#8f04ec6e0b289e85439d2f9f8b942e261e5ad6a6"
   dependencies:
     "@cityofphiladelphia/phila-vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#6e9d7cd139fe95fd3ceff428b9d9da1951f5b094"
     "@cityofphiladelphia/phila-vue-datafetch" "https://github.com/CityOfPhiladelphia/phila-vue-datafetch#97bce98c8b9f6b309a7bbeb5ec192d93dea4cf8e"
@@ -568,7 +568,6 @@
     leaflet-vector-icon "https://github.com/CityOfPhiladelphia/leaflet-vector-icon#74a56f048bceccef9c945f752bbd0379ae9dc77c"
     lodash.debounce "^4.0.8"
     phila-standards "^1.0.0"
-    proj4 "^2.4.4"
     vue "^2.5.21"
     vuex "^3.0.1"
 
