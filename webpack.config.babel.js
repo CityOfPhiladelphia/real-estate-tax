@@ -68,22 +68,22 @@ export default {
   devtool: 'source-map',
   mode: env,
   optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /node_modules/,
-          chunks: 'initial',
-          name: 'vendor',
-          enforce: true,
-          priority: 5,
-        },
-        mapboard: {
-          test: /mapboard/,
-          chunks: 'initial',
-          name: 'mapboard',
-          priority: 10,
-        },
-      },
-    },
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendor: {
+    //       test: /node_modules/,
+    //       chunks: 'initial',
+    //       name: 'vendor',
+    //       enforce: true,
+    //       priority: 5,
+    //     },
+    //     mapboard: {
+    //       test: /mapboard/,
+    //       chunks: 'initial',
+    //       name: 'mapboard',
+    //       priority: 10,
+    //     },
+    //   },
+    // },
   },
 };

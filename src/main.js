@@ -18,7 +18,8 @@ import { faHome } from '@fortawesome/pro-solid-svg-icons/faHome';
 import { faUsdCircle } from '@fortawesome/pro-solid-svg-icons/faUsdCircle';
 import { faAsterisk } from '@fortawesome/pro-solid-svg-icons/faAsterisk';
 import { faCircle } from '@fortawesome/pro-solid-svg-icons/faCircle';
-library.add(faHome, faUsdCircle, faAsterisk, faCircle);
+import { faBuilding } from '@fortawesome/pro-solid-svg-icons/faBuilding';
+library.add(faHome, faUsdCircle, faAsterisk, faCircle, faBuilding);
 
 import accounting from 'accounting';
 import axios from 'axios';
