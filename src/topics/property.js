@@ -106,11 +106,17 @@ export default {
     }
   ],
   errorMessage: function (state) {
-    var data = state.sources.condoList.data;
+    var tipsStatus = state.sources.tips.status;
+    var opaData = state.sources.opa.data;
+    if (tipsStatus === 'error' && opaData !== undefined) {
+      return 'Could not locate tax records for that address.'
+    }
+
+    var condoData = state.sources.condoList.data;
         // features = data.features;
 
-    if (data) {
-      var numCondos = data.total_size;
+    if (condoData) {
+      var numCondos = condoData.total_size;
 
       if (numCondos > 0) {
         var shouldPluralize = numCondos > 1,
