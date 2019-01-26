@@ -23,7 +23,6 @@ library.add(faHome, faUsdCircle, faAsterisk, faCircle, faBuilding);
 
 import accounting from 'accounting';
 import axios from 'axios';
-import moment from 'moment';
 import mapboard from '@cityofphiladelphia/mapboard';
 
 // General Config Modules
