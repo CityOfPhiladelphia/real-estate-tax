@@ -1,5 +1,5 @@
 {
-  "name": "real-estate-demo",
+  "name": "real-estate-tax",
   "version": "0.0.1",
   "description": "A real estate tax data viewer for the City of Philadelphia",
   "main": "",
@@ -13,21 +13,19 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@cityofphiladelphia/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#a095ce704814418b6e1d7520107e8b722c82f357",
+    "@cityofphiladelphia/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#633a37d1a4787211aec3178425096c6f428a77c6",
     "@sentry/browser": "4.3.4",
     "accounting": "^0.4.1",
     "axios": "^0.18.0",
     "escape-html": "^1.0.3",
     "moment": "^2.21.0",
-    "phila-standards": "^1.0.2",
-    "webpack-visualizer-plugin": "^0.1.11"
+    "phila-standards": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/register": "^7.0.0",
-    "@fortawesome/fontawesome-pro": "^5.5.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
     "cross-env": "^5.1.4",
@@ -38,7 +36,8 @@
     "vue-template-compiler": "^2.5.22",
     "webpack": "^4.25.0",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.10",
+    "webpack-visualizer-plugin": "^0.1.11"
   },
   "babel": {
     "presets": [

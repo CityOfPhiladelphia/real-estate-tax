@@ -22,8 +22,7 @@ import { faBuilding } from '@fortawesome/pro-solid-svg-icons/faBuilding';
 library.add(faHome, faUsdCircle, faAsterisk, faCircle, faBuilding);
 
 import accounting from 'accounting';
-import axios from 'axios';
-import moment from 'moment';
+// import axios from 'axios';
 import mapboard from '@cityofphiladelphia/mapboard';
 
 // General Config Modules
