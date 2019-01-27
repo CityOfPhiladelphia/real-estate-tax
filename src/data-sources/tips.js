@@ -9,6 +9,7 @@ export default {
       urlAddition: function (feature) {
         return feature.properties.opa_account_num;
       },
+      gatekeeperKey: helpers.GATEKEEPER_KEY,
     },
     success: function(data) {
       return data;
