@@ -118,12 +118,12 @@ mapboard({
   imageOverlayGroups,
   legendControls,
   cyclomedia: {
-    enabled: true,
+    enabled: false,
     measurementAllowed: false,
     popoutAble: true,
   },
   pictometry: {
-    enabled: true,
+    enabled: false,
   },
   geolocation: {
     enabled: false
