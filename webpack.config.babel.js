@@ -6,6 +6,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const Visualizer = require('webpack-visualizer-plugin');
 
 export default {
+  mode: env,
   entry: {
     app: ['./public/index.html', './public/styles.css', './src/main.js'],
     // app: ['./src/main.js'],
@@ -13,30 +14,30 @@ export default {
   resolve: {
     mainFields: ['module', 'main', 'browser'],
   },
-  devtool: isDevelopment ? 'inline-source-map' : 'source-map',
+  // devtool: isDevelopment ? 'inline-source-map' : 'source-map',
   devServer: {
     contentBase: './dist',
     // host: process.env.WEBPACK_DEV_HOST,
     host: 'localhost',
     // port: process.env.WEBPACK_DEV_PORT
-    port: 8088
+    port: 8088,
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    publicPath: '/',
+    publicPath: '/ret/',
   },
   module: {
     rules: [
-      {
-        test: /\.js/,
-        exclude: /(node_modules|bower_components)/,
-        use: [
-          {
-            loader: 'babel-loader'
-          }
-        ]
-      },
+      // {
+      //   test: /\.js/,
+      //   exclude: /(node_modules|bower_components)/,
+      //   use: [
+      //     {
+      //       loader: 'babel-loader'
+      //     }
+      //   ]
+      // },
       {
         test: /\.html/,
         loader: 'file-loader?name=[name].[ext]',
@@ -62,11 +63,6 @@ export default {
     new VueLoaderPlugin(),
     new Visualizer({ filename: './statistics.html' })
   ],
-  stats: {
-      colors: true
-  },
-  devtool: 'source-map',
-  mode: env,
   optimization: {
     // splitChunks: {
     //   cacheGroups: {
