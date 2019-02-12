@@ -5,6 +5,9 @@
       <div class="main-div"
            :style="minWidth"
       >
+        <div class="maintenance-div">
+          <p>Note: This site will be down for scheduled maintenance from 10:00 pm on 2/12/2019 to 12:00 am on 2/13/2019</p>
+        </div>
         <div class="top-div small-centered">
           <h2>Welcome to the new<br><b>Real Estate Tax Balance Search!</b></h2>
         </div>
@@ -60,6 +63,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.maintenance-div {
+  background: #f4eb42;
+  color: black;
 }
 
 .main-div {
