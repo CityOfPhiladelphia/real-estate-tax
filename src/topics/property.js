@@ -87,6 +87,13 @@ export default {
               'currency'
             ]
           },
+          {
+            label: 'Lien Sale Account',
+            value: function(state) {
+              var owner = state.sources.tips.data.data.property.lienSaleInd;
+              return owner;
+            }
+          },
         ],
       },
       options: {
@@ -102,6 +109,12 @@ export default {
             return 'http://property.phila.gov/?p=' + id;
           }
         }
+      }
+    },
+    {
+      type: 'callout',
+      slots: {
+        text: '<b>If Lien Sale Account is marked Y, the amount due listed may not include all Real Estate Tax liabilities. Call 215-790-1117 for more information.</b>',
       }
     }
   ],
