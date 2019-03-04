@@ -12,7 +12,7 @@ var refuseData = [
 export default {
   key: 'refuse',
   icon: 'trash-alt',
-  label: 'Refuse Fee',
+  label: 'Refuse Collection Fee',
   components: [
     {
       type: 'callout',
