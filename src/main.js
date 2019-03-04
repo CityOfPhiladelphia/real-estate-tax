@@ -19,7 +19,8 @@ import { faUsdCircle } from '@fortawesome/pro-solid-svg-icons/faUsdCircle';
 import { faAsterisk } from '@fortawesome/pro-solid-svg-icons/faAsterisk';
 import { faCircle } from '@fortawesome/pro-solid-svg-icons/faCircle';
 import { faBuilding } from '@fortawesome/pro-solid-svg-icons/faBuilding';
-library.add(faHome, faUsdCircle, faAsterisk, faCircle, faBuilding);
+import { faTrashAlt } from '@fortawesome/pro-solid-svg-icons/faTrashAlt';
+library.add(faHome, faUsdCircle, faAsterisk, faCircle, faBuilding, faTrashAlt);
 
 import accounting from 'accounting';
 import axios from 'axios';
@@ -42,6 +43,7 @@ import condos from './topics/condos';
 import property from './topics/property';
 import balance from './topics/balance';
 import status from './topics/status';
+import refuse from './topics/refuse';
 
 import map from './general/map';
 import legendControls from './general/legendControls';
@@ -67,9 +69,15 @@ accounting.settings.currency.precision = 0;
 
 
 import propertyCallout from './components/propertyCallout.vue';
+import refuseFeeCallout from './components/refuseFeeCallout.vue';
+import refuseExemptionCallout from './components/refuseExemptionCallout.vue';
+import refuseQuestionsCallout from './components/refuseQuestionsCallout.vue';
 import newSiteModal from './components/newSiteModal.vue';
 const customComps = {
   'propertyCallout': propertyCallout,
+  'refuseFeeCallout': refuseFeeCallout,
+  'refuseExemptionCallout': refuseExemptionCallout,
+  'refuseQuestionsCallout': refuseQuestionsCallout,
   'newSiteModal': newSiteModal
 };
 
@@ -174,6 +182,7 @@ mapboard({
     property,
     balance,
     status,
+    refuse
   ],
   components: [
     {
