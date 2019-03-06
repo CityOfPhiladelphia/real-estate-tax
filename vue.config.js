@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  publicPath: '/',
+  publicPath: '/realestatetax/',
   configureWebpack: {
     plugins: [
       new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
@@ -15,10 +15,10 @@ module.exports = {
   },
   transpileDependencies: [
     // can be string or regex
-    '@cityofphiladelphia/mapboard',
-    '@cityofphiladelphia/phila-vue-comps',
-    '@cityofphiladelphia/phila-vue-mapping',
-    // '@cityofphiladelphia/phila-vue-datafetch',
+    '@philly/mapboard',
+    '@philly/vue-comps',
+    '@philly/vue-mapping',
+    '@philly/vue-datafetch',
     // /other-dep/
   ]
 }

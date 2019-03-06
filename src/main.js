@@ -21,8 +21,8 @@ library.add(faHome, faUsdCircle, faAsterisk, faCircle, faBuilding);
 
 import accounting from 'accounting';
 // import axios from 'axios';
-// import mapboard from '@cityofphiladelphia/mapboard';
-import mapboard from '@cityofphiladelphia/mapboard/src/main.js';
+// import mapboard from '@philly/mapboard';
+import mapboard from '@philly/mapboard/src/main.js';
 console.log('mapboard:', mapboard);
 
 // General Config Modules
