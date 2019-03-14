@@ -52,10 +52,10 @@ import './styles.css';
 
 // turn off console logging in production
 // TODO come up with better way of doing this with webpack + env vars
-// const { hostname='' } = location;
-// if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
-//   console.log = console.info = console.debug = console.error = function () {};
-// }
+const { hostname='' } = location;
+if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
+  console.log = console.info = console.debug = console.error = function () {};
+}
 
 // var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
 // var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/mapboard-base-config@2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
@@ -75,10 +75,6 @@ const customComps = {
 
 mapboard({
   customComps,
-  header: {
-    enabled: true,
-    text: 'Real Estate Tax Balance Search'
-  },
   panels: [
     'topics',
   ],
