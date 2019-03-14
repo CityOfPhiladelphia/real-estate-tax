@@ -43,7 +43,7 @@
 <script>
   import transforms from '../general/transforms.js';
   import ePayForm from '@philly/vue-comps/src/components/ePayForm.vue';
-  console.log('ePayForm:', ePayForm);
+  // console.log('ePayForm:', ePayForm);
   // const ePayForm = philaVueComps.ePayForm;
 
   export default {
