@@ -30,7 +30,7 @@ export default {
               if (zip4) parts.push(zip4);
               return 'Philadelphia PA ' + parts.join('-');
             },
-            function(state) { return 'OPA # ' + state.sources.tips.data.data.accountNum.toString(); },
+            function(state) { return 'OPA Number ' + state.sources.tips.data.data.accountNum.toString(); },
             function(state) {
               var owners = state.geocode.data.properties.opa_owners;
               var ownersJoined = owners.join(', ');
@@ -129,7 +129,7 @@ export default {
             ]
           },
           {
-            label: 'Lien#',
+            label: 'Lien Number',
             value: function(state, item){
               return item.lienNum;
             }

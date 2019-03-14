@@ -13,7 +13,7 @@
     "dev-build": "vue-cli-service build --mode development"
   },
   "dependencies": {
-    "@philly/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#6c8f85274b7b0771033231f370945e89c08019d6",
+    "@philly/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#e0d9b7d885dbadb76cefdce07871d39b863d0b56",
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
     "@fortawesome/pro-light-svg-icons": "^5.5.0",
     "@fortawesome/pro-regular-svg-icons": "^5.5.0",
@@ -24,12 +24,12 @@
     "axios": "^0.18.0",
     "moment": "^2.21.0",
     "phila-standards": "^1.0.2",
-    "vue": "2.6.8"
+    "vue": "^2.6.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
-    "vue-template-compiler": "2.6.8",
+    "vue-template-compiler": "^2.6.9",
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "postcss": {
