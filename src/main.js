@@ -47,7 +47,7 @@ import map from './general/map';
 import legendControls from './general/legendControls';
 import imageOverlayGroups from './general/imageOverlayGroups';
 
-import '../node_modules/phila-standards/dist/css/phila-app.min.css';
+// import '../node_modules/phila-standards/dist/css/phila-app.min.css';
 import './styles.css';
 
 // turn off console logging in production
