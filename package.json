@@ -1,51 +1,45 @@
 {
-  "name": "real-estate-demo",
+  "name": "real-estate-tax",
   "version": "0.0.1",
   "description": "A real estate tax data viewer for the City of Philadelphia",
   "main": "",
-  "repository": "https://github.com/cityofphiladelphia/real-estate-demo",
+  "repository": "https://github.com/cityofphiladelphia/real-estate-tax",
   "author": "City of Philadelphia <maps@phila.gov>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "cross-env NODE_ENV=production npx webpack",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "dev-build": "vue-cli-service build --mode development"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
-    "@cityofphiladelphia/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#a095ce704814418b6e1d7520107e8b722c82f357",
+    "@philly/mapboard": "^3.0.25",
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/pro-light-svg-icons": "^5.5.0",
+    "@fortawesome/pro-regular-svg-icons": "^5.5.0",
+    "@fortawesome/pro-solid-svg-icons": "^5.5.0",
+    "@fortawesome/vue-fontawesome": "^0.1.2",
     "@sentry/browser": "4.3.4",
     "accounting": "^0.4.1",
     "axios": "^0.18.0",
-    "escape-html": "^1.0.3",
+    "moment": "^2.21.0",
     "phila-standards": "^1.0.2",
-    "webpack-visualizer-plugin": "^0.1.11"
+    "vue": "^2.6.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/register": "^7.0.0",
-    "@fortawesome/fontawesome-pro": "^5.5.0",
-    "babel-loader": "^8.0.4",
-    "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
-    "cross-env": "^5.1.4",
-    "css-loader": "^0.28.11",
-    "file-loader": "^1.1.11",
-    "style-loader": "^0.20.3",
-    "vue-loader": "^15.4.2",
-    "vue-template-compiler": "^2.5.22",
-    "webpack": "^4.25.0",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "vue-template-compiler": "^2.6.9",
+    "webpack-visualizer-plugin": "^0.1.11"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "dynamic-import-node-babel-7",
-      "@babel/plugin-syntax-dynamic-import"
-    ]
-  }
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }

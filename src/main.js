@@ -10,20 +10,21 @@ __________              .__  ___________         __          __
 import * as Sentry from '@sentry/browser';
 Sentry.init({ dsn: 'https://6702e2c2f3ea4c6384583fbed0b54f4f@sentry.io/1330799' });
 
-import '@babel/polyfill';
-
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { faInfoCircle } from '@fortawesome/pro-solid-svg-icons/faInfoCircle';
 import { faHome } from '@fortawesome/pro-solid-svg-icons/faHome';
 import { faUsdCircle } from '@fortawesome/pro-solid-svg-icons/faUsdCircle';
 import { faAsterisk } from '@fortawesome/pro-solid-svg-icons/faAsterisk';
 import { faCircle } from '@fortawesome/pro-solid-svg-icons/faCircle';
 import { faBuilding } from '@fortawesome/pro-solid-svg-icons/faBuilding';
-library.add(faHome, faUsdCircle, faAsterisk, faCircle, faBuilding);
+library.add(faInfoCircle, faHome, faUsdCircle, faAsterisk, faCircle, faBuilding);
 
 import accounting from 'accounting';
-import axios from 'axios';
-import mapboard from '@cityofphiladelphia/mapboard';
+// import axios from 'axios';
+// import mapboard from '@philly/mapboard';
+import mapboard from '@philly/mapboard/src/main.js';
+// console.log('mapboard:', mapboard);
 
 // General Config Modules
 import helpers from './util/helpers';
@@ -74,10 +75,6 @@ const customComps = {
 
 mapboard({
   customComps,
-  header: {
-    enabled: true,
-    text: 'Real Estate Tax Balance Search'
-  },
   panels: [
     'topics',
   ],
@@ -116,12 +113,12 @@ mapboard({
   imageOverlayGroups,
   legendControls,
   cyclomedia: {
-    enabled: true,
+    enabled: false,
     measurementAllowed: false,
     popoutAble: true,
   },
   pictometry: {
-    enabled: true,
+    enabled: false,
   },
   geolocation: {
     enabled: false
