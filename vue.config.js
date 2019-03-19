@@ -1,12 +1,9 @@
 const Visualizer = require('webpack-visualizer-plugin');
-const webpack = require('webpack');
-const path = require('path');
 
 module.exports = {
-  publicPath: '/revenue/realestatetax/',
+  publicPath: '/realestatetax/',
   configureWebpack: {
     plugins: [
-      new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
       new Visualizer({ filename: './statistics.html' })
     ],
   },
