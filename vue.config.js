@@ -1,7 +1,7 @@
 const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
-  publicPath: '/realestatetax/',
+  publicPath: '/revenue/realestatetax/',
   configureWebpack: {
     plugins: [
       new Visualizer({ filename: './statistics.html' })
