@@ -7,6 +7,8 @@ __________              .__  ___________         __          __
         \/     \/     \/             \/     \/            \/          \/
 */
 
+console.log('test')
+
 import * as Sentry from '@sentry/browser';
 Sentry.init({ dsn: 'https://6702e2c2f3ea4c6384583fbed0b54f4f@sentry.io/1330799' });
 
@@ -45,23 +47,18 @@ import legendControls from './general/legendControls';
 import imageOverlayGroups from './general/imageOverlayGroups';
 
 // import '../node_modules/phila-standards/dist/css/phila-app.min.css';
-import './styles.css';
+// import './styles.css';
 
 // turn off console logging in production
-// TODO come up with better way of doing this with webpack + env vars
 const { hostname='' } = location;
 if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
   console.log = console.info = console.debug = console.error = function () {};
 }
 
-// var BASE_CONFIG_URL = 'https://cdn.rawgit.com/ajrothwell/mapboard-base-config/2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
-// var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/mapboard-base-config@2b849b365a9c4e986222996d0dcaaad114a3e98a/config.js';
-// var BASE_CONFIG_URL = 'https://ajrothwell.github.io/mapboard-base-config/config.js';
 var BASE_CONFIG_URL = null;
 
 // configure accounting.js
 accounting.settings.currency.precision = 0;
-
 
 import propertyCallout from './components/propertyCallout.vue';
 import newSiteModal from './components/newSiteModal.vue';
