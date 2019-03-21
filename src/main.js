@@ -7,8 +7,6 @@ __________              .__  ___________         __          __
         \/     \/     \/             \/     \/            \/          \/
 */
 
-console.log('test')
-
 import * as Sentry from '@sentry/browser';
 Sentry.init({ dsn: 'https://6702e2c2f3ea4c6384583fbed0b54f4f@sentry.io/1330799' });
 
