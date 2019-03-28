@@ -5,9 +5,9 @@
       <div class="main-div"
            :style="minWidth"
       >
-        <div class="maintenance-div">
+        <!-- <div class="maintenance-div">
           <p>Note: This site may down at different points for scheduled maintenance from 8:00 am to 12:00 pm on Sunday, 3/24/2019</p>
-        </div>
+        </div> -->
         <div class="top-div small-centered">
           <h2>Welcome to the new<br><b>Real Estate Tax Balance Search!</b></h2>
         </div>
