@@ -55,7 +55,11 @@
         return this.$store.state.appData.propertyBalance;
       },
       tipsData() {
-        return this.$store.state.sources.tips.data.data;
+        if (this.$store.state.sources.tips.data.data) {
+          return this.$store.state.sources.tips.data.data;
+        } else {
+          return {}
+        }
       },
       ePayOptions() {
         const options = {

@@ -8,7 +8,8 @@ export default {
   icon: 'home',
   label: 'Property Information',
   // dataSources: ['opa'],
-  dataSources: ['opa', 'tips'],
+  // dataSources: ['opa', 'tips'],
+  dataSources: ['tips'],
   components: [
     {
       type: 'propertyCallout',
@@ -20,13 +21,21 @@ export default {
           {
             label: 'OPA Account #',
             value: function(state) {
-              return state.geocode.data.properties.opa_account_num;
+              if (state.geocode.data) {
+                return state.geocode.data.properties.opa_account_num;
+              } else {
+                return 'no data';
+              }
             }
           },
           {
             label: 'OPA Address',
             value: function(state) {
-              return state.geocode.data.properties.opa_address;
+              if (state.geocode.data) {
+                return state.geocode.data.properties.opa_address;
+              } else {
+                return 'no data';
+              }
             }
           },
           {
@@ -42,14 +51,18 @@ export default {
           {
             label: 'Assessed Value',// + new Date().getFullYear(),
             value: function(state) {
-              var data = state.sources.opa.data;
-              var result;
-              if (data) {
-                result = data.market_value;
+              if (state.sources.opa) {
+                var data = state.sources.opa.data;
+                var result;
+                if (data) {
+                  result = data.market_value;
+                } else {
+                  result = 'no data';
+                }
+                return result;
               } else {
-                result = 'no data';
+                return 'no data';
               }
-              return result;
             },
             transforms: [
               'currency'
@@ -105,8 +118,10 @@ export default {
           },
           name: 'Property Search',
           href: function(state) {
-            var id = state.geocode.data.properties.opa_account_num;
-            return 'http://property.phila.gov/?p=' + id;
+            if (state.geocode.data) {
+              var id = state.geocode.data.properties.opa_account_num;
+              return 'http://property.phila.gov/?p=' + id;
+            }
           }
         }
       }

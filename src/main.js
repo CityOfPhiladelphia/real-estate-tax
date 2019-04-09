@@ -91,6 +91,9 @@ mapboard({
       include_units: true,
     },
   },
+  onGeocodeFail: {
+    data: 'tips'
+  },
   carto: {
     baseUrl: '//phl.carto.com/api/v2/sql',
   },
