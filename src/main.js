@@ -60,10 +60,10 @@ var BASE_CONFIG_URL = null;
 accounting.settings.currency.precision = 0;
 
 import propertyCallout from './components/propertyCallout.vue';
-import newSiteModal from './components/newSiteModal.vue';
+// import newSiteModal from './components/newSiteModal.vue';
 const customComps = {
   'propertyCallout': propertyCallout,
-  'newSiteModal': newSiteModal
+  // 'newSiteModal': newSiteModal
 };
 
 mapboard({
@@ -71,16 +71,16 @@ mapboard({
   panels: [
     'topics',
   ],
-  initialPopover: {
-    options: {
-      'height': '100%',
-      'components': [
-        {
-          'type': 'newSiteModal',
-        },
-      ]
-    },
-  },
+  // initialPopover: {
+  //   options: {
+  //     'height': '100%',
+  //     'components': [
+  //       {
+  //         'type': 'newSiteModal',
+  //       },
+  //     ]
+  //   },
+  // },
   geocoder: {
     url: function (input) {
       var inputEncoded = encodeURIComponent(input);
