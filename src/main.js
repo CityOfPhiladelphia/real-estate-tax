@@ -24,7 +24,8 @@ import { faUsdCircle } from '@fortawesome/pro-solid-svg-icons/faUsdCircle';
 import { faAsterisk } from '@fortawesome/free-solid-svg-icons/faAsterisk';
 import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons/faBuilding';
-library.add(faInfoCircle, faHome, faUsdCircle, faAsterisk, faCircle, faBuilding);
+import { faTrashAlt } from '@fortawesome/free-regular-svg-icons/faTrashAlt';
+library.add(faInfoCircle, faHome, faUsdCircle, faAsterisk, faCircle, faBuilding, faTrashAlt);
 
 import accounting from 'accounting';
 import mapboard from '@philly/mapboard/src/main.js';
@@ -39,12 +40,14 @@ import greeting from './general/greeting';
 import condoList from './data-sources/condo-list';
 import opa from './data-sources/opa';
 import tips from './data-sources/tips';
+import refuseData from './data-sources/refuse';
 
 // Topics
 import condos from './topics/condos';
 import property from './topics/property';
 import balance from './topics/balance';
 import status from './topics/status';
+import refuse from './topics/refuse';
 
 import map from './general/map';
 import legendControls from './general/legendControls';
@@ -159,6 +162,7 @@ mapboard({
     condoList,
     opa,
     tips,
+    refuseData
   },
   defaultTopic: 'property',
   topics: [
@@ -166,6 +170,7 @@ mapboard({
     property,
     balance,
     status,
+    refuse,
   ],
   components: [
     {
