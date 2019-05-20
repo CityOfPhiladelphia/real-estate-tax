@@ -40,7 +40,7 @@ import greeting from './general/greeting';
 import condoList from './data-sources/condo-list';
 import opa from './data-sources/opa';
 import tips from './data-sources/tips';
-import refuseData from './data-sources/refuse';
+import refuseData from './data-sources/refuse-data';
 
 // Topics
 import condos from './topics/condos';

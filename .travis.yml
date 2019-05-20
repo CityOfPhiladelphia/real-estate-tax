@@ -28,6 +28,6 @@ deploy:
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     bucket: 'real-estate-demo'
     on:
-      branch: cleanup
+      branch: add-refuse
     local_dir: dist
     skip_cleanup: true
