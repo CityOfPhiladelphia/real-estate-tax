@@ -10,9 +10,10 @@ export default {
         increased charges called "additions." At the end of the year, these charges begin to accrue interest and penalties.\
         <a target="_blank" href="https://www.phila.gov/services/property-lots-housing/property-taxes/">Find\
         more information about Philadelphia Real Estate Tax</a>, including information about discount and assistance programs.</p><br>\
-      <p>For questions about your account, email <a href="mailto:revenue@phila.gov">revenue@phila.gov</a> or call (215) 686-6442.\
-         To receive payoff amounts, please e-mail the statement of claim number from the legal action, the property address\
-         and/or the Office of Property Assessment number to <a href="mailto:amountdue@phila.gov">amountdue@phila.gov</a>.</p><br>\
+      <p>For questions about your account, email <a href="mailto:revenue@phila.gov">revenue@phila.gov</a> or call (215) 686-6442.</p>\
+      <p>Please use this website for the current for the Real Estate Tax balances due on a property. The tax balances on this\
+        website are valid through the end of the current month. Once paid in full, all Revenue Real Estate Tax liens recorded\
+        in Court of Common Pleas with an “R” in the docket number, are satisfied automatically.</p><br>\
     </div>\
   '
 }
