@@ -32,9 +32,10 @@ export default {
             },
             function(state) { return 'OPA Number ' + state.sources.tips.data.data.accountNum.toString(); },
             function(state) {
-              var owners = state.geocode.data.properties.opa_owners;
-              var ownersJoined = owners.join(', ');
-              return 'Owners: ' + ownersJoined;
+              var owner = state.sources.tips.data.data.property.ownerName;
+              // var owners = state.geocode.data.properties.opa_owners;
+              // var ownersJoined = owners.join(', ');
+              return 'Owner: ' + owner;
             },
             function(state) {
               var data = state.sources.opa.data;
