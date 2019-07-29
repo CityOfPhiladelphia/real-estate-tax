@@ -12,7 +12,7 @@ deploy:
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     bucket: 'real-estate-demo'
     on:
-      branch: develop
+      branch: test-epay
     local_dir: dist
     skip_cleanup: true
   - provider: s3
