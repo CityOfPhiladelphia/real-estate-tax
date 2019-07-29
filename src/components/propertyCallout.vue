@@ -66,8 +66,8 @@
           height: 50,
           width: 160,
           fontSize: 25,
-          actionAddress: 'https://test-secure.phila.gov/paymentcenter/gateway1/initiatepurchase.aspx'
-          // actionAddress: 'https://test-epay.phila.gov/paymentcenter/gateway1/initiatepurchase.aspx'
+          // actionAddress: 'https://test-secure.phila.gov/paymentcenter/gateway1/initiatepurchase.aspx'
+          actionAddress: 'https://test-epay.phila.gov/paymentcenter/gateway1/initiatepurchase.aspx'
           // actionAddress: 'https://secure.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx'
         }
         return options;

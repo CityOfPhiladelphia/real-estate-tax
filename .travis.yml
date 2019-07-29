@@ -26,8 +26,8 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: 'real-estate-demo'
+    bucket: 'real-estate-test'
     on:
-      branch: cleanup
+      branch: test-epay-2
     local_dir: dist
     skip_cleanup: true
