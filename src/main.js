@@ -39,6 +39,7 @@ import greeting from './general/greeting';
 import condoList from './data-sources/condo-list';
 import opa from './data-sources/opa';
 import tips from './data-sources/tips';
+import tax from './data-sources/tax';
 
 // Topics
 import condos from './topics/condos';
@@ -159,6 +160,7 @@ mapboard({
     condoList,
     opa,
     tips,
+    tax
   },
   defaultTopic: 'property',
   topics: [
