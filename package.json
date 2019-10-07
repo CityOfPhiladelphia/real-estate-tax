@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "@fortawesome/pro-solid-svg-icons": "^5.7.2",
-    "@philly/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#58e13706258f8cd304059e3e471b1d86ce74c939",
+    "@philly/mapboard": "^3.0.43",
     "@sentry/browser": "4.3.4",
     "accounting": "^0.4.1",
-    "vue": "^2.6.9"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
