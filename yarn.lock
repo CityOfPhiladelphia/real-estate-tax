@@ -826,21 +826,21 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@philly/mapboard@^3.0.39":
-  version "3.0.39"
-  resolved "https://registry.yarnpkg.com/@philly/mapboard/-/mapboard-3.0.39.tgz#be572ec937a5dad8dfbd93d6fd55f6636233705a"
-  integrity sha512-gvcpuWJ90UC0P/1HKgAnpvjq8OAsL4V5oC/61r4u8mPiKPr9HVUW2qlMqCM2N8vzb9AwxyZY2DVp11V0siRYWg==
+"@philly/mapboard@3.0.43":
+  version "3.0.43"
+  resolved "https://registry.yarnpkg.com/@philly/mapboard/-/mapboard-3.0.43.tgz#27e4fedf432cc4e0cf284d2b419489c364d40826"
+  integrity sha512-Srl9wDB6PY8hPz/RW8wwjZCYYpqtFzc5//J3Bk+u+9vkexl9UyG24ZE/nZ/mbb603quXOWmcVEu2n4xd4MNiMw==
   dependencies:
-    "@philly/vue-comps" "^1.0.37"
-    "@philly/vue-datafetch" "^0.0.24"
-    "@philly/vue-mapping" "^1.0.36"
-    vue "^2.6.9"
-    vuex "^3.0.1"
+    "@philly/vue-comps" "^1.0.40"
+    "@philly/vue-datafetch" "^0.0.26"
+    "@philly/vue-mapping" "^1.0.41"
+    vue "^2.6.10"
+    vuex "^3.1.1"
 
-"@philly/vue-comps@^1.0.37":
-  version "1.0.37"
-  resolved "https://registry.yarnpkg.com/@philly/vue-comps/-/vue-comps-1.0.37.tgz#5b427a4f33ac3244a1556ae10c87429ee7f085c6"
-  integrity sha512-PdZV3m2hHXblvCa5dEinf0fd6WObPfe8Rm8TirDj/bzkrd5QjFrk4bhB407drXjdZtAB0tboTOHXpOp2axN6QA==
+"@philly/vue-comps@^1.0.40":
+  version "1.0.42"
+  resolved "https://registry.yarnpkg.com/@philly/vue-comps/-/vue-comps-1.0.42.tgz#64afcaf675cf2cccc805a190862100f06ebff971"
+  integrity sha512-SUtD2VN+5wjXbnSp0TwY71VGHD9BSvs7PNHnQzrQoCIpTRsTz/Ke7yeQ4tYhxKRvbwuJIV903hMV/NTn5mNxsw==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.15"
     "@fortawesome/free-regular-svg-icons" "^5.7.2"
@@ -853,34 +853,35 @@
     jspdf-autotable "^2.3.5"
     lodash-es "^4.17.14"
     phila-standards "^1.0.2"
-    vue "^2.6.9"
-    vuex "^3.0.1"
+    vue "^2.6.10"
+    vuex "^3.1.1"
 
-"@philly/vue-datafetch@^0.0.24":
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/@philly/vue-datafetch/-/vue-datafetch-0.0.24.tgz#d323be05f10d7ad183bf62e4e9acff4fe074c22d"
-  integrity sha512-DKNJcyVL7guECkjnrJQnWQ3zxsLCHE6pysTLEFEDq9q4FBL9um6w3qnYJ/yin6kzH8u3bWVsskvRSbkYK9tcuA==
+"@philly/vue-datafetch@^0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@philly/vue-datafetch/-/vue-datafetch-0.0.26.tgz#f48cc8abbce244d5e7c052e94442dc66746e0da4"
+  integrity sha512-IC8Y1aiDnVIOTiU8uhhK08S872L/SAhEPi7zUmTB7H7e5In2vG2m2ij6mn6cuZWbhsDuPoCs/45mCY4Fwfm9yg==
   dependencies:
     "@turf/turf" "^5.1.6"
     axios "^0.19.0"
     date-fns "^1.30.1"
     esri-leaflet "^2.2.3"
+    https-proxy-agent "^2.2.2"
     leaflet "^1.4.0"
     proj4 "^2.5.0"
-    vue "^2.6.9"
-    vuex "^3.0.1"
+    vue "^2.6.10"
+    vuex "^3.1.1"
 
-"@philly/vue-mapping@^1.0.36":
-  version "1.0.36"
-  resolved "https://registry.yarnpkg.com/@philly/vue-mapping/-/vue-mapping-1.0.36.tgz#cd9c889d23f875b9d228c0060dc21f5c95c7e7d1"
-  integrity sha512-s85zHFlznZb5Eg4dmHj+qwerWbT7vrHwwsi/WM8FUZ034fhW+70pVVIeKal3WUDaly9Dhz1jPE1u2xmzSkJMig==
+"@philly/vue-mapping@^1.0.41":
+  version "1.0.42"
+  resolved "https://registry.yarnpkg.com/@philly/vue-mapping/-/vue-mapping-1.0.42.tgz#1d702d910bcb190ee33fe42494f9253b9ca58d81"
+  integrity sha512-3Qy3157rB51LsM7ZvdAuSJ5JieMS6v/trXXxX7aM+lctOeiHq/8BJe5qlh0K5iWYUPB4eNcCeMkXa9zPwm9xjQ==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.15"
     "@fortawesome/free-regular-svg-icons" "^5.7.2"
     "@fortawesome/free-solid-svg-icons" "^5.7.2"
     "@fortawesome/vue-fontawesome" "^0.1.5"
     "@turf/turf" "^5.1.6"
-    L-esri-WebMap "https://github.com/CityOfPhiladelphia/L.esri.WebMap#00997e51a7ec5b65d43e54df07a00805797fce0c"
+    L-esri-WebMap "https://github.com/CityOfPhiladelphia/L.esri.WebMap#1d4ee074f60f2bba8bfe596d150ea23556c8a94f"
     Leaflet-PointInPolygon "https://github.com/CityOfPhiladelphia/Leaflet.PointInPolygon#a0d410f69aacf5f9165c4d01ccffeed824ccaed8"
     axios "^0.19.0"
     blueimp-md5 "^2.10.0"
@@ -894,8 +895,8 @@
     lodash-es "^4.17.14"
     phila-standards "^1.0.2"
     proj4 "^2.5.0"
-    vue "^2.6.9"
-    vuex "^3.0.1"
+    vue "^2.6.10"
+    vuex "^3.1.1"
 
 "@sentry/browser@4.3.4":
   version "4.3.4"
@@ -2519,9 +2520,9 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"L-esri-WebMap@git+https://github.com/CityOfPhiladelphia/L.esri.WebMap.git#00997e51a7ec5b65d43e54df07a00805797fce0c":
+"L-esri-WebMap@git+https://github.com/CityOfPhiladelphia/L.esri.WebMap.git#1d4ee074f60f2bba8bfe596d150ea23556c8a94f":
   version "0.4.0"
-  resolved "git+https://github.com/CityOfPhiladelphia/L.esri.WebMap.git#00997e51a7ec5b65d43e54df07a00805797fce0c"
+  resolved "git+https://github.com/CityOfPhiladelphia/L.esri.WebMap.git#1d4ee074f60f2bba8bfe596d150ea23556c8a94f"
   dependencies:
     arcgis-to-geojson-utils "^1.0.1"
     date-fns "^1.30.1"
@@ -2611,6 +2612,13 @@ address@^1.0.3:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/address/-/address-1.1.2.tgz#bf1116c9c758c51b7a933d296b72c221ed9428b6"
   integrity sha512-aT6camzM4xEA54YVJYSqxz1kv4IHnQZRtThJJHhUMRExaU5spC7jX5ugSwTaTgJliIgs4VhZOk7htClvQ/LmRA==
+
+agent-base@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.3.0.tgz#8165f01c436009bccad0b1d122f05ed770efc6ee"
+  integrity sha512-salcGninV0nPrwpGNn4VTXBb1SOuXQBiqbrNXoeizJsHrsL6ERFM2Ne3JUSBWRE6aeNJI2ROP/WEEIDUiDe3cg==
+  dependencies:
+    es6-promisify "^5.0.0"
 
 ajv-errors@^1.0.0:
   version "1.0.1"
@@ -4103,7 +4111,7 @@ debug@=3.1.0:
   dependencies:
     ms "2.0.0"
 
-debug@^3.0.0, debug@^3.2.5, debug@^3.2.6:
+debug@^3.0.0, debug@^3.1.0, debug@^3.2.5, debug@^3.2.6:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
@@ -4573,6 +4581,18 @@ es6-map@^0.1.5:
     es6-symbol "~3.1.1"
     event-emitter "~0.3.5"
 
+es6-promise@^4.0.3:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
+  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
+
+es6-promisify@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-5.0.0.tgz#5109d62f3e56ea967c4b63505aef08291c8a5203"
+  integrity sha1-UQnWLz5W6pZ8S2NQWu8IKRyKUgM=
+  dependencies:
+    es6-promise "^4.0.3"
+
 es6-set@^0.1.5, es6-set@~0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/es6-set/-/es6-set-0.1.5.tgz#d2b3ec5d4d800ced818db538d28974db0a73ccb1"
@@ -4966,7 +4986,7 @@ file-loader@^3.0.1:
     loader-utils "^1.0.2"
     schema-utils "^1.0.0"
 
-"file-saver@github:eligrey/FileSaver.js#1.3.8":
+file-saver@eligrey/FileSaver.js#1.3.8:
   version "1.3.8"
   resolved "https://codeload.github.com/eligrey/FileSaver.js/tar.gz/e865e37af9f9947ddcced76b549e27dc45c1cb2e"
 
@@ -5625,6 +5645,14 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
+
+https-proxy-agent@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.2.tgz#271ea8e90f836ac9f119daccd39c19ff7dfb0793"
+  integrity sha512-c8Ndjc9Bkpfx/vCJueCPy0jlP4ccCCSNDp8xwCZzPjKJUm+B+u9WX2x98Qx4n1PiMNTWo3D7KK5ifNV/yJyRzg==
+  dependencies:
+    agent-base "^4.3.0"
+    debug "^3.1.0"
 
 iconv-lite@0.4.24, iconv-lite@^0.4.13, iconv-lite@^0.4.4, iconv-lite@^0.4.5:
   version "0.4.24"
@@ -9943,12 +9971,12 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.6.9:
+vue@^2.6.10, vue@^2.6.9:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
 
-vuex@^3.0.1:
+vuex@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.1.tgz#0c264bfe30cdbccf96ab9db3177d211828a5910e"
   integrity sha512-ER5moSbLZuNSMBFnEBVGhQ1uCBNJslH9W/Dw2W7GZN23UQA69uapP5GTT9Vm8Trc0PzBSVt6LzF3hGjmv41xcg==
