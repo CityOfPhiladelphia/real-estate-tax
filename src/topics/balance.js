@@ -87,9 +87,7 @@ export default {
           {
             label: 'Principal',
             value: function(state, item){
-              // return item.principal_bal.toFixed(2);
-              // return parseFloat(item.principle_bal);
-              return item.principle_bal;
+              return item.principle_bal.toFixed(2);
             },
             transforms: [
               'currency'
@@ -98,8 +96,7 @@ export default {
           {
             label: 'Interest',
             value: function(state, item){
-              // return item.interest_bal.toFixed(2);
-              return item.interest_bal;
+              return item.interest_bal.toFixed(2);
             },
             transforms: [
               'currency'
@@ -108,8 +105,7 @@ export default {
           {
             label: 'Penalty',
             value: function(state, item){
-              // return item.penalty_bal.toFixed(2);
-              return item.penalty_bal;
+              return item.penalty_bal.toFixed(2);
             },
             transforms: [
               'currency'
@@ -118,8 +114,7 @@ export default {
           {
             label: 'Other',
             value: function(state, item){
-              // return item.other_change_bal.toFixed(2);
-              return item.other_change_bal;
+              return item.other_change_bal.toFixed(2);
             },
             transforms: [
               'currency'
@@ -128,8 +123,7 @@ export default {
           {
             label: 'Total',
             value: function(state, item){
-              // return item.total_balance.toFixed(2);
-              return item.total_balance;
+              return item.total_balance.toFixed(2);
             },
             transforms: [
               'currency'
