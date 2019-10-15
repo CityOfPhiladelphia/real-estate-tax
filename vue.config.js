@@ -5,12 +5,12 @@ module.exports = {
 
   configureWebpack: {
     plugins: [
-      new Visualizer({ filename: './statistics.html' })
+      new Visualizer({ filename: './statistics.html' }),
     ],
   },
 
   chainWebpack: (config) => {
-    config.plugins.delete('prefetch')
+    config.plugins.delete('prefetch');
   },
 
   transpileDependencies: [
@@ -27,5 +27,5 @@ module.exports = {
   runtimeCompiler: undefined,
   productionSourceMap: undefined,
   parallel: undefined,
-  css: undefined
-}
+  css: undefined,
+};

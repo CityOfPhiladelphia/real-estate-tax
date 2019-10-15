@@ -13,6 +13,6 @@ export default {
     },
     success: function(data) {
       return data;
-    }
-  }
-}
+    },
+  },
+};

@@ -1,36 +1,46 @@
 <template>
-  <div class='wrapper grid-y'>
+  <div class="wrapper grid-y">
     <div class="callout columns small-24">
       <div class="columns small-24 medium-6 flex-div">
         <h4>Balance Due</h4>
-        <h2 class="header-no-margin"><b>{{ transform.currency.transform(this.propertyBalance) }}</b></h2>
-        <p class="p-margin">Includes Payments Through: {{ transform.date.transform(this.tipsData.lastPaymentPostedDate) }}</p>
+        <h2 class="header-no-margin">
+          <b>{{ transform.currency.transform(propertyBalance) }}</b>
+        </h2>
+        <p class="p-margin">
+          Includes Payments Through: {{ transform.date.transform(tipsData.lastPaymentPostedDate) }}
+        </p>
       </div>
       <div class="columns small-24 medium-6 flex-div div-padding-and-margin">
-        <e-pay-form :options="ePayOptions"
-                    :slots="ePaySlots"
+        <e-pay-form
+          :options="ePayOptions"
+          :slots="ePaySlots"
         />
-        <p v-if="this.propertyBalance > 0"
-           class="p-margin"
+        <p
+          v-if="propertyBalance > 0"
+          class="p-margin"
         >
           Or pay by phone (877) 309-3710.
         </p>
       </div>
       <div class="columns small-24 medium-6 flex-div div-padding-and-margin">
-        <a id="plans-button"
-           href="#"
-           class="button"
-           @click.prevent="plansButtonAction"
+        <a
+          id="plans-button"
+          href="#"
+          class="button"
+          @click.prevent="plansButtonAction"
         >
           Payment Plans
         </a>
-        <p class="p-margin">Need help with your bill? We offer payment options and assistance plans.</p>
+        <p class="p-margin">
+          Need help with your bill? We offer payment options and assistance plans.
+        </p>
       </div>
       <div class="columns small-24 medium-6 flex-div div-padding-and-margin">
-        <a id="plans-button"
-           href="#"
-           class="button"
-           @click.prevent="couponButtonAction"
+        <a
+          id="plans-button"
+          href="#"
+          class="button"
+          @click.prevent="couponButtonAction"
         >
           Print Payment Coupon
         </a>
@@ -41,66 +51,67 @@
 </template>
 
 <script>
-  import transforms from '../general/transforms.js';
-  import ePayForm from '@philly/vue-comps/src/components/ePayForm.vue';
-  // console.log('ePayForm:', ePayForm);
-  // const ePayForm = philaVueComps.ePayForm;
+import transforms from '../general/transforms.js';
+import ePayForm from '@philly/vue-comps/src/components/ePayForm.vue';
+import generateBillingXml from '../util/generate-billing-xml';
+// console.log('ePayForm:', ePayForm);
+// const ePayForm = philaVueComps.ePayForm;
 
-  export default {
-    components: {
-      ePayForm,
+export default {
+  components: {
+    ePayForm,
+  },
+  computed: {
+    propertyBalance() {
+      return this.$store.state.appData.propertyBalance;
     },
-    computed: {
-      propertyBalance() {
-        return this.$store.state.appData.propertyBalance;
-      },
-      tipsData() {
-        if (this.$store.state.sources.tips.data.data) {
-          return this.$store.state.sources.tips.data.data;
-        } else {
-          return {}
-        }
-      },
-      ePayOptions() {
-        const options = {
-          height: 50,
-          width: 160,
-          fontSize: 25,
-          actionAddress: 'https://secure.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx'
-        }
-        return options;
-      },
-      ePaySlots() {
-        const slots = {
-          buttonAction: function(state) {
-            const data = {
-              'accountNum': this.tipsData.accountNum,
-              'totalDue': 0,
-              'balances': this.tipsData,
-              'address': {
-                'streetAddress': this.tipsData.property.address,
-                'zipCode': this.$store.state.geocode.data.properties.zip_code,
-              }
-            }
-            return generateBillingXml(data);
-          },
-          text:'Pay Now'
-        }
-        return slots;
-      },
-      transform() {
-        return transforms;
-      },
+    tipsData() {
+      if (this.$store.state.sources.tips.data.data) {
+        return this.$store.state.sources.tips.data.data;
+      }
+      return {};
+
     },
-    methods: {
-      plansButtonAction() {
-        window.open('https://www.phila.gov/services/payments-assistance-taxes/payment-plans/', '_blank');
-      },
-      couponButtonAction() {
-        window.open('https://ework.phila.gov/revenue/default?realestate=true', '_blank');
-      },
-    }
-  };
+    ePayOptions() {
+      const options = {
+        height: 50,
+        width: 160,
+        fontSize: 25,
+        actionAddress: 'https://secure.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx',
+      };
+      return options;
+    },
+    ePaySlots() {
+      const slots = {
+        buttonAction: function(state) {
+          const data = {
+            'accountNum': this.tipsData.accountNum,
+            'totalDue': 0,
+            'balances': this.tipsData,
+            'address': {
+              'streetAddress': this.tipsData.property.address,
+              'zipCode': this.$store.state.geocode.data.properties.zip_code,
+            },
+          };
+          return generateBillingXml(data);
+        },
+        text:'Pay Now',
+      };
+      return slots;
+    },
+    transform() {
+      return transforms;
+    },
+  },
+  methods: {
+    plansButtonAction() {
+      window.open('https://www.phila.gov/services/payments-assistance-taxes/payment-plans/', '_blank');
+    },
+    couponButtonAction() {
+      window.open('https://ework.phila.gov/revenue/default?realestate=true', '_blank');
+    },
+  },
+};
 </script>
 
 <style scoped>
