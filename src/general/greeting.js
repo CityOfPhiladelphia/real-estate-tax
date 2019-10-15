@@ -15,5 +15,5 @@ export default {
         website are valid through the end of the current month. Once paid in full, all Revenue Real Estate Tax liens recorded\
         in Court of Common Pleas with an “R” in the docket number, are satisfied automatically.</p><br>\
     </div>\
-  '
-}
+  ',
+};

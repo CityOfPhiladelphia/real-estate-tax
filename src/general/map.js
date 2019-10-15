@@ -3,10 +3,10 @@ export default {
   defaultBasemap: 'pwd',
   defaultIdentifyFeature: 'address-marker',
   imagery: {
-    enabled: true
+    enabled: true,
   },
   historicBasemaps: {
-    enabled: true
+    enabled: true,
   },
   featureLayers: {
     dorParcels: {
@@ -16,4 +16,4 @@ export default {
       url: '//services.arcgis.com/fLeGjb7u4uXqeF9q/ArcGIS/rest/services/PWD_PARCELS/FeatureServer/0',
     },
   },
-}
+};

@@ -6,7 +6,7 @@ export default {
   icon: 'usd-circle',
   label: 'Balance Details',
   // REVIEW can these be calculated from vue deps?
-  dataSources: ['tips'],
+  dataSources: [ 'tips' ],
   errorMessage: function() {
     return 'Could not locate tax records for that address.';
   },
@@ -18,19 +18,27 @@ export default {
         export: {
           formatButtons: {
             'csv': 'CSV',
-            'pdf': 'PDF'
+            'pdf': 'PDF',
           },
-          file: function(state) { return state.sources.tips.data.data.accountNum + '_BalanceDetails'; },
+          file: function(state) {
+            return state.sources.tips.data.data.accountNum + '_BalanceDetails'; 
+          },
           introLines: [
-            function(state) { return state.geocode.data.properties.street_address; },
+            function(state) {
+              return state.geocode.data.properties.street_address; 
+            },
             function(state) {
               const zipCode = state.geocode.data.properties.zip_code;
               const zip4 = state.geocode.data.properties.zip_4;
-              const parts = [zipCode];
-              if (zip4) parts.push(zip4);
+              const parts = [ zipCode ];
+              if (zip4) {
+                parts.push(zip4);
+              }
               return 'Philadelphia PA ' + parts.join('-');
             },
-            function(state) { return 'OPA Number ' + state.sources.tips.data.data.accountNum.toString(); },
+            function(state) {
+              return 'OPA Number ' + state.sources.tips.data.data.accountNum.toString(); 
+            },
             function(state) {
               var owner = state.sources.tips.data.data.property.ownerName;
               // var owners = state.geocode.data.properties.opa_owners;
@@ -66,12 +74,12 @@ export default {
                 result = 'no data';
               }
               return 'Sale Price: $' + result + '.00';
-            }
-          ]
+            },
+          ],
         },
         totalRow: {
           enabled: true,
-          totalField: 'year'
+          totalField: 'year',
         },
         fields: [
           {
@@ -81,8 +89,8 @@ export default {
             },
             nullValue: 'no year available',
             transforms: [
-              'misc'
-            ]
+              'misc',
+            ],
           },
           {
             label: 'Principal',
@@ -90,8 +98,8 @@ export default {
               return item.principal.toFixed(2);
             },
             transforms: [
-              'currency'
-            ]
+              'currency',
+            ],
           },
           {
             label: 'Interest',
@@ -99,8 +107,8 @@ export default {
               return item.interest.toFixed(2);
             },
             transforms: [
-              'currency'
-            ]
+              'currency',
+            ],
           },
           {
             label: 'Penalty',
@@ -108,8 +116,8 @@ export default {
               return item.penalty.toFixed(2);
             },
             transforms: [
-              'currency'
-            ]
+              'currency',
+            ],
           },
           {
             label: 'Other',
@@ -117,8 +125,8 @@ export default {
               return item.other.toFixed(2);
             },
             transforms: [
-              'currency'
-            ]
+              'currency',
+            ],
           },
           {
             label: 'Total',
@@ -126,20 +134,20 @@ export default {
               return item.total.toFixed(2);
             },
             transforms: [
-              'currency'
-            ]
+              'currency',
+            ],
           },
           {
             label: 'Lien Number',
             value: function(state, item){
               return item.lienNum;
-            }
+            },
           },
           {
             label: 'City Solicitor',
             value: function(state, item){
               return item.solicitor;
-            }
+            },
           },
           {
             label: 'Status',
@@ -151,7 +159,7 @@ export default {
               'statusMap',
             ],
             popoverPreText: function(state, item) {
-              return '<i class="fa fa-info-circle" aria-hidden="true"></i> <strong>' + item.status + '</strong> - '
+              return '<i class="fa fa-info-circle" aria-hidden="true"></i> <strong>' + item.status + '</strong> - ';
             },
           },
         ],
@@ -161,7 +169,7 @@ export default {
             return item.year;
           },
           // asc or desc
-          order: 'asc'
+          order: 'asc',
         },
       },
       slots: {
@@ -177,4 +185,4 @@ export default {
       },
     },
   ],
-}
+};

@@ -26,30 +26,30 @@ export default {
                 of the sequestration proceedings, you may call (215) 686-3629, or search the Philadelphia Court's civil docket
                 at <a href="http://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer" target="_blank">Civil Docket Access</a>.
                 You may enter the property owner's name in the Court’s “Caption” search box.`,
-      }
+      };
       if (map[value]) {
         return map[value];
-      } else {
-        return 'There is no information provided about this code.'
-      }
-    }
+      } 
+      return 'There is no information provided about this code.';
+      
+    },
   },
   misc: {
     transform: function(value) {
       if (value === 2034) {
         return 'MISC';
-      } else {
-        return value;
-      }
-    }
+      } 
+      return value;
+      
+    },
   },
   currency: {
     // a list of global objects this transform depends on
-    globals: ['accounting'],
+    globals: [ 'accounting' ],
     // this is the function that gets called to perform the transform
     transform: function (value, globals) {
       return accounting.formatMoney(value, '$', 2);
-    }
+    },
   },
   date: {
     transform: function (value) {
@@ -61,7 +61,7 @@ export default {
       var s2 = (""+value).replace(/\D/g, '');
       var m = s2.match(/^(\d{3})(\d{3})(\d{4})$/);
       return (!m) ? null : "(" + m[1] + ") " + m[2] + "-" + m[3];
-    }
+    },
   },
   rcoPrimaryContact: {
     transform: function (value) {
@@ -74,17 +74,17 @@ export default {
       }
 
       // standardize phone number
-      var std = ['(', m[1], ') ', m[3], '-', m[5]].join('');
-      var orig = m[0]
+      var std = [ '(', m[1], ') ', m[3], '-', m[5] ].join('');
+      var orig = m[0];
       var valueStd = value.replace(orig, std);
 
       return valueStd;
-    }
+    },
   },
   booleanToYesNo: {
     transform: function(value) {
       return value ? 'Yes' : 'No';
-    }
+    },
   },
   integer: {
     transform: function (value) {
@@ -116,4 +116,4 @@ export default {
       return '<strong>' + value + '</strong>';
     },
   },
-}
+};

@@ -11,8 +11,8 @@ let keys = [
   'BRT',
   'LSLD',
   'DISC',
-  'SEQR'
-]
+  'SEQR',
+];
 
 const LBR = transforms.statusMap.transform('LBR');
 
@@ -28,31 +28,31 @@ export default {
         text: 'Each status code has different instructions. If there is no\
         status code, the City is handling the account and you should call\
         (215) 686-6442 with questions.\
-        '
-      }
+        ',
+      },
     },
     {
       type: 'vertical-table',
       slots: {
         fields: function() {
-          let ex = []
+          let ex = [];
           for (let key of keys) {
             ex.push({
               label: key,
-              value: transforms.statusMap.transform(key)
-            })
+              value: transforms.statusMap.transform(key),
+            });
           }
           return ex;
-        }()
+        }(),
       },
       options: {
         id: 'statusDetails',
         styles: {
           th: {
-            'width': '10%'
-          }
-        }
-      }
-    }
+            'width': '10%',
+          },
+        },
+      },
+    },
   ],
-}
+};

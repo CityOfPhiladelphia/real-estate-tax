@@ -1,9 +1,9 @@
 <template>
   <div>
-
     <div class="flex-div">
-      <div class="main-div"
-           :style="minWidth"
+      <div
+        class="main-div"
+        :style="minWidth"
       >
         <!-- <div class="maintenance-div">
           <p>Note: This site may down at different points for scheduled maintenance from 8:00 am to 12:00 pm on Sunday, 3/24/2019</p>
@@ -13,14 +13,21 @@
         </div>
         <div class="bottom-div">
           <div class="columns small-24 small-centered medium-12">
-            <a @click="close" class="button full-width uniform-font">Continue To New Site</a>
-            <a href="https://legacy.phila.gov/revenue/realestatetax/" class="button full-width uniform-font">Go To Old Site</a>
-            <p class="disclaimer">Payment coupons are only available on the new site.</p>
+            <a
+              class="button full-width uniform-font"
+              @click="close"
+            >Continue To New Site</a>
+            <a
+              href="https://legacy.phila.gov/revenue/realestatetax/"
+              class="button full-width uniform-font"
+            >Go To Old Site</a>
+            <p class="disclaimer">
+              Payment coupons are only available on the new site.
+            </p>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -33,19 +40,19 @@ export default {
     minWidth() {
       if (this.$store.state.isMobileOrTablet) {
         return;
-      } else {
-        return { minWidth: '550px' };
-      }
-    }
+      } 
+      return { minWidth: '550px' };
+      
+    },
   },
   methods: {
     close() {
       this.$store.commit('setPopoverOpen', false);
       this.$store.commit('setPopoverOptions', {});
       this.$store.commit('setPopoverText', '');
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

@@ -4,10 +4,12 @@ export default {
   url: 'https://phl.carto.com/api/v2/sql',
   options: {
     params: {
-      q: function(feature){ return "select * from opa_properties_public where parcel_number = '" + feature.properties.opa_account_num.toString() + "'"},
+      q: function(feature){
+        return "select * from opa_properties_public where parcel_number = '" + feature.properties.opa_account_num.toString() + "'";
+      },
     },
     success: function(data) {
       return data.rows[0];
-    }
-  }
-}
+    },
+  },
+};

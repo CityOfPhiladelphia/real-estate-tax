@@ -17,7 +17,7 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
 }
 
 // Font Awesome Icons
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { library } from '@fortawesome/fontawesome-svg-core';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons/faInfoCircle';
 import { faHome } from '@fortawesome/free-solid-svg-icons/faHome';
 import { faUsdCircle } from '@fortawesome/pro-solid-svg-icons/faUsdCircle';
@@ -92,7 +92,7 @@ mapboard({
     },
   },
   onGeocodeFail: {
-    data: 'tips'
+    data: 'tips',
   },
   carto: {
     baseUrl: '//phl.carto.com/api/v2/sql',
@@ -104,7 +104,7 @@ mapboard({
     options: {
       headerType: 'h3',
       style: 'margin-top: 5px; margin-bottom: 0px;',
-    }
+    },
   },
   imageOverlayGroups,
   legendControls,
@@ -117,7 +117,7 @@ mapboard({
     enabled: false,
   },
   geolocation: {
-    enabled: false
+    enabled: false,
   },
   router: {
     enabled: true,
@@ -128,13 +128,13 @@ mapboard({
     wideStyle: {
       'max-width': '100%',
       'font-size': '24px',
-      'line-height': '28px'
+      'line-height': '28px',
     },
     narrowStyle: {
       'max-width': '100%',
       'font-size': '20px',
-      'line-height': '24px'
-    }
+      'line-height': '24px',
+    },
   },
   addressInput: {
     width: 465,
@@ -171,8 +171,8 @@ mapboard({
     {
       type: 'topic-set',
       options: {
-        defaultTopic: 'property'
-      }
+        defaultTopic: 'property',
+      },
     },
   ],
 });
