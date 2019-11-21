@@ -29,7 +29,10 @@ export default function (data) {
   }
 
   // get the current date/time in iso format with timezone
-  let timestamp = format(new Date(), 'YYYY-MM-DDTHH:mm:ssZ');
+  // 2019-11-21T13:19:27-05:00
+  // 2019-11-21 157436024221613:17:22-05:00
+  let timestamp = format(new Date(), "yyyy-MM-dd'T'HH:mm:ssxxx");
+  console.log('timestamp in realestatetax gb:', timestamp);
 
   // TODO use a json to xml lib instead of forming this string?
   const xmlString = `<?xml version="1.0" encoding="utf-16"?>
