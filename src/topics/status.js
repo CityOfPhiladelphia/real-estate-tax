@@ -36,12 +36,16 @@ export default {
       slots: {
         fields: function() {
           let ex = [];
-          for (let key of keys) {
-            ex.push({
-              label: key,
-              value: transforms.statusMap.transform(key),
-            });
+          let i;
+          for (i = 0; i < keys.length; i++) {
+            console.log('test');
           }
+          // for (let key of keys) {
+          //   ex.push({
+          //     label: key,
+          //     value: transforms.statusMap.transform(key),
+          //   });
+          // }
           return ex;
         }(),
       },

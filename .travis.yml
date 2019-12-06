@@ -23,3 +23,11 @@ deploy:
       branch: test-api
     local_dir: dist
     skip_cleanup: true
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: 'real-estate-test'
+    on:
+      branch: pde-merge
+    local_dir: dist
+    skip_cleanup: true
