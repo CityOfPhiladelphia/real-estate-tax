@@ -45,9 +45,9 @@ export default {
   },
   currency: {
     // a list of global objects this transform depends on
-    globals: [ 'accounting' ],
+    // globals: [ 'accounting' ],
     // this is the function that gets called to perform the transform
-    transform: function (value, globals) {
+    transform: function (value) {
       return accounting.formatMoney(value, '$', 2);
     },
   },
