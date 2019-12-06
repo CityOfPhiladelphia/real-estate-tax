@@ -26,5 +26,5 @@ module.exports = {
     '@philly/vue-mapping',
     '@philly/vue-datafetch',
     // /other-dep/
-  ]
+  ],
 };
