@@ -13,6 +13,12 @@ module.exports = {
     config.plugins.delete('prefetch');
   },
 
+  // outputDir: undefined,
+  // assetsDir: undefined,
+  // runtimeCompiler: undefined,
+  // productionSourceMap: undefined,
+  // parallel: undefined,
+  // css: undefined,
   transpileDependencies: [
     // can be string or regex
     '@philly/mapboard',
@@ -20,12 +26,5 @@ module.exports = {
     '@philly/vue-mapping',
     '@philly/vue-datafetch',
     // /other-dep/
-  ],
-
-  outputDir: undefined,
-  assetsDir: undefined,
-  runtimeCompiler: undefined,
-  productionSourceMap: undefined,
-  parallel: undefined,
-  css: undefined,
+  ]
 };
