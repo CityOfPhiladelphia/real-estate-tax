@@ -83,7 +83,7 @@ export default {
     },
     ePaySlots() {
       const slots = {
-        buttonAction: function(state) {
+        buttonAction: function() {
           const data = {
             'accountNum': this.tipsData.accountNum,
             'totalDue': 0,
