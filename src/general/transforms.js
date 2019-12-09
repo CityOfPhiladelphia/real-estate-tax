@@ -1,5 +1,5 @@
 import accounting from 'accounting';
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 
 accounting.settings.currency.precision = 0;
 
@@ -29,18 +29,18 @@ export default {
       };
       if (map[value]) {
         return map[value];
-      } 
+      }
       return 'There is no information provided about this code.';
-      
+
     },
   },
   misc: {
     transform: function(value) {
       if (value === 2034) {
         return 'MISC';
-      } 
+      }
       return value;
-      
+
     },
   },
   currency: {
@@ -53,7 +53,14 @@ export default {
   },
   date: {
     transform: function (value) {
-      return format(value, 'MM/DD/YYYY');
+      let valueTransformed;
+      // console.log('date transform running, value:', value, 'typeof value:', typeof value);
+      if (typeof value === 'string') {
+        valueTransformed = format(parseISO(value), 'MM/dd/yyyy');
+      } else {
+        valueTransformed = format(value, 'MM/dd/yyyy');
+      }
+      return valueTransformed;
     },
   },
   phoneNumber: {
