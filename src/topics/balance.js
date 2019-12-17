@@ -19,6 +19,7 @@ export default {
             'csv': 'CSV',
             'pdf': 'PDF',
           },
+          buttonPosition: 'right',
           file: function(state) {
             return state.sources.tips.data.data.accountNum + '_BalanceDetails';
           },
