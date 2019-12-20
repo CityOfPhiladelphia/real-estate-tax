@@ -1,4 +1,4 @@
-// import transforms from '../general/transforms.js';
+import transforms from '../general/transforms.js';
 
 let keys = [
   'LBR',
@@ -38,7 +38,11 @@ export default {
           let ex = [];
           let i;
           for (i = 0; i < keys.length; i++) {
-            console.log('test');
+            // console.log('test');
+            ex.push({
+              label: keys[i],
+              value: transforms.statusMap.transform(keys[i]),
+            });
           }
           // for (let key of keys) {
           //   ex.push({
