@@ -1,7 +1,7 @@
-import generateBillingXml from '../util/generate-billing-xml';
-import transforms from '../general/transforms';
+// import generateBillingXml from '../util/generate-billing-xml';
+// import transforms from '../general/transforms';
 // import propertyCallout from '../components/propertyCallout.vue';
-import account from '../util/account.js';
+// import account from '../util/account.js';
 
 export default {
   key: 'property',
@@ -23,9 +23,9 @@ export default {
             value: function(state) {
               if (state.geocode.data) {
                 return state.geocode.data.properties.opa_account_num;
-              } 
+              }
               return 'no data';
-              
+
             },
           },
           {
@@ -33,9 +33,9 @@ export default {
             value: function(state) {
               if (state.geocode.data) {
                 return state.geocode.data.properties.opa_address;
-              } 
+              }
               return 'no data';
-              
+
             },
           },
           {
@@ -60,9 +60,9 @@ export default {
                   result = 'no data';
                 }
                 return result;
-              } 
+              }
               return 'no data';
-              
+
             },
             transforms: [
               'currency',
@@ -113,7 +113,7 @@ export default {
         id: 'opaData',
         // requiredSources: ['opa'],
         externalLink: {
-          action: function(count) {
+          action: function() {
             return 'See more';
           },
           name: 'Property Search',

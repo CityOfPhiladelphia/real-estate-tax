@@ -1,4 +1,3 @@
-import helpers from '../util/helpers.js';
 import transforms from '../general/transforms.js';
 
 export default {
@@ -20,12 +19,13 @@ export default {
             'csv': 'CSV',
             'pdf': 'PDF',
           },
+          buttonPosition: 'right',
           file: function(state) {
-            return state.sources.tips.data.data.accountNum + '_BalanceDetails'; 
+            return state.sources.tips.data.data.accountNum + '_BalanceDetails';
           },
           introLines: [
             function(state) {
-              return state.geocode.data.properties.street_address; 
+              return state.geocode.data.properties.street_address;
             },
             function(state) {
               const zipCode = state.geocode.data.properties.zip_code;
@@ -37,7 +37,7 @@ export default {
               return 'Philadelphia PA ' + parts.join('-');
             },
             function(state) {
-              return 'OPA Number ' + state.sources.tips.data.data.accountNum.toString(); 
+              return 'OPA Number ' + state.sources.tips.data.data.accountNum.toString();
             },
             function(state) {
               var owner = state.sources.tips.data.data.property.ownerName;

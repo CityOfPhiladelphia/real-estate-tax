@@ -14,7 +14,7 @@ let keys = [
   'SEQR',
 ];
 
-const LBR = transforms.statusMap.transform('LBR');
+// const LBR = transforms.statusMap.transform('LBR');
 
 export default {
   key: 'status',
@@ -36,12 +36,20 @@ export default {
       slots: {
         fields: function() {
           let ex = [];
-          for (let key of keys) {
+          let i;
+          for (i = 0; i < keys.length; i++) {
+            // console.log('test');
             ex.push({
-              label: key,
-              value: transforms.statusMap.transform(key),
+              label: keys[i],
+              value: transforms.statusMap.transform(keys[i]),
             });
           }
+          // for (let key of keys) {
+          //   ex.push({
+          //     label: key,
+          //     value: transforms.statusMap.transform(key),
+          //   });
+          // }
           return ex;
         }(),
       },

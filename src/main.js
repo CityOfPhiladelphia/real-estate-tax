@@ -7,8 +7,10 @@ __________              .__  ___________         __          __
         \/     \/     \/             \/     \/            \/          \/
 */
 
-import * as Sentry from '@sentry/browser';
-Sentry.init({ dsn: 'https://6702e2c2f3ea4c6384583fbed0b54f4f@sentry.io/1330799' });
+// import * as Sentry from '@sentry/browser';
+// Sentry.init({ dsn: 'https://6702e2c2f3ea4c6384583fbed0b54f4f@sentry.io/1330799' });
+
+console.log('real estate tax at top of main.js');
 
 // turn off console logging in production
 const { hostname='' } = location;
@@ -50,8 +52,8 @@ import map from './general/map';
 import legendControls from './general/legendControls';
 import imageOverlayGroups from './general/imageOverlayGroups';
 
-import '../node_modules/phila-standards/dist/css/phila-app.min.css';
-import './styles.css';
+// import '../node_modules/phila-standards/dist/css/phila-app.min.css';
+// import './styles.css';
 
 
 var BASE_CONFIG_URL = null;
