@@ -1,5 +1,3 @@
-import helpers from '../util/helpers';
-
 export default {
   id: 'condoList',
   type: 'http-get',
@@ -9,7 +7,7 @@ export default {
       urlAddition: function (feature) {
         return feature.properties.street_address;
       },
-      gatekeeperKey: helpers.GATEKEEPER_KEY,
+      gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
       include_units: true,
       opa_only: true,
       page: 1,

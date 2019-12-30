@@ -32,7 +32,6 @@ import accounting from 'accounting';
 import mapboard from '@philly/mapboard/src/main.js';
 
 // General Config Modules
-import helpers from './util/helpers';
 import transforms from './general/transforms';
 import parcels from './general/parcels';
 import greeting from './general/greeting';
@@ -89,7 +88,7 @@ mapboard({
       return '//api.phila.gov/ais/v1/search/' + inputEncoded;
     },
     params: {
-      gatekeeperKey: helpers.GATEKEEPER_KEY,
+      gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
       include_units: true,
     },
   },
@@ -152,7 +151,7 @@ mapboard({
     left: 0,
     right: 0,
   },
-  gatekeeperKey: helpers.GATEKEEPER_KEY,
+  gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
   baseConfig: BASE_CONFIG_URL,
   parcels,
   transforms,

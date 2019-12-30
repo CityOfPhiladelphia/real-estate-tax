@@ -1,5 +1,3 @@
-import helpers from '../util/helpers';
-
 export default {
   id: 'tips',
   type: 'http-get',
@@ -9,7 +7,7 @@ export default {
       urlAddition: function (feature) {
         return feature.properties.opa_account_num;
       },
-      gatekeeperKey: helpers.GATEKEEPER_KEY,
+      gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
     },
     success: function(data) {
       return data;
