@@ -36,7 +36,7 @@ export default {
   },
   misc: {
     transform: function(value) {
-      if (value === 2034) {
+      if (value === 1934) {
         return 'MISC';
       }
       return value;
