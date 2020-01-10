@@ -97,7 +97,7 @@ export default {
             label: 'Principal',
             value: function(state, item){
               // console.log('item:', item);
-              return item.principle_bal.toFixed(2);
+              return item.principal_bal.toFixed(2);
             },
             transforms: [
               'currency',

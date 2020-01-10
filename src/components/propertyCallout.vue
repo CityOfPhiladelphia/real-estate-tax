@@ -7,7 +7,8 @@
           <b>{{ transform.currency.transform(propertyBalance) }}</b>
         </h2>
         <p class="p-margin">
-          <!-- Includes Payments Through: {{ transform.date.transform(tipsData.lastPaymentPostedDate) }} -->
+          <!-- Includes Payments Through: {{ transform.date.transform(tipsData.payments_posted_thru) }} -->
+          Includes Payments Through: {{ tipsData.payments_posted_thru }}
         </p>
       </div>
       <div class="columns small-24 medium-6 flex-div div-padding-and-margin">
