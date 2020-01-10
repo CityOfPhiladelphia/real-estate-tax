@@ -61,9 +61,11 @@ var BASE_CONFIG_URL = null;
 accounting.settings.currency.precision = 0;
 
 import propertyCallout from './components/propertyCallout.vue';
+import ePayForm from './components/ePayForm.vue';
 // import newSiteModal from './components/newSiteModal.vue';
 const customComps = {
   'propertyCallout': propertyCallout,
+  'ePayForm': ePayForm,
   // 'newSiteModal': newSiteModal
 };
 

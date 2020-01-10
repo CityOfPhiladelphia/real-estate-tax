@@ -62,7 +62,7 @@ export default function (data) {
   </Details>
   <Customers>
     <Customer>
-      <FirstName>${data.balances.property.ownerName}</FirstName>
+      <FirstName>${data.ownerName}</FirstName>
       <MiddleName />
       <LastName />
       <BillingAddress>

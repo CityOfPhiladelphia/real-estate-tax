@@ -21,7 +21,7 @@ export default {
           },
           buttonPosition: 'right',
           file: function(state) {
-            return state.sources.tips.data.data.accountNum + '_BalanceDetails';
+            return state.sources.tips.data.brt_no + '_BalanceDetails';
           },
           introLines: [
             function(state) {
@@ -37,10 +37,10 @@ export default {
               return 'Philadelphia PA ' + parts.join('-');
             },
             function(state) {
-              return 'OPA Number ' + state.sources.tips.data.data.accountNum.toString();
+              return 'OPA Number ' + state.sources.tips.data.brt_no.toString();
             },
             function(state) {
-              var owner = state.sources.tips.data.data.property.ownerName;
+              var owner = state.sources.tips.data.property_info.owner_name;
               // var owners = state.geocode.data.properties.opa_owners;
               // var ownersJoined = owners.join(', ');
               return 'Owner: ' + owner;
@@ -85,6 +85,7 @@ export default {
           {
             label: 'Year',
             value: function(state, item){
+              console.log('item:', item);
               return item.year;
             },
             nullValue: 'no year available',
@@ -95,7 +96,8 @@ export default {
           {
             label: 'Principal',
             value: function(state, item){
-              return item.principal.toFixed(2);
+              // console.log('item:', item);
+              return item.principle_bal.toFixed(2);
             },
             transforms: [
               'currency',
@@ -104,7 +106,7 @@ export default {
           {
             label: 'Interest',
             value: function(state, item){
-              return item.interest.toFixed(2);
+              return item.interest_bal.toFixed(2);
             },
             transforms: [
               'currency',
@@ -113,7 +115,7 @@ export default {
           {
             label: 'Penalty',
             value: function(state, item){
-              return item.penalty.toFixed(2);
+              return item.penalty_bal.toFixed(2);
             },
             transforms: [
               'currency',
@@ -122,7 +124,7 @@ export default {
           {
             label: 'Other',
             value: function(state, item){
-              return item.other.toFixed(2);
+              return item.other_change_bal.toFixed(2);
             },
             transforms: [
               'currency',
@@ -131,7 +133,7 @@ export default {
           {
             label: 'Total',
             value: function(state, item){
-              return item.total.toFixed(2);
+              return item.total_balance.toFixed(2);
             },
             transforms: [
               'currency',
@@ -140,13 +142,13 @@ export default {
           {
             label: 'Lien Number',
             value: function(state, item){
-              return item.lienNum;
+              return item.lien_number;
             },
           },
           {
             label: 'City Solicitor',
             value: function(state, item){
-              return item.solicitor;
+              return item.attorney;
             },
           },
           {
@@ -175,7 +177,7 @@ export default {
       slots: {
         title: 'Balance Details',
         items: function(state) {
-          var data = state.sources['tips'].data.data.years;
+          var data = state.sources.tips.data.tax_years;
           var rows = data.map(function(row){
             var itemRow = row;
             return itemRow;
