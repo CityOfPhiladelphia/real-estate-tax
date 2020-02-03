@@ -70,7 +70,7 @@ export default {
          width: ' + this.$props.options.width + 'px;\
          font-size: ' + this.$props.options.fontSize + 'px;\
          ',
-      actionAddress: this.$props.options.actionAddress || 'https://test-secure.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx',
+      actionAddress: this.$props.options.actionAddress || 'https://test-epay.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx',
     };
     return data;
   },
