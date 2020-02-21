@@ -7,7 +7,6 @@ export default {
       urlAddition: function (feature) {
         return feature.properties.opa_account_num;
       },
-      gatekeeperKey: process.env.VUE_APP_GATEKEEPER_KEY,
     },
     success: function(data) {
       return data;
