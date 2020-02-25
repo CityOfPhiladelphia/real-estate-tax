@@ -72,13 +72,14 @@ mapboard({
   customComps,
   healthCheck: {
     enabled: true,
+    endpoint: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_down.json',
     // endpoint: 'http://api.phila.gov/tips/account/883309050',
-    endpoint: 'http://api.phila.gov/tips/account/fghfghfghfg',
+    // endpoint: 'http://api.phila.gov/tips/account/fghfghfghfg',
     maintenanceHours: [
       {
         'day': 2,
         'startTime': '14:00',
-        'endTime': '16:00',
+        'endTime': '16:20',
       },
       {
         'day': 3,
