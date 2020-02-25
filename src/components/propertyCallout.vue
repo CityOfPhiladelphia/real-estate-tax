@@ -52,7 +52,7 @@
 
 <script>
 import transforms from '../general/transforms.js';
-import ePayForm from '@philly/vue-comps/src/components/ePayForm.vue';
+import ePayForm from '@phila/vue-comps/src/components/ePayForm.vue';
 import generateBillingXml from '../util/generate-billing-xml';
 // console.log('ePayForm:', ePayForm);
 // const ePayForm = philaVueComps.ePayForm;

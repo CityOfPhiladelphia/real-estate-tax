@@ -1,7 +1,8 @@
 const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
-  publicPath: '/revenue/realestatetax/',
+  publicPath: process.env.VUE_APP_PUBLIC_PATH,//'/revenue/realestatetax/',
+  // publicPath: '/revenue/realestatetax/',
 
   configureWebpack: {
     plugins: [

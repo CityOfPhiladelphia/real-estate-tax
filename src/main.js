@@ -29,7 +29,7 @@ import { faBuilding } from '@fortawesome/free-solid-svg-icons/faBuilding';
 library.add(faInfoCircle, faHome, faUsdCircle, faAsterisk, faCircle, faBuilding);
 
 import accounting from 'accounting';
-import mapboard from '@philly/mapboard/src/main.js';
+import mapboard from '@phila/mapboard/src/main.js';
 
 // General Config Modules
 import transforms from './general/transforms';
@@ -61,14 +61,21 @@ var BASE_CONFIG_URL = null;
 accounting.settings.currency.precision = 0;
 
 import propertyCallout from './components/propertyCallout.vue';
+import maintenance from './components/Maintenance.vue';
 // import newSiteModal from './components/newSiteModal.vue';
 const customComps = {
   'propertyCallout': propertyCallout,
+  'maintenance': maintenance,
   // 'newSiteModal': newSiteModal
 };
 
 mapboard({
   customComps,
+  healthCheck: {
+    enabled: true,
+    // endpoint: 'http://api.phila.gov/tips/account/883309050',
+    endpoint: 'http://api.phila.gov/tips/account/fghfghfghfg',
+  },
   panels: [
     'topics',
   ],

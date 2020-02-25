@@ -28,6 +28,6 @@ deploy:
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     bucket: 'real-estate-test'
     on:
-      branch: pde-merge
+      branch: maintenance-page
     local_dir: dist
     skip_cleanup: true
