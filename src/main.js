@@ -54,7 +54,6 @@ import imageOverlayGroups from './general/imageOverlayGroups';
 // import '../node_modules/phila-standards/dist/css/phila-app.min.css';
 // import './styles.css';
 
-
 var BASE_CONFIG_URL = null;
 
 // configure accounting.js
