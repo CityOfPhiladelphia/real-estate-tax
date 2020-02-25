@@ -72,8 +72,8 @@ mapboard({
   customComps,
   healthCheck: {
     enabled: true,
-    endpoint: 'http://api.phila.gov/tips/account/883309050',
-    // endpoint: 'http://api.phila.gov/tips/account/fghfghfghfg',
+    // endpoint: 'http://api.phila.gov/tips/account/883309050',
+    endpoint: 'http://api.phila.gov/tips/account/fghfghfghfg',
     maintenanceHours: [
       {
         'day': 2,
