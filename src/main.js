@@ -78,7 +78,7 @@ mapboard({
       {
         'day': 2,
         'startTime': '14:00',
-        'endTime': '15:20',
+        'endTime': '16:00',
       },
       {
         'day': 3,
