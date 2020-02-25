@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fortawesome/pro-solid-svg-icons": "^5.7.2",
-    "@phila/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#45676bef88b3aa32d628b4afa753d545ba58c384",
+    "@phila/mapboard": "https://github.com/CityOfPhiladelphia/mapboard#2cfcdeaa8efb0a5fa7ebc988ce994cde570fa7fa",
     "accounting": "^0.4.1",
     "vue": "^2.6.10"
   },
