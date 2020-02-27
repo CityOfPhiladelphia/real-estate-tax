@@ -60,34 +60,48 @@ var BASE_CONFIG_URL = null;
 accounting.settings.currency.precision = 0;
 
 import propertyCallout from './components/propertyCallout.vue';
-import maintenance from './components/Maintenance.vue';
+import maintenanceAPI from './components/MaintenanceAPI.vue';
+import maintenanceHours from './components/MaintenanceHours.vue';
+import alertBanner from './components/AlertBanner.vue';
 // import newSiteModal from './components/newSiteModal.vue';
 const customComps = {
   'propertyCallout': propertyCallout,
-  'maintenance': maintenance,
+  'maintenanceAPI': maintenanceAPI,
+  'maintenanceHours': maintenanceHours,
+  'alertBanner': alertBanner,
   // 'newSiteModal': newSiteModal
 };
 
 mapboard({
   customComps,
-  healthCheck: {
+  header: {
     enabled: true,
-    endpoint: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_down.json',
-    // endpoint: 'http://api.phila.gov/tips/account/883309050',
-    // endpoint: 'http://api.phila.gov/tips/account/fghfghfghfg',
-    maintenanceHours: [
-      {
-        'day': 2,
-        'startTime': '14:00',
-        'endTime': '16:20',
-      },
-      {
-        'day': 3,
-        'startTime': '14:00',
-        'endTime': '15:30',
-      },
-    ],
+    text: 'Real Estate Tax Balance Search',
   },
+  alertBanner: {
+    enabled: true,
+  },
+  healthChecks: [
+    {
+      type: 'maintenanceHours',
+      maintenanceHours: [
+        {
+          'day': 7,
+          'startTime': '11:00',
+          'endTime': '12:20',
+        },
+        {
+          'day': 7,
+          'startTime': '11:20',
+          'endTime': '12:50',
+        },
+      ],
+    },
+    {
+      type: 'maintenanceAPI',
+      endpoint: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_down.json',
+    },
+  ],
   panels: [
     'topics',
   ],

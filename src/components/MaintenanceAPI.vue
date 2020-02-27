@@ -3,12 +3,11 @@
     <div class="columns">
       <div class="column login-box card is-offset-4 is-4 content">
         <h2 class="has-text-centered">
-          Important Notice
+          Real Estate Tax website currently unavailable
         </h2>
         <p>
-          We are having issues connecting to the <strong>Real Estate Tax Balance data services</strong>.
-          It might occur because a <strong>scheduled data maintenance</strong> or <strong>internet connection</strong>,
-          please, verify that you are connected to the internet and try again later if the problem persists call the system administrators.
+          Due to an unexpected issue, our <strong>Real Estate Tax balance and payment</strong> website is currently unavailable. We are working to resolve the problem.
+          You can also check and pay your Real Estate Tax by calling (877) 309-3710. We apologize for any inconvenience.
         </p>
         <div class="has-text-centered">
           <button
@@ -40,7 +39,7 @@ export default {
       console.log('testHealthCheck is running');
       this.isTesting = true;
       setTimeout(async () => {
-        await this.$store.dispatch('healthCheck', this.$config.healthCheck.endpoint);
+        await this.$store.dispatch('healthCheck', this.$config.healthChecks);
         // await this.$store.dispatch('healthCheck');
         this.isTesting = false;
       }, 600);
