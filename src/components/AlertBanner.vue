@@ -1,7 +1,7 @@
 <template>
   <!-- <div class="columns alert"> -->
   <div class="alert">
-    <p class='side-padding no-margin'>
+    <p class="side-padding no-margin">
       During tax season, the site occasionally experiences high volume impacting usage.
       If you are unable to obtain your balance, please try again in a few minutes.
     </p>

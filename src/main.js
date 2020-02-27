@@ -84,22 +84,22 @@ mapboard({
   healthChecks: [
     {
       type: 'maintenanceHours',
-      maintenanceHours: [
+      condition: [
         {
           'day': 7,
           'startTime': '11:00',
           'endTime': '12:20',
         },
         {
-          'day': 7,
+          'day': 5,
           'startTime': '11:20',
-          'endTime': '12:50',
+          'endTime': '13:50',
         },
       ],
     },
     {
       type: 'maintenanceAPI',
-      endpoint: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_down.json',
+      condition: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_down.json',
     },
   ],
   panels: [
