@@ -92,14 +92,14 @@ mapboard({
         },
         {
           'day': 5,
-          'startTime': '11:20',
-          'endTime': '13:50',
+          'startTime': '13:20',
+          'endTime': '17:50',
         },
       ],
     },
     {
       type: 'maintenanceAPI',
-      condition: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_down.json',
+      condition: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_up.json',
     },
   ],
   panels: [
