@@ -64,12 +64,13 @@ import maintenanceAPI from './components/MaintenanceAPI.vue';
 import maintenanceHours from './components/MaintenanceHours.vue';
 import alertBanner from './components/AlertBanner.vue';
 // import newSiteModal from './components/newSiteModal.vue';
+
 const customComps = {
   'propertyCallout': propertyCallout,
   'maintenanceAPI': maintenanceAPI,
   'maintenanceHours': maintenanceHours,
   'alertBanner': alertBanner,
-  // 'newSiteModal': newSiteModal
+  // 'newSiteModal': newSiteModal,
 };
 
 mapboard({
@@ -78,8 +79,8 @@ mapboard({
     enabled: true,
     text: 'Real Estate Tax Balance Search',
   },
-  alertBanner: {
-    enabled: true,
+  alerts: {
+    header: 'alertBanner',
   },
   healthChecks: [
     {
@@ -91,15 +92,15 @@ mapboard({
           'endTime': '12:20',
         },
         {
-          'day': 5,
-          'startTime': '13:20',
+          'day': 4,
+          'startTime': '9:20',
           'endTime': '17:50',
         },
       ],
     },
     {
       type: 'maintenanceAPI',
-      condition: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_up.json',
+      condition: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_down.json',
     },
   ],
   panels: [
@@ -112,7 +113,7 @@ mapboard({
   //       {
   //         'type': 'newSiteModal',
   //       },
-  //     ]
+  //     ],
   //   },
   // },
   geocoder: {

@@ -807,9 +807,9 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@phila/mapboard@https://github.com/CityOfPhiladelphia/mapboard#a2ad7b4c3524270b85040ab4d91a2253f9c6614c":
+"@phila/mapboard@https://github.com/CityOfPhiladelphia/mapboard#84bae3dc0080ef137ac83b3528e4c9e497ea180c":
   version "4.0.7"
-  resolved "https://github.com/CityOfPhiladelphia/mapboard#a2ad7b4c3524270b85040ab4d91a2253f9c6614c"
+  resolved "https://github.com/CityOfPhiladelphia/mapboard#84bae3dc0080ef137ac83b3528e4c9e497ea180c"
   dependencies:
     "@phila/vue-comps" "^2.0.9"
     "@phila/vue-datafetch" "https://github.com/CityOfPhiladelphia/phila-vue-datafetch#3763780c6de49730c7250648286a69d70b3cd2fd"

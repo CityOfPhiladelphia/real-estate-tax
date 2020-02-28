@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="columns alert"> -->
   <div class="alert">
     <p class="side-padding no-margin">
       During tax season, the site occasionally experiences high volume impacting usage.
