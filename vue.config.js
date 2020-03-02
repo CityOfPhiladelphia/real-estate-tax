@@ -21,10 +21,10 @@ module.exports = {
   // css: undefined,
   transpileDependencies: [
     // can be string or regex
-    '@philly/mapboard',
-    '@philly/vue-comps',
-    '@philly/vue-mapping',
-    '@philly/vue-datafetch',
+    '@phila/mapboard',
+    '@phila/vue-comps',
+    '@phila/vue-mapping',
+    '@phila/vue-datafetch',
     // /other-dep/
   ],
 };
