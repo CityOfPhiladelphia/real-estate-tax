@@ -29,7 +29,7 @@ import { faBuilding } from '@fortawesome/free-solid-svg-icons/faBuilding';
 library.add(faInfoCircle, faHome, faUsdCircle, faAsterisk, faCircle, faBuilding);
 
 import accounting from 'accounting';
-import mapboard from '@philly/mapboard/src/main.js';
+import mapboard from '@phila/mapboard/src/main.js';
 
 // General Config Modules
 import transforms from './general/transforms';
@@ -54,21 +54,55 @@ import imageOverlayGroups from './general/imageOverlayGroups';
 // import '../node_modules/phila-standards/dist/css/phila-app.min.css';
 // import './styles.css';
 
-
 var BASE_CONFIG_URL = null;
 
 // configure accounting.js
 accounting.settings.currency.precision = 0;
 
 import propertyCallout from './components/propertyCallout.vue';
+import maintenanceAPI from './components/MaintenanceAPI.vue';
+import maintenanceHours from './components/MaintenanceHours.vue';
+import alertBanner from './components/AlertBanner.vue';
 // import newSiteModal from './components/newSiteModal.vue';
+
 const customComps = {
   'propertyCallout': propertyCallout,
-  // 'newSiteModal': newSiteModal
+  'maintenanceAPI': maintenanceAPI,
+  'maintenanceHours': maintenanceHours,
+  'alertBanner': alertBanner,
+  // 'newSiteModal': newSiteModal,
 };
 
 mapboard({
   customComps,
+  header: {
+    enabled: true,
+    text: 'Real Estate Tax Balance Search',
+  },
+  alerts: {
+    header: 'alertBanner',
+  },
+  healthChecks: [
+    {
+      type: 'maintenanceHours',
+      condition: [
+        {
+          'day': 7,
+          'startTime': '2:00',
+          'endTime': '3:00',
+        },
+        {
+          'day': 7,
+          'startTime': '10:00',
+          'endTime': '11:00',
+        },
+      ],
+    },
+    {
+      type: 'maintenanceAPI',
+      condition: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_up.json',
+    },
+  ],
   panels: [
     'topics',
   ],
@@ -79,7 +113,7 @@ mapboard({
   //       {
   //         'type': 'newSiteModal',
   //       },
-  //     ]
+  //     ],
   //   },
   // },
   geocoder: {

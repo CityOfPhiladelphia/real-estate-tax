@@ -20,7 +20,6 @@ module.exports = {
     "nonblock-statement-body-position": [ "error", "below" ],
     "curly": [ "error", "all" ],
     "indent": [ "error", 2 ],
-    "no-else-return": "error",
     "object-curly-spacing": [ "error", "always", {
       arraysInObjects: false,
       objectsInObjects: false,
@@ -39,6 +38,7 @@ module.exports = {
     // "vue/require-prop-types": "off",
     // "vue/no-use-v-if-with-v-for": "off",
     "no-useless-escape": "off",
+    "no-else-return": "off",
   },
   parserOptions: {
     parser: "babel-eslint",
