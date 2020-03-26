@@ -83,24 +83,29 @@ mapboard({
     header: 'alertBanner',
   },
   healthChecks: [
-    {
-      type: 'maintenanceHours',
-      condition: [
-        {
-          'day': 7,
-          'startTime': '2:00',
-          'endTime': '3:00',
-        },
-        {
-          'day': 7,
-          'startTime': '10:00',
-          'endTime': '11:00',
-        },
-      ],
-    },
+    // {
+    //   type: 'maintenanceHours',
+    //   condition: [
+    //     {
+    //       'day': 7,
+    //       'startTime': '2:00',
+    //       'endTime': '3:00',
+    //     },
+    //     {
+    //       'day': 7,
+    //       'startTime': '10:00',
+    //       'endTime': '11:00',
+    //     },
+    //     {
+    //       'day': 4,
+    //       'startTime': '10:00',
+    //       'endTime': '13:00',
+    //     },
+    //   ],
+    // },
     {
       type: 'maintenanceAPI',
-      condition: 'https://real-estate-tax-monitors.s3.amazonaws.com/status_up.json',
+      condition: 'https://real-estate-tax-monitors.s3.amazonaws.com/status.json',
     },
   ],
   panels: [
