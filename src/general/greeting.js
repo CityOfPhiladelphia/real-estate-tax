@@ -5,8 +5,8 @@ export default {
       <p>The City and the School District of Philadelphia impose a tax on all real estate in the City pursuant to Philadelphia\
         Code Chapter 19-1300, as authorized by 72 P.S. § 5020-201. The Office of Property Assessment (OPA) determines\
         the value of the property on which the taxes must be paid.</p><br>\
-      <p>Real Estate Tax bills are sent in December for the following year and payments are due March 31st. If you pay on\
-        or before the last day of February, you receive a 1% discount. If you pay after March 31, you are subject to\
+      <p>Real Estate Tax bills are sent in December for the following year and payments are due March 31st.\
+      If you pay after this due date, you are subject to\
         increased charges called "additions." At the end of the year, these charges begin to accrue interest and penalties.\
         <a target="_blank" href="https://www.phila.gov/services/property-lots-housing/property-taxes/">Find\
         more information about Philadelphia Real Estate Tax</a>, including information about discount and assistance programs.</p><br>\
