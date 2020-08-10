@@ -10,7 +10,7 @@ let keys = [
   'PIO',
   'BRT',
   'LSLD',
-  'DISC',
+  // 'DISC',
   'SEQR',
 ];
 
