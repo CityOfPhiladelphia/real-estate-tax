@@ -54,8 +54,10 @@ export default {
   date: {
     transform: function (value) {
       let valueTransformed;
-      // console.log('date transform running, value:', value, 'typeof value:', typeof value);
-      if (typeof value === 'string') {
+      console.log('date transform running, value:', value, 'typeof value:', typeof value);
+      if (value === 'no data') {
+        valueTransformed = 'no data';
+      } else if (typeof value === 'string') {
         valueTransformed = format(parseISO(value), 'MM/dd/yyyy');
       } else {
         valueTransformed = format(value, 'MM/dd/yyyy');
