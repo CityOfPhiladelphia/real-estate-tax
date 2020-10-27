@@ -7,7 +7,8 @@
           <b>{{ transform.currency.transform(propertyBalance) }}</b>
         </h2>
         <p class="p-margin">
-          Includes Payments Through: {{ transform.date.transform(tipsData.lastPaymentPostedDate) }}
+          <!-- Includes Payments Through: {{ transform.date.transform(tipsData.payments_posted_thru) }} -->
+          Includes Payments Through: {{ tipsData.payments_posted_thru }}
         </p>
       </div>
       <div class="columns small-24 medium-6 flex-div div-padding-and-margin">
@@ -52,10 +53,8 @@
 
 <script>
 import transforms from '../general/transforms.js';
-import ePayForm from '@phila/vue-comps/src/components/ePayForm.vue';
+import ePayForm from './ePayForm.vue';
 import generateBillingXml from '../util/generate-billing-xml';
-// console.log('ePayForm:', ePayForm);
-// const ePayForm = philaVueComps.ePayForm;
 
 export default {
   components: {
@@ -66,8 +65,8 @@ export default {
       return this.$store.state.appData.propertyBalance;
     },
     tipsData() {
-      if (this.$store.state.sources.tips.data.data) {
-        return this.$store.state.sources.tips.data.data;
+      if (this.$store.state.sources.tips.data) {
+        return this.$store.state.sources.tips.data;
       }
       return {};
 

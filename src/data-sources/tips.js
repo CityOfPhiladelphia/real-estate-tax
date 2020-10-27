@@ -1,10 +1,10 @@
 export default {
   id: 'tips',
   type: 'http-get',
-  url: '//api.phila.gov/tips/account/',
+  url: 'https://testapigateway.phila.gov/RevRealEstateTax',
   options: {
     params: {
-      urlAddition: function (feature) {
+      'BRT-NO': function (feature) {
         return feature.properties.opa_account_num;
       },
     },

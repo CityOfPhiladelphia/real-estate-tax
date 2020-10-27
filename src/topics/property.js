@@ -44,7 +44,7 @@ export default {
               // var owners = state.geocode.data.properties.opa_owners;
               // var ownersJoined = owners.join(', ');
               // return ownersJoined;
-              var owner = state.sources.tips.data.data.property.ownerName;
+              var owner = state.sources.tips.data.property_info.owner_name;
               return owner;
             },
           },
@@ -103,7 +103,7 @@ export default {
           {
             label: 'Lien Sale Account',
             value: function(state) {
-              var owner = state.sources.tips.data.data.property.lienSaleInd;
+              var owner = state.sources.tips.data.property_info.lien_sale_ind;
               return owner;
             },
           },
