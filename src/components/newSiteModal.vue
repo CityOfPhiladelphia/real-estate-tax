@@ -40,9 +40,9 @@ export default {
     minWidth() {
       if (this.$store.state.isMobileOrTablet) {
         return;
-      } 
+      }
       return { minWidth: '550px' };
-      
+
     },
   },
   methods: {

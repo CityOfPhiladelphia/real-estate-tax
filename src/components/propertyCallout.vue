@@ -52,15 +52,9 @@
 
 <script>
 import transforms from '../general/transforms.js';
-import ePayForm from '@phila/vue-comps/src/components/ePayForm.vue';
 import generateBillingXml from '../util/generate-billing-xml';
-// console.log('ePayForm:', ePayForm);
-// const ePayForm = philaVueComps.ePayForm;
 
 export default {
-  components: {
-    ePayForm,
-  },
   computed: {
     propertyBalance() {
       return this.$store.state.appData.propertyBalance;
@@ -77,6 +71,7 @@ export default {
         height: 50,
         width: 160,
         fontSize: 25,
+        // fontColor: 'rgb(68, 68, 68)',
         actionAddress: 'https://epay.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx',
       };
       return options;
@@ -115,6 +110,11 @@ export default {
 </script>
 
 <style scoped>
+
+.button {
+  padding: 10px;
+  font-weight: bold !important;
+}
 
 .callout {
   margin-top: 1rem;

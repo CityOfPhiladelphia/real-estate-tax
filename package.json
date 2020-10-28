@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fortawesome/pro-solid-svg-icons": "^5.7.2",
-    "@phila/mapboard": "4.2.3",
+    "@phila/mapboard": "4.3.3",
     "accounting": "^0.4.1",
     "vue": "^2.6.10"
   },
@@ -27,6 +27,9 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.0.1",
+    "node-sass": "^4.14.1",
+    "sass": "^1.27.0",
+    "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10",
     "webpack-visualizer-plugin": "^0.1.11"
   },

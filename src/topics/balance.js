@@ -16,8 +16,12 @@ export default {
         id: 'balanceDetails',
         export: {
           formatButtons: {
-            'csv': 'CSV',
-            'pdf': 'PDF',
+            'csv': {
+              text: 'CSV',
+            },
+            'pdf': {
+              text: 'PDF',
+            },
           },
           buttonPosition: 'right',
           file: function(state) {

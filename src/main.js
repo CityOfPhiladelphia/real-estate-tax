@@ -63,6 +63,7 @@ import propertyCallout from './components/propertyCallout.vue';
 import maintenanceAPI from './components/MaintenanceAPI.vue';
 import maintenanceHours from './components/MaintenanceHours.vue';
 import alertBanner from './components/AlertBanner.vue';
+import ePayForm from './components/ePayForm.vue';
 // import newSiteModal from './components/newSiteModal.vue';
 
 const customComps = {
@@ -70,6 +71,7 @@ const customComps = {
   'maintenanceAPI': maintenanceAPI,
   'maintenanceHours': maintenanceHours,
   'alertBanner': alertBanner,
+  'ePayForm': ePayForm,
   // 'newSiteModal': newSiteModal,
 };
 
@@ -161,6 +163,7 @@ mapboard({
   },
   router: {
     enabled: true,
+    type: 'vue',
     returnToDefaultTopicOnGeocode: true,
   },
   defaultAddressTextPlaceholder: {
