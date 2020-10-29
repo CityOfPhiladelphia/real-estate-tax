@@ -76,6 +76,7 @@ const customComps = {
 
 mapboard({
   customComps,
+  publicPath: '/revenue/realestatetax/',
   header: {
     enabled: true,
     text: 'Real Estate Tax Balance Search',

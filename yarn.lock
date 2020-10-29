@@ -1064,10 +1064,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@phila/mapboard@4.3.4":
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/@phila/mapboard/-/mapboard-4.3.4.tgz#405298d5854e957ebc0c7c0ee39bf422a7c7bf5e"
-  integrity sha512-vr04AHbiBxN7Zbm+cPbC+JDPHVnIZuY8onchlGaHNIxVfNP0alQn70wo6nA52L7TkO4W+rvqtAYnkCj5HSx/HA==
+"@phila/mapboard@4.3.5":
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/@phila/mapboard/-/mapboard-4.3.5.tgz#5dd6b1c2348ae0ff967408132e20ddfa2ce9d3b3"
+  integrity sha512-C3V7BTBlNxQ0PdsUwVD/89ycPnAq8yZZmEKDauAaHgasgm7mEmNn/YEOxNPkf8I+JAJY8VSYKSJE0K/uh3UQGA==
   dependencies:
     "@phila/vue-comps" "2.1.21"
     "@phila/vue-datafetch" "1.4.6"
