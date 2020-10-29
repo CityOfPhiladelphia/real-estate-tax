@@ -1064,13 +1064,13 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@phila/mapboard@4.3.6":
-  version "4.3.6"
-  resolved "https://registry.yarnpkg.com/@phila/mapboard/-/mapboard-4.3.6.tgz#5c369914630e57819fb55ebe2ee468db7674b9cb"
-  integrity sha512-4O065z0nhl86HtRYzSACOvS/ygCnQn5/2mo999vqjbK65LOgh+rYNs6F2m4+uhzDOsVduf+iMITNN85WSon9Hg==
+"@phila/mapboard@4.3.7":
+  version "4.3.7"
+  resolved "https://registry.yarnpkg.com/@phila/mapboard/-/mapboard-4.3.7.tgz#19cdad74b45ff821e579189544224b154e291145"
+  integrity sha512-0jGwLJ9T3e0aDSvBjC1u4Ns3WqFdqpWyy17ctD7Wg44XrAgkCQiTsIwuleQaGZcejXlE75KdmU4W+bGnSBCxCQ==
   dependencies:
     "@phila/vue-comps" "2.1.21"
-    "@phila/vue-datafetch" "1.4.7"
+    "@phila/vue-datafetch" "1.4.8"
     "@phila/vue-mapping" "2.2.10"
     vue "^2.6.10"
     vue-i18n "^8.22.0"
@@ -1096,10 +1096,10 @@
     vue "^2.6.11"
     vuex "^3.1.2"
 
-"@phila/vue-datafetch@1.4.7":
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/@phila/vue-datafetch/-/vue-datafetch-1.4.7.tgz#bc79616c3059772680def277d8dfdc86b1c24df0"
-  integrity sha512-aVptQYPWe5+Rg8gfIdDapncvCaTHAA/F//m1ZsIu9pPlh5OQHj6S9RgfD446gQI/cSGvQdMzlSLrboxTDNJxrw==
+"@phila/vue-datafetch@1.4.8":
+  version "1.4.8"
+  resolved "https://registry.yarnpkg.com/@phila/vue-datafetch/-/vue-datafetch-1.4.8.tgz#68b96dc59ccc68d1014c5715a7fac6af06178db2"
+  integrity sha512-BLdF92XX5TrYCpiVOz5XzDi01MguSh5zJDX/MqyFWSHSx8MaSF5/0ebfESIzOLc0Bikc+33BpAZvsbJFD9zs2A==
   dependencies:
     "@turf/turf" "^5.1.6"
     airtable "^0.8.1"
