@@ -163,7 +163,7 @@ mapboard({
   },
   router: {
     enabled: true,
-    type: 'vue',
+    // type: 'vue',
     returnToDefaultTopicOnGeocode: true,
   },
   defaultAddressTextPlaceholder: {
