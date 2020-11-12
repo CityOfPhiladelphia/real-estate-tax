@@ -19,9 +19,9 @@ module.exports = {
             test: /[\\/]node_modules[\\/](esri-leaflet)[\\/]/,
             name: 'esri-leaflet-chunk',
             chunks: 'all',
-          }
-        }
-      }
+          },
+        },
+      },
     },
   },
 
