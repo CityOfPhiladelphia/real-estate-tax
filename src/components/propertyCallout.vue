@@ -7,7 +7,8 @@
           <b>{{ transform.currency.transform(propertyBalance) }}</b>
         </h2>
         <p class="p-margin">
-          Includes Payments Through: {{ transform.date.transform(tipsData.lastPaymentPostedDate) }}
+          <!-- Includes Payments Through: {{ transform.date.transform(tipsData.payments_posted_thru) }} -->
+          Includes Payments Through: {{ tipsData.payments_posted_thru }}
         </p>
       </div>
       <div class="columns small-24 medium-6 flex-div div-padding-and-margin">
@@ -60,8 +61,8 @@ export default {
       return this.$store.state.appData.propertyBalance;
     },
     tipsData() {
-      if (this.$store.state.sources.tips.data.data) {
-        return this.$store.state.sources.tips.data.data;
+      if (this.$store.state.sources.tips.data) {
+        return this.$store.state.sources.tips.data;
       }
       return {};
 
@@ -80,11 +81,11 @@ export default {
       const slots = {
         buttonAction: function() {
           const data = {
-            'accountNum': this.tipsData.accountNum,
+            'accountNum': this.tipsData.brt_no,
             'totalDue': 0,
             'balances': this.tipsData,
             'address': {
-              'streetAddress': this.tipsData.property.address,
+              'streetAddress': this.tipsData.property_info.property_address,
               'zipCode': this.$store.state.geocode.data.properties.zip_code,
             },
           };

@@ -99,7 +99,7 @@ export default {
           {
             label: 'Principal',
             value: function(state, item){
-              return item.principal.toFixed(2);
+              return item.principal_bal.toFixed(2);
             },
             transforms: [
               'currency',
@@ -108,7 +108,7 @@ export default {
           {
             label: 'Interest',
             value: function(state, item){
-              return item.interest.toFixed(2);
+              return item.interest_bal.toFixed(2);
             },
             transforms: [
               'currency',
@@ -117,7 +117,7 @@ export default {
           {
             label: 'Penalty',
             value: function(state, item){
-              return item.penalty.toFixed(2);
+              return item.penalty_bal.toFixed(2);
             },
             transforms: [
               'currency',
@@ -126,7 +126,7 @@ export default {
           {
             label: 'Other',
             value: function(state, item){
-              return item.other.toFixed(2);
+              return item.other_change_bal.toFixed(2);
             },
             transforms: [
               'currency',
@@ -135,7 +135,7 @@ export default {
           {
             label: 'Total',
             value: function(state, item){
-              return item.total.toFixed(2);
+              return item.total_balance.toFixed(2);
             },
             transforms: [
               'currency',
@@ -144,19 +144,20 @@ export default {
           {
             label: 'Lien Number',
             value: function(state, item){
-              return item.lienNum;
+              return item.lien_number;
             },
           },
           {
             label: 'City Solicitor',
             value: function(state, item){
-              return item.solicitor;
+              // return item.solicitor;
+              return item.attorney;
             },
           },
           {
             label: 'Status',
             value: function(state, item) {
-              return item.status;
+              return item.case_status;
             },
             popoverLink: true,
             popoverTransforms: [
@@ -179,7 +180,7 @@ export default {
       slots: {
         title: 'Balance Details',
         items: function(state) {
-          var data = state.sources['tips'].data.data.years;
+          var data = state.sources['tips'].data.tax_years;
           var rows = data.map(function(row){
             var itemRow = row;
             return itemRow;

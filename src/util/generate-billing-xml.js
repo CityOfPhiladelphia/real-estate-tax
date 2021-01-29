@@ -39,7 +39,7 @@ export default function (data) {
 <BillingStatement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ApplicationID>fcd68fd2-e923-4b03-a0e7-a678c2ed612a</ApplicationID>
   <AccountNumber />
-  <BillNumber>${data.balances.accountNum}</BillNumber>
+  <BillNumber>${data.balances.brt_no}</BillNumber>
   <StatementNumber />
   <BillingDate>${timestamp}</BillingDate>
   <DueDate>${timestamp}</DueDate>
@@ -62,7 +62,7 @@ export default function (data) {
   </Details>
   <Customers>
     <Customer>
-      <FirstName>${data.balances.property.ownerName}</FirstName>
+      <FirstName>${data.balances.property_info.owner_name}</FirstName>
       <MiddleName />
       <LastName />
       <BillingAddress>

@@ -25,10 +25,10 @@ import TopicComponent from '@phila/vue-comps/src/components/TopicComponent.vue';
 import generateBillingXml from '../util/generate-billing-xml';
 
 const BALANCE_PARTS = [
-  'principal',
-  'interest',
-  'penalty',
-  'other',
+  'principal_bal',
+  'interest_bal',
+  'penalty_bal',
+  'other_change_bal',
 ];
 
 export default {
@@ -36,11 +36,12 @@ export default {
   data() {
     const data = {
       parseData: {
-        'accountNum': this.$store.state.sources.tips.data.data.accountNum,
+        'accountNum': this.$store.state.sources.tips.data.brt_no,
+        // 'accountNum': this.$store.state.sources.tips.data.data.accountNum,
         'totalDue': '',
-        'balances': this.$store.state.sources.tips.data.data,
+        'balances': this.$store.state.sources.tips.data,
         'address': {
-          'streetAddress':  this.$store.state.sources.tips.data.data.property.address,
+          'streetAddress':  this.$store.state.sources.tips.data.property_info.property_address,
           'zipCode': this.zipCode,
         },
       },
@@ -96,7 +97,7 @@ export default {
     },
   },
   created() {
-    // console.log('ePayForm created is running, this.zipCode:', this.zipCode)
+    // console.log('ePayForm created is running, this.zipCode:', this.zipCode);
     this.parseData.totalDue = this.calculateTotalDue();
     this.$store.commit('setPropertyBalance', this.parseData.totalDue);
   },
@@ -107,12 +108,14 @@ export default {
   },
   methods: {
     calculateTotalDue() {
-      return this.parseData.balances.years.reduce((acc, year) => {
+      // console.log('calculateTotalDue is running');
+      return this.parseData.balances.tax_years.reduce((acc, year) => {
         const yearTotal = this.calculateTotalForYear(year);
         return acc + yearTotal;
       }, 0);
     },
     calculateTotalForYear(year) {
+      // console.log('calculateTotalForYear is running, year:', year);
       const amounts = BALANCE_PARTS.map(part => year[part]);
       return amounts.reduce((acc, amount) => acc + amount, 0);
     },
