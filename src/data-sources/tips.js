@@ -2,7 +2,8 @@ export default {
   id: 'tips',
   type: 'http-get',
   // url: '//api.phila.gov/tips/account/',
-  url: 'https://testapigateway.phila.gov/RevRealEstateTax',
+  // url: 'https://testapigateway.phila.gov/RevRealEstateTax',
+  url: 'https://gwprod.phila.gov/RevRealEstateTax',
   options: {
     params: {
       'BRT-NO':function (feature) {
