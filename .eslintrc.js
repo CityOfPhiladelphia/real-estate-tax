@@ -16,20 +16,20 @@ module.exports = {
     "no-unused-vars": process.env.NODE_ENV === "production" ? "error" : "off",
 
     // Eslint Rules
-    "brace-style": "error",
-    "nonblock-statement-body-position": [ "error", "below" ],
-    "curly": [ "error", "all" ],
-    "indent": [ "error", 2 ],
-    "object-curly-spacing": [ "error", "always", {
-      arraysInObjects: false,
-      objectsInObjects: false,
-    }],
-    "array-bracket-spacing": [ "error", "always", {
-      objectsInArrays: false,
-      arraysInArrays: false,
-    }],
-    "comma-dangle": [ "error", "always-multiline" ],
-    "semi": [ "error", "always" ],
+    // "brace-style": "error",
+    // "nonblock-statement-body-position": [ "error", "below" ],
+    // "curly": [ "error", "all" ],
+    // "indent": [ "error", 2 ],
+    // "object-curly-spacing": [ "error", "always", {
+    //   arraysInObjects: false,
+    //   objectsInObjects: false,
+    // }],
+    // "array-bracket-spacing": [ "error", "always", {
+    //   objectsInArrays: false,
+    //   arraysInArrays: false,
+    // }],
+    // "comma-dangle": [ "error", "always-multiline" ],
+    // "semi": [ "error", "always" ],
 
     // Vue Rules
     // "vue/no-v-html": "off",
