@@ -14,7 +14,8 @@ export default {
         'AGRE': 'Active payment agreement plan in effect for delinquent taxes.',
         'INST': 'Active installment payment plan in effect for current taxes.',
         'PIO': 'Collections being pursued by Pioneer Collection Agency. Please call (866) 439-1318.',
-        'BRT': 'Under appeal with the Board of Revision of Taxes.  Properties with pending assessment appeals may pay the prior year tax amount until the appeal is resolved.',
+        'BRT': `Under appeal with the Board of Revision of Taxes.  Properties with pending assessment appeals should pay the amount billed until the appeal is resolved.
+                Once resolved, accounts that ultimately receive a credit can request to have the credit amount refunded or applied to other balances.`,
         'LSLD': `This charge has a tax lien that was sold to a private third-party lien-holder at a City Tax Lien Sale.
                 Therefore, the amounts listed below for those years may not include all Real Estate Tax liabilities currently due.
                 For more information regarding the name, address, and phone number of the new lien-holder, as well as the
@@ -36,7 +37,7 @@ export default {
   },
   misc: {
     transform: function(value) {
-      if (value === 2034) {
+      if (value === 2034 || value === 1934) {
         return 'MISC';
       }
       return value;
