@@ -11,7 +11,7 @@ export default {
         'LBRA': 'In an agreement with Linebarger.',
         'GRB': 'Collections being pursued by GRB Collection Agency. Please call (866) 677-5970.',
         'GRBA': 'In an agreement with GRB.',
-        'AGRE': 'Active payment agreement plan in effect for delinquent taxes.',
+        'AGRE': 'Active payment agreement plan in effect.',
         'INST': 'Active installment payment plan in effect for current taxes.',
         'PIO': 'Collections being pursued by Pioneer Collection Agency. Please call (866) 439-1318.',
         'BRT': `Under appeal with the Board of Revision of Taxes.  Properties with pending assessment appeals should pay the amount billed until the appeal is resolved.
