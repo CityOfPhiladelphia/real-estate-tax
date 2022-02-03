@@ -29,7 +29,7 @@ jobs:
         FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FA_AUTH_TOKEN }}
         VUE_APP_GATEKEEPER_KEY: ${{ secrets.VUE_APP_GATEKEEPER_KEY }}
 
-    - name: Deploy to Prod s3, Set index headers
+    - name: Deploy to Test s3, Set index headers
       env:
         AWS_DEFAULT_REGION: 'us-east-1'
         AWS_S3_BUCKET: real-estate-test
