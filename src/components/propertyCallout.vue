@@ -72,7 +72,7 @@ export default {
         width: 160,
         fontSize: 25,
         // fontColor: 'rgb(68, 68, 68)',
-        actionAddress: 'https://epay.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx',
+        actionAddress: 'https://epay-staging.phila.gov/PaymentCenter/Gateway1/InitiatePurchase.aspx',
       };
       return options;
     },
