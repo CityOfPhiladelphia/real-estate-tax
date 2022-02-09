@@ -8,9 +8,10 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "local": "vue-cli-service serve --mode local",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "dev-build": "vue-cli-service build --mode development",
+    "build:development": "vue-cli-service build --mode development",
+    "build:production": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "lintFix": "vue-cli-service lint --fix"
   },
