@@ -44,6 +44,7 @@ module.exports = {
   // css: undefined,
   transpileDependencies: [
     // can be string or regex
+    '@mapbox/mapbox-gl-draw',
     '@phila/mapboard',
     '@phila/vue-comps',
     '@phila/vue-mapping',
