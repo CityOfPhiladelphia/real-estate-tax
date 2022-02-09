@@ -6,7 +6,7 @@ name: test Push to S3
 on:
   push:
     branches:
-      - dev
+      - dev2
 
 jobs:
   build:
@@ -23,8 +23,8 @@ jobs:
     - name: npm install, and build
       run: |
         printf "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=${FONTAWESOME_NPM_AUTH_TOKEN}" >> ~/.npmrc
-        npm install
-        npm run build:development
+        yarn
+        yarn build:development
       env:
         FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FA_AUTH_TOKEN }}
         VUE_APP_GATEKEEPER_KEY: ${{ secrets.VUE_APP_GATEKEEPER_KEY }}
