@@ -6,7 +6,7 @@ name: test Push to S3
 on:
   push:
     branches:
-      - test-push
+      - dev
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
       run: |
         printf "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=${FONTAWESOME_NPM_AUTH_TOKEN}" >> ~/.npmrc
         npm install
-        npm run build
+        npm run build:development
       env:
         FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FA_AUTH_TOKEN }}
         VUE_APP_GATEKEEPER_KEY: ${{ secrets.VUE_APP_GATEKEEPER_KEY }}
@@ -32,7 +32,7 @@ jobs:
     - name: Deploy to Test s3, Set index headers
       env:
         AWS_DEFAULT_REGION: 'us-east-1'
-        AWS_S3_BUCKET: real-estate-test
+        AWS_S3_BUCKET: real-estate-demo
         AWS_CLOUDFRONT_DISTRIBUTION: E2ZPINBL1O4497
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
