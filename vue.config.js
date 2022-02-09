@@ -44,6 +44,7 @@ module.exports = {
   // css: undefined,
   transpileDependencies: [
     // can be string or regex
+    '@fortawesome/fontawesome-svg-core',
     '@mapbox/mapbox-gl-draw',
     '@phila/mapboard',
     '@phila/vue-comps',
