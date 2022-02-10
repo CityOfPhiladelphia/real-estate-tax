@@ -1,11 +1,11 @@
-const Visualizer = require('webpack-visualizer-plugin');
+// const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
   publicPath: process.env.VUE_APP_PUBLICPATH,
   configureWebpack: {
-    plugins: [
-      new Visualizer({ filename: './statistics.html' }),
-    ],
+    // plugins: [
+    //   new Visualizer({ filename: './statistics.html' }),
+    // ],
     optimization: {
       splitChunks: {
         cacheGroups: {
