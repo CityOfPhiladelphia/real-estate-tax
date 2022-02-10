@@ -32,7 +32,7 @@ jobs:
     - name: Deploy to Prod s3, Set index headers, and Invalidate Cloudfront
       env:
         AWS_DEFAULT_REGION: 'us-east-1'
-        AWS_S3_BUCKET: realestatetax
+        AWS_S3_BUCKET: real-estate-tax-prod
         AWS_CLOUDFRONT_DISTRIBUTION: E2K2DCUMZ188JW
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
