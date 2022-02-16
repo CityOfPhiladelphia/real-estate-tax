@@ -24,7 +24,7 @@ export default {
                 You may enter or copy/paste the 13-digit lien number listed below (ex. 1504R14010000) to the Court’s “Case ID” search box.`,
         // 'DISC': 'Discounted amount good until last day of February.',
         'SEQR': `This charge has a tax lien that is in the Law Department\'s Sequestration/Receivership Program. For more information regarding the status
-                of the sequestration proceedings, you may call (215) 686-5495, or search the Philadelphia Court's civil docket
+                of the sequestration proceedings, you may call (215) 686-0520, or search the Philadelphia Court's civil docket
                 at <a href="http://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_disclaimer" target="_blank">Civil Docket Access</a>.
                 You may enter the property owner's name in the Court’s “Caption” search box.`,
       };
