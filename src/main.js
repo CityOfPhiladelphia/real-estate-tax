@@ -74,8 +74,10 @@ const customComps = {
 };
 
 mapboard({
+  resetDataOnGeocode: true,
   customComps,
-  publicPath: '/revenue/realestatetax',
+  publicPath: process.env.VUE_APP_PUBLICPATH,
+  // publicPath: '/revenue/realestatetax',
   header: {
     enabled: true,
     text: 'Real Estate Tax Balance Search',
@@ -162,7 +164,7 @@ mapboard({
   },
   router: {
     enabled: true,
-    // type: 'vue',
+    type: 'vue',
     returnToDefaultTopicOnGeocode: true,
   },
   defaultAddressTextPlaceholder: {
