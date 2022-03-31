@@ -6,7 +6,7 @@ name: test Push to S3
 on:
   push:
     branches:
-      - dev2
+      - dev
 
 jobs:
   build:
