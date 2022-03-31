@@ -77,7 +77,7 @@ const customComps = {
 mapboard({
   resetDataOnGeocode: true,
   customComps,
-  publicPath: process.env.VUE_APP_PUBLICPATH,
+  publicPath: process.env.VUE_APP_PUBLICPATH.slice(0, -1),
   // publicPath: '/revenue/realestatetax',
   header: {
     enabled: true,
