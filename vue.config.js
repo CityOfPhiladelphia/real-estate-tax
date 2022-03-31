@@ -23,7 +23,6 @@ module.exports = {
       }
     },
   },
-
   chainWebpack: (config) => {
     config.plugins.delete('prefetch');
   },
@@ -35,13 +34,6 @@ module.exports = {
       },
     },
   },
-
-  // outputDir: undefined,
-  // assetsDir: undefined,
-  // runtimeCompiler: undefined,
-  // productionSourceMap: undefined,
-  // parallel: undefined,
-  // css: undefined,
   transpileDependencies: [
     // can be string or regex
     '@phila/mapboard',
